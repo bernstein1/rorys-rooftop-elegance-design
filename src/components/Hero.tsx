@@ -18,15 +18,14 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/45"></div>
       </div>
 
-      <div className="relative z-10 text-center max-w-3xl mx-auto px-4">
-        {/* Changed text color to primary (turquoise) */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-primary">
-          Rory&apos;s Rooftop
-        </h1>
-        <p className="text-xl md:text-2xl mb-10 max-w-xl mx-auto leading-relaxed animate-fade-in text-primary">
-          Elevated dining above the city.<br className="hidden md:block" /> 
-          Experience cocktails, cuisine, <br className="hidden md:block" /> and skyline views in the heart of NYC&apos;s Meatpacking District.
-        </p>
+      <div className="relative z-10 text-center max-w-3xl mx-auto px-4 flex flex-col items-center">
+        {/* LOGO ONLY */}
+        <img
+          src="/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png"
+          alt="Rory's Rooftop Bar Logo"
+          className="h-32 md:h-40 w-auto mx-auto mb-10 drop-shadow-lg"
+          style={{ maxHeight: "160px" }}
+        />
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
           <Button 
             size="lg" 
@@ -52,3 +51,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
