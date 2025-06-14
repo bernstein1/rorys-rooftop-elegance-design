@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +31,7 @@ const MenuPreview = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Artful Sips & <span className="text-primary">Bites</span>
+            Signature Sips & <span className="text-primary">Bites</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore a preview of our signature creations, where every drink is a masterpiece and every dish is a discovery. This is just a glimpse—your new favorite awaits.
@@ -46,7 +47,7 @@ const MenuPreview = () => {
             >
               <img
                 src={item.image}
-                alt={item.name}
+                alt={`A featured dish or drink at Rory's Rooftop: ${item.name}`}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>

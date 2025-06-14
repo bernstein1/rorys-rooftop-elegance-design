@@ -59,7 +59,7 @@ export default function FAQ() {
 
             <div className="relative z-10">
               <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 text-foreground">
-                Good to Know
+                Frequently Asked Questions
               </h1>
               <p className="text-lg text-center text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
                 Everything you need to know before you go. If your question isn't here, please feel free to{" "}

@@ -31,6 +31,7 @@ const Hero = () => {
         />
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 animate-fade-in-up drop-shadow-md">
           Elevate Your Evenings
+          <span className="sr-only"> at Rory's Rooftop Bar, NYC</span>
         </h1>
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
           <Button 

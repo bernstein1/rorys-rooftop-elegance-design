@@ -41,7 +41,7 @@ const MenuPage = () => {
       <main className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Our Menu</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Rory's Rooftop Bar Menu</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               A curated collection of vibrant cocktails and shareable plates, inspired by the spirit of New York and crafted with the finest ingredients. Dive in.
             </p>

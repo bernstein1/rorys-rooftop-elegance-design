@@ -13,8 +13,9 @@ const About = () => {
           {/* Text Content */}
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Above the City,<br />
-              <span className="text-primary">Beyond Ordinary</span>
+              About Our Rooftop Bar
+              <br />
+              <span className="text-primary">in the Meatpacking District</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               High above the electric pulse of the Meatpacking District, Rory's Rooftop is an urban oasis. We blend stunning skyline views with an atmosphere of effortless sophistication, creating the perfect backdrop for unforgettable moments.
@@ -27,7 +28,7 @@ const About = () => {
           <div className="relative">
             <img
               src="/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png"
-              alt="Rory's Rooftop Interior"
+              alt="Chic interior of Rory's Rooftop Bar with guests enjoying the ambiance"
               className="w-full h-96 object-cover rounded-lg shadow-2xl"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
