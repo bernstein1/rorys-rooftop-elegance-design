@@ -6,10 +6,13 @@ import { Menu, X } from "lucide-react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Add "Events" and "Blog" to navigation
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Menu", href: "#menu" },
+    { name: "Events", href: "/events" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -23,12 +26,16 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-lg text-foreground/90 hover:text-primary font-medium transition-colors px-3 py-1"
+                className={`text-lg text-foreground/90 hover:text-primary font-medium transition-colors px-3 py-1 ${
+                  item.name === "Events" || item.name === "Blog"
+                    ? "story-link"
+                    : ""
+                }`}
               >
                 {item.name}
               </a>
@@ -81,3 +88,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
