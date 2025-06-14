@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       id="home"
@@ -37,6 +40,7 @@ const Hero = () => {
             size="lg" 
             variant="outline" 
             className="border-primary text-primary px-12 py-3"
+            onClick={() => navigate("/menu")}
           >
             View Menu
           </Button>

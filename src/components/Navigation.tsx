@@ -2,14 +2,15 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Remove "About", add "FAQ" in navigation
+  // Update menu and home links
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Menu", href: "#menu" },
+    { name: "Home", href: "/" },
+    { name: "Menu", href: "/menu" },
     { name: "Events", href: "/events" },
     { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
@@ -25,22 +26,22 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/">
+            <Link to="/">
               <img
                 src="/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png"
                 alt="Rory's Rooftop Bar Logo"
                 className="h-12 md:h-14 w-auto object-contain"
                 style={{ maxHeight: "56px" }}
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className={`text-lg text-foreground/90 hover:text-primary font-medium transition-colors px-3 py-1 ${
                   item.name === "Events" || item.name === "Blog"
                     ? "story-link"
@@ -48,7 +49,7 @@ const Navigation = () => {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button 
               className="ml-8 bg-primary text-primary-foreground shadow-md px-8 py-3"
@@ -78,14 +79,14 @@ const Navigation = () => {
         <div className="md:hidden">
           <div className="px-3 pt-2 pb-4 space-y-1 sm:px-3 bg-background border-b border-border">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="block text-lg font-medium px-3 py-2 rounded-md text-foreground/90 hover:bg-primary/10 hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button className="mt-4 w-full bg-primary text-primary-foreground px-8 py-3" size="lg">
               Make Reservation

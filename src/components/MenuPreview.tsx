@@ -1,8 +1,9 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const MenuPreview = () => {
+  const navigate = useNavigate();
   const featuredItems = [
     {
       name: "Manhattan Sunset",
@@ -68,6 +69,7 @@ const MenuPreview = () => {
             size="lg"
             variant="outline"
             className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
+            onClick={() => navigate("/menu")}
           >
             View Full Menu
           </Button>
