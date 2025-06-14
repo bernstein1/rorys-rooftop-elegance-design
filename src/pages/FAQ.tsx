@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const faqs = [
@@ -33,30 +34,33 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="min-h-screen bg-[hsl(346,56%,86%)] flex items-center justify-center py-12 md:py-20">
-      <div className="w-full max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 text-foreground">
-          Frequently Asked Questions
-        </h1>
-        <p className="text-lg text-center text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
-          Answers to our most common guest questions. For anything else, feel free to{" "}
-          <a href="/contact" className="underline text-primary">contact us</a>.
-        </p>
-        <div className="w-full">
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full rounded-lg bg-[hsl(46,46%,95%)] shadow-xl border border-primary/10"
-          >
-            {faqs.map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`}>
-                <AccordionTrigger className="text-lg text-left px-8 py-5">{faq.question}</AccordionTrigger>
-                <AccordionContent className="text-left px-8 pb-6 pt-1">{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+    <>
+      <Navigation />
+      <section className="min-h-screen bg-[hsl(346,56%,86%)] flex items-center justify-center py-12 md:py-20">
+        <div className="w-full max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 text-foreground">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-lg text-center text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
+            Answers to our most common guest questions. For anything else, feel free to{" "}
+            <a href="/contact" className="underline text-primary">contact us</a>.
+          </p>
+          <div className="w-full">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full rounded-lg bg-[hsl(46,46%,95%)] shadow-xl border border-primary/10"
+            >
+              {faqs.map((faq, idx) => (
+                <AccordionItem key={idx} value={`item-${idx}`}>
+                  <AccordionTrigger className="text-lg text-left px-8 py-5">{faq.question}</AccordionTrigger>
+                  <AccordionContent className="text-left px-8 pb-6 pt-1">{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
