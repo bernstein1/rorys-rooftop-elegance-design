@@ -36,7 +36,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-primary text-primary bg-background px-12 py-3"
+            className="border-primary text-primary px-12 py-3"
           >
             View Menu
           </Button>
