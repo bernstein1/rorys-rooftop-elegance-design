@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -133,7 +132,7 @@ const Blog = () => {
         </p>
         {/* ScrollArea wraps the carousel and provides a nice horizontal scroll bar directly underneath */}
         <div className="relative">
-          <ScrollArea className="w-full" type="scroll" scrollHideDelay={0} orientation="horizontal">
+          <ScrollArea className="w-full pb-4" type="scroll" scrollHideDelay={0}>
             <Carousel
               className="w-full"
               opts={{ align: "start", slidesToScroll: 1, dragFree: true }}
@@ -184,4 +183,3 @@ const Blog = () => {
 }
 
 export default Blog;
-
