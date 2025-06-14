@@ -20,7 +20,7 @@ const POSTS = [
 ];
 
 const Blog = () => (
-  <div className="min-h-screen pt-0 pb-16 bg-background">
+  <div className="min-h-screen pt-0 pb-16" style={{ backgroundColor: "hsl(46, 46%, 95%)" }}>
     <Navigation />
     <section className="max-w-5xl mx-auto px-4 pt-32">
       <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
@@ -31,7 +31,11 @@ const Blog = () => (
       </p>
       <div className="grid md:grid-cols-2 gap-10">
         {POSTS.map((post, i) => (
-          <div key={i} className="bg-card rounded-2xl shadow-lg hover-scale transition-all flex flex-col">
+          <div
+            key={i}
+            style={{ backgroundColor: "hsl(346, 56%, 86%)" }} // pink
+            className="rounded-2xl shadow-lg hover-scale transition-all flex flex-col"
+          >
             <div className="overflow-hidden rounded-t-2xl">
               <img src={post.image} alt={post.title} className="w-full h-56 object-cover group-hover:scale-105 transition-transform" />
             </div>
@@ -56,4 +60,3 @@ const Blog = () => (
 );
 
 export default Blog;
-

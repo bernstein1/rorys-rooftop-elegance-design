@@ -21,7 +21,7 @@ const EVENTS = [
 ];
 
 const Events = () => (
-  <div className="min-h-screen pt-0 pb-16 bg-background">
+  <div className="min-h-screen pt-0 pb-16" style={{ backgroundColor: "hsl(46, 46%, 95%)" }}>
     <Navigation />
     <section className="max-w-6xl mx-auto px-4 pt-32">
       <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
@@ -32,7 +32,11 @@ const Events = () => (
       </p>
       <div className="grid md:grid-cols-2 gap-8">
         {EVENTS.map((event, i) => (
-          <div key={i} className="bg-card rounded-2xl shadow-lg hover-scale transition-all group">
+          <div
+            key={i}
+            className="rounded-2xl shadow-lg hover-scale transition-all group"
+            style={{ backgroundColor: "hsl(346, 56%, 86%)" }} // pink
+          >
             <div className="overflow-hidden rounded-t-2xl">
               <img src={event.image} alt={event.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform" />
             </div>
@@ -70,4 +74,3 @@ const Events = () => (
 );
 
 export default Events;
-

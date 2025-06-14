@@ -3,7 +3,11 @@ import { Card } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section
+      id="about"
+      className="py-20"
+      style={{ backgroundColor: "hsl(346, 56%, 86%)" }} // pink per request
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
