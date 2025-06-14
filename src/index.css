@@ -102,7 +102,11 @@ p, .p, li, ul, ol {
 
 /* Default button text style */
 button, .btn, .font-btn {
-  @apply font-btn;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* Responsive tweaks for mobile Didot */
