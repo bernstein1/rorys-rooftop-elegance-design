@@ -20,7 +20,7 @@ const POSTS = [
 ];
 
 const Blog = () => (
-  <div className="min-h-screen pt-0 pb-16" style={{ backgroundColor: "hsl(46, 46%, 95%)" }}>
+  <div className="min-h-screen pt-0 pb-16" style={{ backgroundColor: "hsl(346, 56%, 86%)" }}>
     <Navigation />
     <section className="max-w-5xl mx-auto px-4 pt-32">
       <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
@@ -33,7 +33,7 @@ const Blog = () => (
         {POSTS.map((post, i) => (
           <div
             key={i}
-            style={{ backgroundColor: "hsl(346, 56%, 86%)" }} // pink
+            style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige after swap
             className="rounded-2xl shadow-lg hover-scale transition-all flex flex-col"
           >
             <div className="overflow-hidden rounded-t-2xl">

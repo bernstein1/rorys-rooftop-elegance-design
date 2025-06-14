@@ -6,31 +6,31 @@
 /* Custom color palette: */
 @layer base {
   :root {
-    --background: 46 46% 95%; /* #F6F2DA (Warm Cream - beige) */
+    --background: 346 56% 86%; /* #F6CCD3 (Soft Rose, Pink) */
     --foreground: 228 13% 18%; /* Rich Black (#2C2E33) */
-    --card: 346 56% 86%;       /* #F6CCD3 (Soft Rose, Pink) */
+    --card: 46 46% 95%;        /* #F6F2DA (Warm Cream - beige) */
     --card-foreground: 228 13% 18%;
 
-    --popover: 46 46% 95%;     /* Beige popover */
+    --popover: 346 56% 86%;    /* Pink popover */
     --popover-foreground: 228 13% 18%;
 
     --primary: 174 88% 32%;    /* #0A9F93 (Deep Teal) */
     --primary-foreground: 0 0% 100%; /* White for crisp high contrast */
 
-    --secondary: 346 56% 86%;  /* #F6CCD3 (Soft Rose, Pink) */
+    --secondary: 46 46% 95%;   /* Beige */
     --secondary-foreground: 228 13% 18%;
 
-    --muted: 46 46% 90%;       /* Lighter beige */
+    --muted: 346 56% 86%;      /* Pink */
     --muted-foreground: 228 10% 40%;
 
-    --accent: 346 56% 86%;     /* Use Soft Rose as accent */
+    --accent: 46 46% 95%;      /* Beige as accent */
     --accent-foreground: 228 13% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 174 65% 88%;     /* Light Deep Teal for subtle lines */
-    --input: 46 46% 88%;       /* Input area beige */
+    --input: 346 56% 92%;      /* Very light pink input area */
     --ring: 174 88% 32%;
 
     --radius: 0.5rem;
@@ -41,7 +41,7 @@
     --foreground: 0 0% 100%; /* White */
     --primary: 174 88% 32%; /* Deep Teal */
     --primary-foreground: 0 0% 100%;
-    --secondary: 346 56% 86%; /* Soft Rose */
+    --secondary: 46 46% 95%;  /* Beige */
     --secondary-foreground: 0 0% 100%;
     --muted: 228 13% 22%;
     --muted-foreground: 0 0% 80%;
@@ -85,3 +85,4 @@
   from {opacity:0; transform:translateY(20px);}
   to {opacity:1; transform:translateY(0);}
 }
+

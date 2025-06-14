@@ -6,7 +6,7 @@ const About = () => {
     <section
       id="about"
       className="py-20"
-      style={{ backgroundColor: "hsl(346, 56%, 86%)" }} // pink per request
+      style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige after swap
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
