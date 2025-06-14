@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -52,10 +51,13 @@ const Navigation = () => {
               </Link>
             ))}
             <Button 
+              asChild
               className="ml-8 bg-primary text-primary-foreground shadow-md px-8 py-3"
               size="lg"
             >
-              Make Reservation
+              <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+                Make Reservation
+              </a>
             </Button>
           </div>
 
@@ -88,8 +90,10 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="mt-4 w-full bg-primary text-primary-foreground px-8 py-3" size="lg">
-              Make Reservation
+            <Button asChild className="mt-4 w-full bg-primary text-primary-foreground px-8 py-3" size="lg">
+              <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+                Make Reservation
+              </a>
             </Button>
           </div>
         </div>

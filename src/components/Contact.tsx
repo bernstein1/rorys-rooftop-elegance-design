@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
@@ -108,17 +107,23 @@ const Contact = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
           <Button
+            asChild
             size="lg"
             className="px-12 py-3 shadow-lg"
           >
-            Make Reservation
+            <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+              Make Reservation
+            </a>
           </Button>
           <Button
+            asChild
             size="lg"
             variant="outline"
             className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
           >
-            Request Information
+            <a href="mailto:hello@rorysrooftop.com">
+              Request Information
+            </a>
           </Button>
         </div>
       </div>

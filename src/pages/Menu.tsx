@@ -67,8 +67,10 @@ const MenuPage = () => {
           </div>
 
           <div className="text-center mt-20">
-            <Button size="lg">
-              Make a Reservation
+            <Button asChild size="lg">
+              <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+                Make a Reservation
+              </a>
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
               A 20% gratuity will be added to parties of 6 or more.

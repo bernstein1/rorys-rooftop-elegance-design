@@ -79,7 +79,9 @@ const Events = () => {
                     <p className="text-base text-foreground/80">{event.desc}</p>
                     <div className="mt-4">
                       <a
-                        href="#"
+                        href="https://resy.com/rorysrooftop"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block rounded-full bg-[hsl(46,46%,95%)] text-primary px-8 py-3 font-medium hover:bg-[hsl(46,46%,90%)] transition-colors"
                       >
                         RSVP

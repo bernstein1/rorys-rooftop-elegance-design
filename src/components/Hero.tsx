@@ -31,10 +31,13 @@ const Hero = () => {
         />
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
           <Button 
+            asChild
             size="lg" 
             className="bg-primary text-primary-foreground px-12 py-3 shadow-lg"
           >
-            Make Reservation
+            <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+              Make Reservation
+            </a>
           </Button>
           <Button 
             size="lg" 
