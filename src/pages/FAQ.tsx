@@ -36,7 +36,7 @@ export default function FAQ() {
   return (
     <>
       <Navigation />
-      <section className="min-h-screen bg-[hsl(346,56%,86%)] flex items-center justify-center py-12 md:py-20 pt-24">
+      <section className="min-h-screen bg-[hsl(346,56%,86%)] flex items-center justify-center py-12 md:py-20 pt-36">
         <div className="w-full max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 text-foreground">
             Frequently Asked Questions
