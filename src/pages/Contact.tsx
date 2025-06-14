@@ -1,4 +1,5 @@
 
+import Navigation from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -44,8 +45,9 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-4 animate-fade-in">
+    <div className="bg-background min-h-screen w-full pb-16">
+      <Navigation />
+      <div className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
         <h1 className="font-hero mb-2">Contact Rory’s Rooftop Bar</h1>
         <p className="font-body text-lg mb-8 text-muted-foreground">
           Questions, event inquiries or feedback? Reach out — we’d love to connect.
@@ -53,7 +55,7 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-10">
           {/* Contact Details */}
           <div className="space-y-8 flex flex-col justify-between">
-            <Card className="p-6 bg-[hsl(46,46%,95%)]">
+            <Card className="p-6">
               <div className="flex items-center mb-3">
                 <MapPin className="text-primary mr-3" />
                 <span className="font-medium">446 W 14th St, New York, NY 10014</span>
@@ -85,7 +87,7 @@ export default function ContactPage() {
                 </a>
               </div>
             </Card>
-            <Card className="p-6 bg-[hsl(46,46%,95%)]">
+            <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Clock className="text-primary mr-3" />
                 <span className="font-medium">Hours</span>
@@ -101,7 +103,7 @@ export default function ContactPage() {
             </Card>
           </div>
           {/* Contact Form */}
-          <Card className="p-8 bg-[hsl(346,56%,96%)] shadow-lg">
+          <Card className="p-8 bg-[hsl(46,46%,95%)] shadow-lg">
             <h2 className="font-section-header text-2xl mb-4 text-primary">Send a Message</h2>
             <form className="space-y-5" onSubmit={handleSubmit}>
               <Input
@@ -130,6 +132,10 @@ export default function ContactPage() {
                 disabled={submitting}
                 className="resize-none"
                 required
+                style={{
+                  backgroundColor: "hsl(46,46%,95%)", // beige for form
+                  fontFamily: "Montserrat, Inter, sans-serif"
+                }}
               />
               <Button
                 type="submit"
