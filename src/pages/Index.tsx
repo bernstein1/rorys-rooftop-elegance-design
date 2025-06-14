@@ -16,12 +16,13 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
+      <EmailSignup />
       <MenuPreview />
       <Contact />
-      <EmailSignup />
       <Footer />
     </div>
   );
 };
 
 export default Index;
+
