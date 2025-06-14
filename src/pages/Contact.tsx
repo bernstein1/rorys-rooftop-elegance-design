@@ -112,7 +112,7 @@ export default function ContactPage() {
             <img
               src="/lovable-uploads/36a4f841-7d4d-4be7-931b-f1d83aa744d3.png"
               alt="Illustration of a person on a paddleboard shaped like a can"
-              className="absolute -bottom-12 -right-20 w-48 h-auto mix-blend-screen hidden lg:block"
+              className="absolute -bottom-12 -right-20 w-48 h-auto hidden lg:block"
               style={{ transform: "rotate(10deg)" }}
             />
             <Card className="p-8 bg-[hsl(46,46%,95%)] shadow-lg relative z-10">
