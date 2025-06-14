@@ -19,7 +19,6 @@ const EmailSignup = () => {
       return;
     }
     setSubmitting(true);
-    // Simulate async request (for demo)
     setTimeout(() => {
       setSubmitting(false);
       setEmail("");
@@ -31,11 +30,12 @@ const EmailSignup = () => {
   };
 
   return (
-    // Use a green-tinted beige background for the section
+    // Restore the lighter green-to-beige gradient like the original implementation
     <section
       className="relative z-10 py-16 px-4 md:py-20 flex flex-col items-center"
       style={{
-        background: "linear-gradient(120deg, rgba(10,159,147,0.14) 0%, rgba(246,242,218,0.92) 60%)"
+        background:
+          "linear-gradient(120deg, rgba(10,159,147,0.19) 0%, rgba(246,242,218,0.97) 75%)"
       }}
     >
       <div className="max-w-2xl w-full text-center">
@@ -53,7 +53,8 @@ const EmailSignup = () => {
             placeholder="Your email address"
             value={email}
             onChange={e => setEmail(e.target.value)}
-            className="flex-1 bg-background border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
+            // Force beige background & beige placeholder globally for this Input
+            className="flex-1 bg-[hsl(46,46%,95%)] border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
             disabled={submitting}
             required
             aria-label="Email address"
