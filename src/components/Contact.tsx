@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
@@ -106,11 +105,18 @@ const Contact = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
+          <Button
+            size="lg"
+            className="bg-primary text-primary-foreground px-12 py-3 shadow-lg"
+          >
             Make Reservation
           </Button>
-          <Button size="lg" variant="outline" className="px-8 py-3">
+          <Button
+            size="lg"
+            variant="outline"
+            className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
+          >
             Request Information
           </Button>
         </div>

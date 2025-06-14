@@ -37,9 +37,9 @@ const MenuPreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-10">
           {featuredItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden hover-scale group cursor-pointer">
+            <Card key={index} className="overflow-hidden hover-scale group cursor-pointer bg-card">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={item.image}
@@ -48,13 +48,13 @@ const MenuPreview = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <div className="text-2xl font-bold text-primary bg-background px-2 py-1 rounded">
+                  <div className="text-xl font-bold text-primary bg-background/90 px-3 py-2 rounded shadow">
                     {item.price}
                   </div>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">{item.name}</h3>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">{item.name}</h3>
                 <p className="text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             </Card>
@@ -62,7 +62,7 @@ const MenuPreview = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="px-8 py-3 text-lg">
+          <Button size="lg" variant="outline" className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition">
             View Full Menu
           </Button>
         </div>
