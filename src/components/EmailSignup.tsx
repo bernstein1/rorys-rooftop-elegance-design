@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { Mail } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const EmailSignup = () => {
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast({
@@ -19,14 +20,31 @@ const EmailSignup = () => {
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+
+    try {
+      const { error } = await supabase
+        .from("Email Collection")
+        .insert([{ Email: email }]);
+
+      if (error) {
+        throw error;
+      }
+
       setEmail("");
       toast({
         title: "Thank you for subscribing!",
         description: "You'll be the first to hear about new events and exclusive deals.",
       });
-    }, 1000);
+    } catch (error) {
+      console.error("Error inserting email:", error);
+      toast({
+        variant: "destructive",
+        title: "Error submitting email.",
+        description: "We couldn't add you to the list. Please try again later.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -76,4 +94,3 @@ const EmailSignup = () => {
 };
 
 export default EmailSignup;
-
