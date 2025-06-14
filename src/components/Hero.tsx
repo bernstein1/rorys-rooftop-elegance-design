@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -45,7 +44,6 @@ const Hero = () => {
             View Menu
           </Button>
         </div>
-        <p className="mt-10 text-sm text-foreground/70">21+ Only • Valid ID Required</p>
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ArrowDown className="w-7 h-7 text-white opacity-85" />
@@ -55,4 +53,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

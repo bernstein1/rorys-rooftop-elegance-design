@@ -1,4 +1,5 @@
-import { Instagram, Phone, MapPin } from "lucide-react";
+
+import { Instagram, Phone, MapPin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -41,6 +42,10 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
                 <span className="text-primary-foreground/80 text-sm">+1 631-212-8501</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:hello@rorysrooftop.com" className="text-primary-foreground/80 text-sm hover:text-white">hello@rorysrooftop.com</a>
               </div>
             </div>
           </div>
