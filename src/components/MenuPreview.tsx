@@ -62,7 +62,6 @@ const MenuPreview = () => {
           <Button
             size="lg"
             variant="outline"
-            className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
             onClick={() => navigate("/menu")}
           >
             View Full Menu

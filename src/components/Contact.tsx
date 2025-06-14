@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
@@ -120,7 +119,6 @@ const Contact = () => {
             asChild
             size="lg"
             variant="outline"
-            className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
           >
             <a href="mailto:hello@rorysrooftop.com">
               Request Information

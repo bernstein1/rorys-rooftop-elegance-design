@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -66,15 +67,6 @@ body {
   color: #666666;
 }
 
-/* === Button Text === */
-.font-btn {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 /* === Headings global override === */
 h1, .h1 {
   @apply font-hero;
@@ -97,15 +89,6 @@ p, .p, li, ul, ol {
   letter-spacing: 0.01em;
   line-height: 1.6;
   color: var(--color-body);
-}
-
-/* Default button text style */
-button, .btn, .font-btn {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 /* Responsive tweaks for mobile Didot */
@@ -182,11 +165,9 @@ button, .btn, .font-btn {
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 700;
     letter-spacing: -0.01em;
   }

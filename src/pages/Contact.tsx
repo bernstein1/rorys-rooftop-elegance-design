@@ -144,10 +144,6 @@ export default function ContactPage() {
                   disabled={submitting}
                   className="resize-none"
                   required
-                  style={{
-                    backgroundColor: "hsl(46,46%,95%)", // beige for form
-                    fontFamily: "Montserrat, Inter, sans-serif"
-                  }}
                 />
                 <Button
                   type="submit"
