@@ -11,35 +11,35 @@ const EVENTS = [
     date: "Friday, June 21, 8:00 PM",
     location: "Rory's Rooftop",
     image: "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png",
-    desc: "Celebrate the solstice with signature cocktails and skyline views. RSVP recommended.",
+    desc: "Kick off the weekend as our resident DJ spins feel-good tracks against a sunset backdrop. Good vibes only.",
   },
   {
     title: "Rosé All Day – Summer Brunch",
     date: "Sunday, June 23, 12:00 PM",
     location: "Rory's Rooftop",
     image: "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
-    desc: "A seasonal brunch series featuring curated small plates and endless rosé.",
+    desc: "Our weekend brunch, perfected. Enjoy a curated menu of brunch favorites and, of course, free-flowing rosé.",
   },
   {
     title: "Rooftop Movie Night",
     date: "Wednesday, June 26, 9:00 PM",
     location: "Rory's Rooftop",
     image: "/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png",
-    desc: "Watch a classic film under the stars with fresh popcorn and specialty drinks.",
+    desc: "Your favorite films have never looked this good. Join us for cinema under the stars, complete with themed cocktails and gourmet popcorn.",
   },
   {
     title: "Acoustic Sessions: Unplugged",
     date: "Thursday, June 27, 7:00 PM",
     location: "Rory's Rooftop",
     image: "/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png",
-    desc: "An intimate evening with local musicians. Limited seating available.",
+    desc: "Experience the magic of live, unplugged music in an intimate setting. A truly special night.",
   },
   {
     title: "Weekend Yoga & Mimosas",
     date: "Saturday, June 29, 10:00 AM",
     location: "Rory's Rooftop",
     image: "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
-    desc: "Start your weekend with a refreshing yoga session followed by brunch mimosas.",
+    desc: "Salute the sun (and the skyline) with a morning yoga class, then reward yourself with well-deserved mimosas.",
   },
 ];
 
@@ -51,10 +51,10 @@ const Events = () => {
       <Navigation />
       <section className="max-w-6xl mx-auto px-4 pt-32">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
-          Events at Rory's Rooftop
+          Happenings at The Rooftop
         </h1>
         <p className="text-lg md:text-xl mb-10 text-muted-foreground text-center max-w-2xl mx-auto">
-          Discover upcoming social events, themed nights, and special experiences overlooking NYC.
+          From sunset DJ sets to exclusive tasting menus, there's always something happening at Rory's. See what's on.
         </p>
         <div className="relative">
           <div className="overflow-x-scroll overflow-y-hidden pb-4 custom-scrollbar">

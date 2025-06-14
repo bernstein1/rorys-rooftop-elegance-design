@@ -26,9 +26,12 @@ const Hero = () => {
         <img
           src="/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png"
           alt="Rory's Rooftop Bar Logo"
-          className="h-32 md:h-40 w-auto mx-auto mb-10 drop-shadow-lg"
+          className="h-32 md:h-40 w-auto mx-auto mb-6 drop-shadow-lg"
           style={{ maxHeight: "160px" }}
         />
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 animate-fade-in-up drop-shadow-md">
+          Elevate Your Evenings
+        </h1>
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
           <Button 
             asChild

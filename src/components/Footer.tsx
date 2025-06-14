@@ -1,3 +1,4 @@
+
 import { Instagram, Phone, MapPin, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -9,8 +10,7 @@ const Footer = () => {
           <div className="col-span-2">
             <h3 className="text-2xl font-bold mb-4 tracking-tight">Rory's Rooftop</h3>
             <p className="text-primary-foreground/90 mb-4 max-w-md">
-              Elevated dining above the city. Experience cocktails, cuisine, and skyline views 
-              in the heart of NYC's Meatpacking District.
+              Where skyline views, creative cocktails, and an unforgettable vibe meet. Your elevated escape in the heart of the Meatpacking District.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/rorysrooftop/" className="text-primary-foreground/80 hover:text-white">

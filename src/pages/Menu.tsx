@@ -6,31 +6,31 @@ import { Link } from "react-router-dom";
 
 const MENU_DATA = {
   "Signature Cocktails": [
-    { name: "Manhattan Sunset", description: "Bourbon, sweet vermouth, cherry bitters, orange peel", price: "$16" },
-    { name: "Rory's Rooftop G&T", description: "Hendrick's Gin, elderflower tonic, cucumber ribbon, juniper berries", price: "$15" },
-    { name: "The High Line", description: "Vodka, St-Germain, grapefruit, lime, sparkling rosé", price: "$16" },
-    { name: "Spicy Watermelon Margarita", description: "Blanco tequila, fresh watermelon, jalapeño, lime, agave nectar", price: "$15" },
-    { name: "Espresso Martini", description: "Vodka, Kahlúa, fresh-brewed espresso, simple syrup", price: "$17" },
+    { name: "Manhattan Sunset", description: "A classic, reimagined. Rich bourbon, sweet vermouth, and a whisper of cherry bitters.", price: "$16" },
+    { name: "Rory's Rooftop G&T", description: "Our signature serve. Crisp Hendrick's Gin, floral elderflower tonic, and a refreshing cucumber ribbon.", price: "$15" },
+    { name: "The High Line", description: "An effervescent blend of vodka, St-Germain, grapefruit, and lime, topped with sparkling rosé.", price: "$16" },
+    { name: "Spicy Watermelon Margarita", description: "Summer in a glass. Blanco tequila, fresh watermelon, a kick of jalapeño, and lime.", price: "$15" },
+    { name: "Espresso Martini", description: "The ultimate pick-me-up. Vodka, Kahlúa, and fresh-brewed espresso, shaken to velvety perfection.", price: "$17" },
   ],
   "Small Plates & Sharables": [
-    { name: "Truffle Fries", description: "Hand-cut fries, truffle oil, parmesan, fresh parsley, garlic aioli", price: "$12" },
-    { name: "Whipped Ricotta", description: "Honey, black pepper, toasted sourdough", price: "$14" },
-    { name: "Tuna Tartare Tacos", description: "Crispy wonton shells, ahi tuna, avocado, sriracha mayo", price: "$19" },
-    { name: "Burrata & Prosciutto", description: "Heirloom tomatoes, balsamic glaze, fresh basil, grilled bread", price: "$21" },
-    { name: "Short Rib Sliders", description: "Brioche buns, braised short rib, caramelized onions, horseradish cream", price: "$18" },
+    { name: "Truffle Fries", description: "Perfectly crisp, tossed in truffle oil and parmesan, served with garlic aioli. Irresistible.", price: "$12" },
+    { name: "Whipped Ricotta", description: "Creamy, dreamy ricotta topped with honey and black pepper. Served with toasted sourdough for dipping.", price: "$14" },
+    { name: "Tuna Tartare Tacos", description: "Two crispy wonton shells filled with fresh ahi tuna, creamy avocado, and a zesty sriracha mayo.", price: "$19" },
+    { name: "Burrata & Prosciutto", description: "The perfect pairing. Creamy burrata, salty prosciutto, heirloom tomatoes, and a balsamic glaze.", price: "$21" },
+    { name: "Short Rib Sliders", description: "Tender, braised short rib on brioche buns with sweet caramelized onions and a horseradish kick.", price: "$18" },
   ],
   "Wines by the Glass": [
-    { name: "Sauvignon Blanc, Cloudy Bay", description: "Marlborough, New Zealand", price: "$16" },
-    { name: "Rosé, Whispering Angel", description: "Provence, France", price: "$15" },
-    { name: "Pinot Noir, Belle Glos", description: "Clark & Telephone Vineyard, California", price: "$20" },
-    { name: "Cabernet Sauvignon, Caymus", description: "Napa Valley, California", price: "$28" },
-    { name: "Prosecco, La Marca", description: "Veneto, Italy", price: "$14" },
+    { name: "Sauvignon Blanc, Cloudy Bay", description: "A vibrant and crisp classic from Marlborough, New Zealand.", price: "$16" },
+    { name: "Rosé, Whispering Angel", description: "The quintessential Provence rosé. Dry, elegant, and endlessly drinkable.", price: "$15" },
+    { name: "Pinot Noir, Belle Glos", description: "A rich and expressive Pinot Noir from California's coast.", price: "$20" },
+    { name: "Cabernet Sauvignon, Caymus", description: "Bold and iconic. A signature Cabernet from Napa Valley.", price: "$28" },
+    { name: "Prosecco, La Marca", description: "Bright, bubbly, and beautifully Italian. Perfect for any celebration.", price: "$14" },
   ],
   "Beer & Cider": [
-    { name: "Peroni, Pale Lager", description: "Italy", price: "$9" },
-    { name: "Brooklyn Lager, Amber Lager", description: "Brooklyn, NY", price: "$9" },
-    { name: "Allagash White, Witbier", description: "Portland, ME", price: "$10" },
-    { name: "Downeast Original, Unfiltered Cider", description: "Boston, MA", price: "$9" },
+    { name: "Peroni, Pale Lager", description: "A crisp and refreshing Italian lager. A timeless choice.", price: "$9" },
+    { name: "Brooklyn Lager, Amber Lager", description: "A taste of our home borough. Smooth, flavorful, and versatile.", price: "$9" },
+    { name: "Allagash White, Witbier", description: "A refreshing Belgian-style wheat beer with notes of citrus and spice.", price: "$10" },
+    { name: "Downeast Original, Unfiltered Cider", description: "Juicy, fresh, and unfiltered. A modern American cider.", price: "$9" },
   ],
 };
 
@@ -43,7 +43,7 @@ const MenuPage = () => {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Our Menu</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Crafted with passion and inspired by the city, our menu features locally-sourced ingredients and innovative flavors.
+              A curated collection of vibrant cocktails and shareable plates, inspired by the spirit of New York and crafted with the finest ingredients. Dive in.
             </p>
           </div>
 

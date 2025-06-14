@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
@@ -15,10 +16,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Visit <span className="text-primary">Rory's</span>
+            Join Us <span className="text-primary">Above It All</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Find us in the heart of Manhattan's Meatpacking District
+            Your table with a view is waiting. Find us in the heart of the Meatpacking District.
           </p>
         </div>
 

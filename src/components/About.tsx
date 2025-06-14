@@ -17,14 +17,10 @@ const About = () => {
               <span className="text-primary">Beyond Ordinary</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Perched high above Manhattan's vibrant Meatpacking District, Rory's Rooftop 
-              offers an unparalleled dining experience where exceptional cocktails meet 
-              breathtaking city views.
+              High above the electric pulse of the Meatpacking District, Rory's Rooftop is an urban oasis. We blend stunning skyline views with an atmosphere of effortless sophistication, creating the perfect backdrop for unforgettable moments.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our carefully curated menu celebrates both classic and innovative flavors, 
-              while our atmosphere captures the energy and sophistication that defines 
-              New York City's dining scene.
+              Our menu is a love letter to New York—a spirited mix of inventive cocktails and artfully crafted plates, all designed to be shared and savored. Join us where the city lights sparkle brightest.
             </p>
           </div>
           {/* Image */}

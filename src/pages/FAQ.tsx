@@ -1,34 +1,35 @@
+
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const faqs = [
   {
     question: "Do I need a reservation?",
-    answer: "Reservations are highly recommended, especially on weekends. Walk-ins are welcome based on availability.",
+    answer: "We highly recommend making a reservation, especially for weekend visits, to ensure your spot. We do save some space for walk-in guests, available on a first-come, first-served basis.",
   },
   {
     question: "Is there a dress code?",
-    answer: "Smart casual attire is encouraged. Please, no beachwear or athletic wear.",
+    answer: "We encourage smart casual attire. Think date night, not gym day. Please, no beachwear or athletic wear.",
   },
   {
     question: "Are children allowed?",
-    answer: "Rory’s Rooftop is 21+ only. Valid government-issued ID is required for all guests.",
+    answer: "To maintain our lounge atmosphere, all guests must be 21 or older. Please have your valid government-issued ID ready.",
   },
   {
     question: "Do you host private events?",
-    answer: "Absolutely! We welcome private events and group bookings. Please contact us for event packages and availability.",
+    answer: "We love a good party! Our rooftop is the perfect venue for private events. Get in touch with our events team to start planning.",
   },
   {
     question: "Can I bring my own cake or outside food?",
-    answer: "Outside food and beverages are not permitted, but we’re happy to assist with special arrangements for celebrations.",
+    answer: "While we don't permit outside food or drinks, our team can help arrange special treats for your celebration. Let us know what you're celebrating when you book!",
   },
   {
     question: "Is the rooftop accessible for guests with disabilities?",
-    answer: "Yes, our facilities are accessible and we’re happy to accommodate additional needs. Please let us know in advance.",
+    answer: "Yes, our rooftop and facilities are fully accessible. If you have specific needs, please give us a call ahead of your visit so we can ensure your experience is seamless.",
   },
   {
     question: "How do I find the rooftop?",
-    answer: "We are located on the roof of Puttery. Take the elevator and press 6 to reach the rooftop.",
+    answer: "You'll find us on the roof of Puttery. Just enter, hop in the elevator, and come on up to the 6th floor. The views are worth it.",
   },
 ];
 
@@ -58,10 +59,10 @@ export default function FAQ() {
 
             <div className="relative z-10">
               <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 text-foreground">
-                Frequently Asked Questions
+                Good to Know
               </h1>
               <p className="text-lg text-center text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
-                Answers to our most common guest questions. For anything else, feel free to{" "}
+                Everything you need to know before you go. If your question isn't here, please feel free to{" "}
                 <a href="/contact" className="underline text-primary">contact us</a>.
               </p>
               <div className="w-full">
