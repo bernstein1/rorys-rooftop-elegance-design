@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -49,12 +48,12 @@ export default function ContactPage() {
       <Navigation />
       <div className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
         <h1 className="font-hero mb-2">Contact Rory’s Rooftop Bar</h1>
-        <p className="font-body text-lg mb-8 text-muted-foreground">
+        <p className="font-body text-lg mb-8 text-muted-foreground text-center">
           Questions, event inquiries or feedback? Reach out — we’d love to connect.
         </p>
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* Contact Details */}
-          <div className="space-y-8 flex flex-col justify-between">
+          <div className="space-y-6 flex flex-col justify-between">
             <Card className="p-6">
               <div className="flex items-center mb-3">
                 <MapPin className="text-primary mr-3" />
