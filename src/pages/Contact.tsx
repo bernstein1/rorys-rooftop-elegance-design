@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -44,9 +45,21 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="bg-background min-h-screen w-full pb-16">
+    <div className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
       <Navigation />
-      <div className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
+      <div className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in relative">
+        <img
+          src="/lovable-uploads/70c2fc32-5834-4dcc-9911-137b8c8ff451.png"
+          alt="Illustration of a person reading under a beach umbrella"
+          className="absolute top-24 -left-28 w-40 h-auto hidden lg:block"
+          style={{ transform: "rotate(-10deg)" }}
+        />
+        <img
+          src="/lovable-uploads/36a4f841-7d4d-4be7-931b-f1d83aa744d3.png"
+          alt="Illustration of a person on a paddleboard shaped like a can"
+          className="absolute bottom-8 -right-28 w-48 h-auto mix-blend-screen hidden lg:block"
+          style={{ transform: "rotate(10deg)" }}
+        />
         <h1 className="font-hero mb-2">Contact Rory’s Rooftop Bar</h1>
         <p className="font-body text-lg mb-8 text-muted-foreground text-center">
           Questions, event inquiries or feedback? Reach out — we’d love to connect.

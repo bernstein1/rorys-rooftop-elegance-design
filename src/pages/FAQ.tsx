@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
@@ -36,8 +37,21 @@ export default function FAQ() {
   return (
     <>
       <Navigation />
-      <section className="min-h-screen bg-[hsl(346,56%,86%)] flex items-center justify-center py-12 md:py-20 pt-36">
-        <div className="w-full max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="min-h-screen bg-[hsl(346,56%,86%)] flex items-center justify-center py-12 md:py-20 pt-36 overflow-x-hidden">
+        <div className="w-full max-w-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <img
+            src="/lovable-uploads/717ae8bd-32a5-4dd0-b648-c6bfc76d8b4b.png"
+            alt="Illustration of a person relaxing on a lemon-slice floatie"
+            className="absolute top-[-2rem] -left-24 w-40 md:w-48 opacity-90 hidden md:block"
+            style={{ transform: "rotate(-15deg)" }}
+          />
+          <img
+            src="/lovable-uploads/eaf50c27-a77f-4580-8706-d131c85608f1.png"
+            alt="Illustration of a person relaxing in a cocktail"
+            className="absolute bottom-[-2rem] -right-24 w-40 md:w-48 opacity-90 hidden md:block"
+            style={{ transform: "rotate(15deg)" }}
+          />
+
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 text-foreground">
             Frequently Asked Questions
           </h1>
