@@ -24,9 +24,10 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <a href="/">
               <img
-                src="/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png"
-                alt="Rory's Rooftop Logo"
-                className="h-10 w-auto object-contain"
+                src="/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png"
+                alt="Rory's Rooftop Bar Logo"
+                className="h-12 md:h-14 w-auto object-contain"
+                style={{ maxHeight: "56px" }}
               />
             </a>
           </div>
@@ -94,4 +95,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
