@@ -1,4 +1,3 @@
-
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const faqs = [
@@ -25,6 +24,10 @@ const faqs = [
   {
     question: "Is the rooftop accessible for guests with disabilities?",
     answer: "Yes, our facilities are accessible and we’re happy to accommodate additional needs. Please let us know in advance.",
+  },
+  {
+    question: "How do I find the rooftop?",
+    answer: "We are located on the roof of Puttery. Take the elevator and press 6 to reach the rooftop.",
   },
 ];
 
