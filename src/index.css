@@ -1,7 +1,119 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ==== Custom Typography Variables & Classes ==== */
+:root {
+  --font-heading: 'Playfair Display', 'serif'; /* Didot alt */
+  --font-body: 'Montserrat', 'Inter', 'sans-serif'; /* Grotesque alt */
+  --color-heading: #0A9F93;
+  --color-body: #1a1a1a;
+}
+
+/* === Base font family === */
+body {
+  font-family: var(--font-body);
+  color: var(--color-body);
+  @apply antialiased;
+}
+
+/* === HERO Headline === */
+.font-hero {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 6vw, 4.5rem); /* 36-72px */
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--color-heading);
+}
+
+/* === Section Header === */
+.font-section-header {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4vw, 3rem); /* 28-48px */
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--color-heading);
+}
+
+/* === Subsection Header === */
+.font-subsection-header {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20-28px */
+  letter-spacing: 0em;
+  line-height: 1.3;
+}
+
+/* === Body Text === */
+.font-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.125rem; /* 18px */
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--color-body);
+}
+
+/* === Supporting Text === */
+.font-supporting {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.95rem; /* 15px */
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  color: #666666;
+}
+
+/* === Button Text === */
+.font-btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* === Headings global override === */
+h1, .h1 {
+  @apply font-hero;
+}
+h2, .h2 {
+  @apply font-section-header;
+}
+h3, .h3 {
+  @apply font-subsection-header;
+}
+h4, .h4 {
+  @apply font-brandongrotesque font-medium text-lg;
+}
+
+/* Paragraphs and default text */
+p, .p, li, ul, ol, .font-body {
+  @apply font-body;
+}
+
+/* Default button text style */
+button, .btn, .font-btn {
+  @apply font-btn;
+}
+
+/* Responsive tweaks for mobile Didot */
+@media (max-width: 600px) {
+  .font-hero {
+    font-size: clamp(2rem, 7vw, 3rem); /* 32-48px */
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .font-section-header {
+    font-size: clamp(1.25rem, 5vw, 2rem); /* 20-32px */
+    line-height: 1.22;
+  }
+  .font-body {
+    font-size: 1rem;
+  }
+}
 
 /* Custom color palette: */
 @layer base {
@@ -85,4 +197,3 @@
   from {opacity:0; transform:translateY(20px);}
   to {opacity:1; transform:translateY(0);}
 }
-
