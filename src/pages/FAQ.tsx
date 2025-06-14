@@ -1,4 +1,3 @@
-
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const faqs = [
@@ -46,8 +45,8 @@ export default function FAQ() {
         >
           {faqs.map((faq, idx) => (
             <AccordionItem key={idx} value={`item-${idx}`}>
-              <AccordionTrigger className="text-lg">{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionTrigger className="text-lg px-6 py-4">{faq.question}</AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 pt-2">{faq.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
