@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -40,24 +41,19 @@ const MenuPreview = () => {
 
         <div className="grid md:grid-cols-3 gap-10">
           {featuredItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden hover-scale group cursor-pointer">
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  {/* The price box should use beige background and teal text */}
-                  <div className="text-xl font-bold text-primary bg-[hsl(46,46%,95%)] px-3 py-2 rounded shadow border border-primary">
-                    {item.price}
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold mb-2 text-foreground">{item.name}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+            <Card
+              key={index}
+              className="relative overflow-hidden group cursor-pointer h-80 rounded-lg shadow-lg border-0"
+              onClick={() => navigate("/menu")}
+            >
+              <img
+                src={item.image}
+                alt={item.name}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-2xl font-didot text-white drop-shadow-lg">{item.name}</h3>
               </div>
             </Card>
           ))}
