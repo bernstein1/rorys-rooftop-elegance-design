@@ -1,5 +1,7 @@
 
 import { CalendarDays, MapPin } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import EmailSignup from "@/components/EmailSignup";
 
 const EVENTS = [
   {
@@ -19,8 +21,9 @@ const EVENTS = [
 ];
 
 const Events = () => (
-  <div className="min-h-screen pt-32 pb-16 bg-background">
-    <section className="max-w-6xl mx-auto px-4">
+  <div className="min-h-screen pt-0 pb-16 bg-background">
+    <Navigation />
+    <section className="max-w-6xl mx-auto px-4 pt-32">
       <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
         Events at Rory's Rooftop
       </h1>
@@ -60,7 +63,11 @@ const Events = () => (
         </p>
       </div>
     </section>
+    <div className="mt-16">
+      <EmailSignup />
+    </div>
   </div>
 );
 
 export default Events;
+
