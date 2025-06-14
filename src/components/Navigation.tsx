@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -12,7 +13,7 @@ const Navigation = () => {
     { name: "Menu", href: "#menu" },
     { name: "Events", href: "/events" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" }, // changed from #contact to /contact
   ];
 
   return (
@@ -97,3 +98,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
