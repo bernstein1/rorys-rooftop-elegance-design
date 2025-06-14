@@ -33,14 +33,14 @@ const EmailSignup = () => {
     <section
       className="relative z-10 py-16 px-4 md:py-20 flex flex-col items-center"
       style={{
-        // Use a solid vibrant light green that matches site colors
-        background: "#C7F8F2"
+        // Solid turquoise (#0A9F93) matching site primary color
+        background: "#0A9F93",
       }}
     >
       <div className="max-w-2xl w-full text-center">
-        <Mail className="mx-auto mb-4 text-primary" size={40} />
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Stay Informed</h2>
-        <p className="text-lg md:text-xl text-foreground/80 mb-8">
+        <Mail className="mx-auto mb-4 text-primary-foreground" size={40} />
+        <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Stay Informed</h2>
+        <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
           Join the list for exclusive invites, opening parties, and signature rooftop experiences.
         </p>
         <form
@@ -52,7 +52,6 @@ const EmailSignup = () => {
             placeholder="Your email address"
             value={email}
             onChange={e => setEmail(e.target.value)}
-            // Force beige background & beige placeholder globally for this Input
             className="flex-1 bg-[hsl(46,46%,95%)] border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
             disabled={submitting}
             required
@@ -67,7 +66,7 @@ const EmailSignup = () => {
             {submitting ? "Joining..." : "Sign Up"}
           </Button>
         </form>
-        <p className="text-xs text-muted-foreground mt-4">
+        <p className="text-xs text-primary-foreground mt-4">
           No spam, ever. We respect your privacy. Unsubscribe at any time.
         </p>
       </div>
