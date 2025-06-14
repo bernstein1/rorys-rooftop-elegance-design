@@ -30,12 +30,12 @@ const EmailSignup = () => {
   };
 
   return (
-    // Restore the lighter green-to-beige gradient like the original implementation
     <section
       className="relative z-10 py-16 px-4 md:py-20 flex flex-col items-center"
       style={{
+        // Use a vibrant light green to beige gradient, matching the site colors
         background:
-          "linear-gradient(120deg, rgba(10,159,147,0.19) 0%, rgba(246,242,218,0.97) 75%)"
+          "linear-gradient(120deg, rgba(10,159,147,0.22) 0%, rgba(246,242,218,0.99) 80%)"
       }}
     >
       <div className="max-w-2xl w-full text-center">
@@ -77,3 +77,4 @@ const EmailSignup = () => {
 };
 
 export default EmailSignup;
+
