@@ -1,4 +1,3 @@
-
 import { Instagram, Phone, MapPin, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -53,7 +52,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/80 text-sm">
-            © 2024 Rory's Rooftop. All rights reserved. | 21+ Only, Valid ID Required
+            © 2024 Rory's Rooftop. All rights reserved.
           </p>
         </div>
       </div>

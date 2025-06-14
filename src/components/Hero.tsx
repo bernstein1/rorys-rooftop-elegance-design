@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, AlertTriangle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -44,6 +45,16 @@ const Hero = () => {
             View Menu
           </Button>
         </div>
+
+        {/* Important Information Card */}
+        <Card className="mt-10 bg-primary/10 border-primary/20 max-w-sm w-full shadow-lg">
+          <CardContent className="p-4 flex items-center justify-center gap-4">
+            <AlertTriangle className="w-8 h-8 text-primary flex-shrink-0" />
+            <p className="text-sm text-primary/90 text-left">
+              <strong>21+ Only:</strong> A valid government-issued ID is required for entry.
+            </p>
+          </CardContent>
+        </Card>
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ArrowDown className="w-7 h-7 text-white opacity-85" />
