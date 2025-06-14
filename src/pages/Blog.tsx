@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -134,33 +133,10 @@ const Blog = () => {
         {/* Horizontal scrolling container with always visible scrollbar */}
         <div className="relative">
           <div 
-            className="overflow-x-scroll overflow-y-hidden pb-4"
-            style={{
-              scrollbarWidth: 'auto', // Firefox
-              WebkitScrollbarWidth: 'auto', // Safari/Chrome
-            }}
+            className="overflow-x-scroll overflow-y-hidden pb-4 custom-scrollbar"
           >
-            <style jsx>{`
-              div::-webkit-scrollbar {
-                height: 12px;
-              }
-              div::-webkit-scrollbar-track {
-                background: rgba(0, 0, 0, 0.1);
-                border-radius: 6px;
-              }
-              div::-webkit-scrollbar-thumb {
-                background: hsl(174, 88%, 32%);
-                border-radius: 6px;
-                border: 2px solid transparent;
-                background-clip: content-box;
-              }
-              div::-webkit-scrollbar-thumb:hover {
-                background: hsl(174, 88%, 28%);
-                background-clip: content-box;
-              }
-            `}</style>
             <div className="flex gap-4 sm:gap-6 w-max">
-              {POSTS.map((post, i) => (
+              {POSTS.map((post) => (
                 <div
                   key={post.slug}
                   className="w-72 sm:w-80 flex-shrink-0"
