@@ -19,12 +19,13 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 text-center max-w-3xl mx-auto px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-foreground/95">
-          Rory's Rooftop
+        {/* Changed text color to primary (turquoise) */}
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-primary">
+          Rory&apos;s Rooftop
         </h1>
-        <p className="text-xl md:text-2xl mb-10 max-w-xl mx-auto leading-relaxed animate-fade-in text-foreground/80">
+        <p className="text-xl md:text-2xl mb-10 max-w-xl mx-auto leading-relaxed animate-fade-in text-primary">
           Elevated dining above the city.<br className="hidden md:block" /> 
-          Experience cocktails, cuisine, <br className="hidden md:block" /> and skyline views in the heart of NYC's Meatpacking District.
+          Experience cocktails, cuisine, <br className="hidden md:block" /> and skyline views in the heart of NYC&apos;s Meatpacking District.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
           <Button 
