@@ -1,4 +1,5 @@
 
+import Navigation from "@/components/Navigation";
 import { CalendarDays } from "lucide-react";
 
 const POSTS = [
@@ -19,8 +20,9 @@ const POSTS = [
 ];
 
 const Blog = () => (
-  <div className="min-h-screen pt-32 pb-16 bg-background">
-    <section className="max-w-5xl mx-auto px-4">
+  <div className="min-h-screen pt-0 pb-16 bg-background">
+    <Navigation />
+    <section className="max-w-5xl mx-auto px-4 pt-32">
       <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
         Rory's Rooftop Blog
       </h1>
@@ -54,3 +56,4 @@ const Blog = () => (
 );
 
 export default Blog;
+
