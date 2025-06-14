@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,7 +59,8 @@ const EmailSignup = () => {
           />
           <Button
             type="submit"
-            className="bg-primary text-primary-foreground px-8 font-semibold text-base rounded-full shadow-lg hover:bg-primary/90 transition-colors"
+            variant="outline"
+            className="border-primary text-primary px-12 py-3"
             size="lg"
             disabled={submitting}
           >
@@ -74,3 +76,4 @@ const EmailSignup = () => {
 };
 
 export default EmailSignup;
+
