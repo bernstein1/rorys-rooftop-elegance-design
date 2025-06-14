@@ -6,12 +6,12 @@
 /* Custom color palette: */
 @layer base {
   :root {
-    --background: 46 46 95%; /* #F6F2DA (Warm Cream) */
+    --background: 346 56% 86%; /* #F6CCD3 (Soft Rose, Pink) */
     --foreground: 228 13% 18%; /* Rich Black (#2C2E33) */
-    --card: 46 46 95%; 
+    --card: 346 56% 86%; /* Pink background for cards */
     --card-foreground: 228 13% 18%;
 
-    --popover: 0 0% 100%;
+    --popover: 346 56% 86%; /* Pink popover */
     --popover-foreground: 228 13% 18%;
 
     --primary: 174 88% 32%; /* #0A9F93 (Deep Teal) */
@@ -20,7 +20,7 @@
     --secondary: 346 56% 86%; /* #F6CCD3 (Soft Rose) */
     --secondary-foreground: 228 13% 18%;
 
-    --muted: 46 46 90%; /* Lighter Cream */
+    --muted: 346 56% 91%; /* Even lighter Pink, close to #FAE1E7 */
     --muted-foreground: 228 10% 40%;
 
     --accent: 346 56% 86%; /* Use Soft Rose as accent */
@@ -30,7 +30,7 @@
     --destructive-foreground: 0 0% 100%;
 
     --border: 174 65% 88%; /* Light Deep Teal for subtle lines */
-    --input: 46 46 88%;
+    --input: 346 56% 92%; /* Just a very light pink input area */
     --ring: 174 88% 32%;
 
     --radius: 0.5rem;
