@@ -20,6 +20,27 @@ const EVENTS = [
     image: "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
     desc: "A seasonal brunch series featuring curated small plates and endless rosé.",
   },
+  {
+    title: "Rooftop Movie Night",
+    date: "Wednesday, June 26, 9:00 PM",
+    location: "Rory's Rooftop",
+    image: "/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png",
+    desc: "Watch a classic film under the stars with fresh popcorn and specialty drinks.",
+  },
+  {
+    title: "Acoustic Sessions: Unplugged",
+    date: "Thursday, June 27, 7:00 PM",
+    location: "Rory's Rooftop",
+    image: "/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png",
+    desc: "An intimate evening with local musicians. Limited seating available.",
+  },
+  {
+    title: "Weekend Yoga & Mimosas",
+    date: "Saturday, June 29, 10:00 AM",
+    location: "Rory's Rooftop",
+    image: "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
+    desc: "Start your weekend with a refreshing yoga session followed by brunch mimosas.",
+  },
 ];
 
 const Events = () => {
