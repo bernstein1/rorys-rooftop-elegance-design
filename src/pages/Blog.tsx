@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { CalendarDays } from "lucide-react";
 
@@ -33,13 +32,12 @@ const Blog = () => (
         {POSTS.map((post, i) => (
           <div
             key={i}
-            style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige for cards
             className="rounded-2xl shadow-lg hover-scale transition-all flex flex-col"
           >
             <div className="overflow-hidden rounded-t-2xl">
               <img src={post.image} alt={post.title} className="w-full h-56 object-cover group-hover:scale-105 transition-transform" />
             </div>
-            <div className="p-6 flex flex-col h-full">
+            <div className="p-6 flex flex-col h-full bg-[hsl(46,46%,95%)] rounded-b-2xl">
               <span className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                 <CalendarDays className="w-4 h-4" /> {post.date}
               </span>

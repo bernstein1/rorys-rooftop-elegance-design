@@ -29,12 +29,12 @@ const About = () => {
             
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 pt-6">
-              {/* Ensuring Cards use Beige */}
-              <Card className="p-4 text-center bg-card">
+              {/* Cards already use beige via Card component */}
+              <Card className="p-4 text-center">
                 <h3 className="font-semibold text-primary mb-2">Rooftop Views</h3>
                 <p className="text-sm text-muted-foreground">Stunning NYC skyline panoramas</p>
               </Card>
-              <Card className="p-4 text-center bg-card">
+              <Card className="p-4 text-center">
                 <h3 className="font-semibold text-primary mb-2">Craft Cocktails</h3>
                 <p className="text-sm text-muted-foreground">Expertly crafted drinks</p>
               </Card>

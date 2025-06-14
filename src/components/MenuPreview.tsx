@@ -39,7 +39,7 @@ const MenuPreview = () => {
 
         <div className="grid md:grid-cols-3 gap-10">
           {featuredItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden hover-scale group cursor-pointer bg-card">
+            <Card key={index} className="overflow-hidden hover-scale group cursor-pointer">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={item.image}

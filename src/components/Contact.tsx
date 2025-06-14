@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
@@ -24,7 +25,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Location Card */}
-          <Card className="p-6 bg-background">
+          <Card className="p-6">
             <div className="flex items-start space-x-4">
               <MapPin className="w-6 h-6 text-primary mt-1" />
               <div>
@@ -42,7 +43,7 @@ const Contact = () => {
           </Card>
 
           {/* Contact Card */}
-          <Card className="p-6 bg-background">
+          <Card className="p-6">
             <div className="flex items-start space-x-4">
               <Phone className="w-6 h-6 text-primary mt-1" />
               <div>
@@ -61,7 +62,7 @@ const Contact = () => {
           </Card>
 
           {/* Hours Card */}
-          <Card className="p-6 bg-background">
+          <Card className="p-6">
             <div className="flex items-start space-x-4">
               <Clock className="w-6 h-6 text-primary mt-1" />
               <div>
@@ -81,7 +82,7 @@ const Contact = () => {
 
         {/* Important Info */}
         <div className="mt-12 text-center">
-          <Card className="p-6 bg-background max-w-2xl mx-auto">
+          <Card className="p-6 max-w-2xl mx-auto">
             <h3 className="text-lg font-semibold mb-3">Important Information</h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
               <div>
@@ -108,7 +109,7 @@ const Contact = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
           <Button
             size="lg"
-            className="bg-primary text-primary-foreground px-12 py-3 shadow-lg"
+            className="px-12 py-3 shadow-lg"
           >
             Make Reservation
           </Button>

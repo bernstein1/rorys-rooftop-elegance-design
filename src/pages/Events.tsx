@@ -52,7 +52,7 @@ const Events = () => (
               <div className="mt-4">
                 <a
                   href="#"
-                  className="inline-block rounded-full bg-primary text-primary-foreground px-8 py-3 font-medium hover:bg-primary/80 transition-colors"
+                  className="inline-block rounded-full bg-[hsl(46,46%,95%)] text-primary px-8 py-3 font-medium hover:bg-[hsl(46,46%,90%)] transition-colors"
                 >
                   RSVP
                 </a>
