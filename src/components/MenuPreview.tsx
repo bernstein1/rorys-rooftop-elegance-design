@@ -47,8 +47,9 @@ const MenuPreview = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <div className="text-xl font-bold text-primary bg-background/90 px-3 py-2 rounded shadow">
+                <div className="absolute bottom-4 left-4">
+                  {/* The price box should use beige background and teal text */}
+                  <div className="text-xl font-bold text-primary bg-[hsl(46,46%,95%)] px-3 py-2 rounded shadow border border-primary">
                     {item.price}
                   </div>
                 </div>
@@ -62,7 +63,12 @@ const MenuPreview = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition">
+          {/* Remove any custom bg/text, use outline variant which is beige by default */}
+          <Button
+            size="lg"
+            variant="outline"
+            className="px-12 py-3 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
+          >
             View Full Menu
           </Button>
         </div>

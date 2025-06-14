@@ -31,7 +31,13 @@ const EmailSignup = () => {
   };
 
   return (
-    <section className="relative z-10 bg-primary/10 py-16 px-4 md:py-20 flex flex-col items-center">
+    // Use a green-tinted beige background for the section
+    <section
+      className="relative z-10 py-16 px-4 md:py-20 flex flex-col items-center"
+      style={{
+        background: "linear-gradient(120deg, rgba(10,159,147,0.14) 0%, rgba(246,242,218,0.92) 60%)"
+      }}
+    >
       <div className="max-w-2xl w-full text-center">
         <Mail className="mx-auto mb-4 text-primary" size={40} />
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Stay Informed</h2>
