@@ -2,6 +2,7 @@
 import Navigation from "@/components/Navigation";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 
 // Add more posts for horizontal scrolling
@@ -130,44 +131,47 @@ const Blog = () => {
         <p className="text-lg md:text-xl mb-8 text-muted-foreground text-center max-w-2xl mx-auto">
           Stories, culture, and cocktail inspiration straight from the rooftop.
         </p>
+        {/* ScrollArea wraps the carousel and provides a nice horizontal scroll bar directly underneath */}
         <div className="relative">
-          <Carousel
-            className="w-full"
-            opts={{ align: "start", slidesToScroll: 1, dragFree: true }}
-          >
-            <CarouselPrevious />
-            <CarouselContent className="gap-4 sm:gap-6">
-              {POSTS.map((post, i) => (
-                <CarouselItem
-                  key={post.slug}
-                  className="max-w-xs sm:max-w-sm basis-4/5 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 px-2"
-                >
-                  {/* Clickable Card */}
-                  <button
-                    onClick={() => navigate(`/blog/${post.slug}`)}
-                    className="w-full group rounded-xl shadow-md hover-scale transition-all flex flex-col items-stretch cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-primary/30 bg-[hsl(46,46%,95%)] border border-border hover:border-primary/30 h-full min-h-[380px]"
-                    aria-label={`Read full article: ${post.title}`}
+          <ScrollArea className="w-full" type="scroll" scrollHideDelay={0} orientation="horizontal">
+            <Carousel
+              className="w-full"
+              opts={{ align: "start", slidesToScroll: 1, dragFree: true }}
+            >
+              <CarouselPrevious />
+              <CarouselContent className="gap-4 sm:gap-6">
+                {POSTS.map((post, i) => (
+                  <CarouselItem
+                    key={post.slug}
+                    className="max-w-xs sm:max-w-sm basis-4/5 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 px-2"
                   >
-                    <div className="overflow-hidden rounded-t-xl">
-                      <img src={post.image} alt={post.title} className="w-full h-40 object-cover group-hover:scale-105 transition-transform" />
-                    </div>
-                    <div className="p-4 flex flex-col h-full rounded-b-xl">
-                      <span className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
-                        <CalendarDays className="w-4 h-4" /> {post.date}
-                      </span>
-                      <h2 className="text-lg font-semibold text-primary mb-1 group-hover:underline text-left">{post.title}</h2>
-                      <p className="text-sm text-foreground/80 mb-2 flex-grow text-left">{post.excerpt}</p>
-                      <div className="flex items-center justify-between mt-auto">
-                        <span className="inline-block text-xs text-muted-foreground">by {post.author}</span>
-                        <ArrowRight className="w-4 h-4 text-primary opacity-80 group-hover:translate-x-1 group-hover:opacity-100 transition-all" />
+                    {/* Clickable Card */}
+                    <button
+                      onClick={() => navigate(`/blog/${post.slug}`)}
+                      className="w-full group rounded-xl shadow-md hover-scale transition-all flex flex-col items-stretch cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-primary/30 bg-[hsl(46,46%,95%)] border border-border hover:border-primary/30 h-full min-h-[380px]"
+                      aria-label={`Read full article: ${post.title}`}
+                    >
+                      <div className="overflow-hidden rounded-t-xl">
+                        <img src={post.image} alt={post.title} className="w-full h-40 object-cover group-hover:scale-105 transition-transform" />
                       </div>
-                    </div>
-                  </button>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselNext />
-          </Carousel>
+                      <div className="p-4 flex flex-col h-full rounded-b-xl">
+                        <span className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
+                          <CalendarDays className="w-4 h-4" /> {post.date}
+                        </span>
+                        <h2 className="text-lg font-semibold text-primary mb-1 group-hover:underline text-left">{post.title}</h2>
+                        <p className="text-sm text-foreground/80 mb-2 flex-grow text-left">{post.excerpt}</p>
+                        <div className="flex items-center justify-between mt-auto">
+                          <span className="inline-block text-xs text-muted-foreground">by {post.author}</span>
+                          <ArrowRight className="w-4 h-4 text-primary opacity-80 group-hover:translate-x-1 group-hover:opacity-100 transition-all" />
+                        </div>
+                      </div>
+                    </button>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselNext />
+            </Carousel>
+          </ScrollArea>
         </div>
         <div className="mt-16 text-center">
           <p className="text-muted-foreground text-base">
@@ -180,3 +184,4 @@ const Blog = () => {
 }
 
 export default Blog;
+
