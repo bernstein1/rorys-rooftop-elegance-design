@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -47,27 +46,21 @@ export default function ContactPage() {
   return (
     <div className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
       <Navigation />
-      <div className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in relative">
-        <img
-          src="/lovable-uploads/70c2fc32-5834-4dcc-9911-137b8c8ff451.png"
-          alt="Illustration of a person reading under a beach umbrella"
-          className="absolute top-24 -left-28 w-40 h-auto hidden lg:block"
-          style={{ transform: "rotate(-10deg)" }}
-        />
-        <img
-          src="/lovable-uploads/36a4f841-7d4d-4be7-931b-f1d83aa744d3.png"
-          alt="Illustration of a person on a paddleboard shaped like a can"
-          className="absolute bottom-8 -right-28 w-48 h-auto mix-blend-screen hidden lg:block"
-          style={{ transform: "rotate(10deg)" }}
-        />
+      <div className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
         <h1 className="font-hero mb-2">Contact Rory’s Rooftop Bar</h1>
         <p className="font-body text-lg mb-8 text-muted-foreground text-center">
           Questions, event inquiries or feedback? Reach out — we’d love to connect.
         </p>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Details */}
-          <div className="space-y-6 flex flex-col justify-between">
-            <Card className="p-6">
+          <div className="space-y-6 flex flex-col justify-between relative">
+            <img
+              src="/lovable-uploads/70c2fc32-5834-4dcc-9911-137b8c8ff451.png"
+              alt="Illustration of a person reading under a beach umbrella"
+              className="absolute -top-12 -left-20 w-40 h-auto hidden lg:block"
+              style={{ transform: "rotate(-10deg)" }}
+            />
+            <Card className="p-6 relative z-10">
               <div className="flex items-center mb-3">
                 <MapPin className="text-primary mr-3" />
                 <span className="font-medium">446 W 14th St, New York, NY 10014</span>
@@ -99,7 +92,7 @@ export default function ContactPage() {
                 </a>
               </div>
             </Card>
-            <Card className="p-6">
+            <Card className="p-6 relative z-10">
               <div className="flex items-center mb-4">
                 <Clock className="text-primary mr-3" />
                 <span className="font-medium">Hours</span>
@@ -115,53 +108,61 @@ export default function ContactPage() {
             </Card>
           </div>
           {/* Contact Form */}
-          <Card className="p-8 bg-[hsl(46,46%,95%)] shadow-lg">
-            <h2 className="font-section-header text-2xl mb-4 text-primary">Send a Message</h2>
-            <form className="space-y-5" onSubmit={handleSubmit}>
-              <Input
-                name="name"
-                placeholder="Your Name"
-                value={form.name}
-                onChange={handleChange}
-                disabled={submitting}
-                required
-              />
-              <Input
-                name="email"
-                type="email"
-                placeholder="Your Email"
-                value={form.email}
-                onChange={handleChange}
-                disabled={submitting}
-                required
-              />
-              <Textarea
-                name="message"
-                placeholder="How can we help?"
-                rows={5}
-                value={form.message}
-                onChange={handleChange}
-                disabled={submitting}
-                className="resize-none"
-                required
-                style={{
-                  backgroundColor: "hsl(46,46%,95%)", // beige for form
-                  fontFamily: "Montserrat, Inter, sans-serif"
-                }}
-              />
-              <Button
-                type="submit"
-                className="w-full bg-primary text-primary-foreground shadow-md"
-                size="lg"
-                disabled={submitting}
-              >
-                {submitting ? "Sending..." : "Send Message"}
-              </Button>
-              <p className="text-xs text-muted-foreground text-center mt-2">
-                Response within 24 hours (Mon–Fri)
-              </p>
-            </form>
-          </Card>
+          <div className="relative">
+            <img
+              src="/lovable-uploads/36a4f841-7d4d-4be7-931b-f1d83aa744d3.png"
+              alt="Illustration of a person on a paddleboard shaped like a can"
+              className="absolute -bottom-12 -right-20 w-48 h-auto mix-blend-screen hidden lg:block"
+              style={{ transform: "rotate(10deg)" }}
+            />
+            <Card className="p-8 bg-[hsl(46,46%,95%)] shadow-lg relative z-10">
+              <h2 className="font-section-header text-2xl mb-4 text-primary">Send a Message</h2>
+              <form className="space-y-5" onSubmit={handleSubmit}>
+                <Input
+                  name="name"
+                  placeholder="Your Name"
+                  value={form.name}
+                  onChange={handleChange}
+                  disabled={submitting}
+                  required
+                />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  value={form.email}
+                  onChange={handleChange}
+                  disabled={submitting}
+                  required
+                />
+                <Textarea
+                  name="message"
+                  placeholder="How can we help?"
+                  rows={5}
+                  value={form.message}
+                  onChange={handleChange}
+                  disabled={submitting}
+                  className="resize-none"
+                  required
+                  style={{
+                    backgroundColor: "hsl(46,46%,95%)", // beige for form
+                    fontFamily: "Montserrat, Inter, sans-serif"
+                  }}
+                />
+                <Button
+                  type="submit"
+                  className="w-full bg-primary text-primary-foreground shadow-md"
+                  size="lg"
+                  disabled={submitting}
+                >
+                  {submitting ? "Sending..." : "Send Message"}
+                </Button>
+                <p className="text-xs text-muted-foreground text-center mt-2">
+                  Response within 24 hours (Mon–Fri)
+                </p>
+              </form>
+            </Card>
+          </div>
         </div>
       </div>
     </div>
