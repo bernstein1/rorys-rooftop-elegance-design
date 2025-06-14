@@ -131,9 +131,34 @@ const Blog = () => {
           Stories, culture, and cocktail inspiration straight from the rooftop.
         </p>
         
-        {/* Simple horizontal scrolling container */}
+        {/* Horizontal scrolling container with always visible scrollbar */}
         <div className="relative">
-          <div className="overflow-x-auto overflow-y-hidden pb-4">
+          <div 
+            className="overflow-x-scroll overflow-y-hidden pb-4"
+            style={{
+              scrollbarWidth: 'auto', // Firefox
+              WebkitScrollbarWidth: 'auto', // Safari/Chrome
+            }}
+          >
+            <style jsx>{`
+              div::-webkit-scrollbar {
+                height: 12px;
+              }
+              div::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+              }
+              div::-webkit-scrollbar-thumb {
+                background: hsl(174, 88%, 32%);
+                border-radius: 6px;
+                border: 2px solid transparent;
+                background-clip: content-box;
+              }
+              div::-webkit-scrollbar-thumb:hover {
+                background: hsl(174, 88%, 28%);
+                background-clip: content-box;
+              }
+            `}</style>
             <div className="flex gap-4 sm:gap-6 w-max">
               {POSTS.map((post, i) => (
                 <div
