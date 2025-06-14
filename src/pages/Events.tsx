@@ -62,7 +62,7 @@ const Events = () => {
               {EVENTS.map((event, i) => (
                 <div
                   key={i}
-                  className="w-80 sm:w-96 flex-shrink-0 rounded-2xl shadow-lg hover-scale transition-all group"
+                  className="w-80 sm:w-96 flex-shrink-0 rounded-2xl shadow-xl hover-scale transition-all group"
                   style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige for event cards
                 >
                   <div className="overflow-hidden rounded-t-2xl">

@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -144,7 +145,7 @@ const Blog = () => {
                   {/* Clickable Card */}
                   <button
                     onClick={() => navigate(`/blog/${post.slug}`)}
-                    className="w-full group rounded-xl shadow-md hover-scale transition-all flex flex-col items-stretch cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-primary/30 bg-[hsl(46,46%,95%)] border border-border hover:border-primary/30 h-full min-h-[380px]"
+                    className="w-full group rounded-xl shadow-xl hover-scale transition-all flex flex-col items-stretch cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-primary/30 bg-[hsl(46,46%,95%)] border border-border hover:border-primary/30 h-full min-h-[380px]"
                     aria-label={`Read full article: ${post.title}`}
                   >
                     <div className="overflow-hidden rounded-t-xl">
