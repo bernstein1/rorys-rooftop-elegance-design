@@ -8,6 +8,7 @@ import MenuPreview from "@/components/MenuPreview";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import EmailSignup from "@/components/EmailSignup";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <About />
       <MenuPreview />
       <Contact />
+      <EmailSignup />
       <Footer />
     </div>
   );
