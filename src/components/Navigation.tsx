@@ -22,7 +22,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary tracking-tight">Rory's Rooftop</h1>
+            <a href="/">
+              <img
+                src="/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png"
+                alt="Rory's Rooftop Logo"
+                className="h-10 w-auto object-contain"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
