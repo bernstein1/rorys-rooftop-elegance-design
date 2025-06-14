@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -90,8 +91,13 @@ h4, .h4 {
 }
 
 /* Paragraphs and default text */
-p, .p, li, ul, ol, .font-body {
-  @apply font-body;
+p, .p, li, ul, ol {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.125rem; /* 18px */
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--color-body);
 }
 
 /* Default button text style */
@@ -111,6 +117,9 @@ button, .btn, .font-btn {
     line-height: 1.22;
   }
   .font-body {
+    font-size: 1rem;
+  }
+  p, .p, li, ul, ol {
     font-size: 1rem;
   }
 }
@@ -197,3 +206,4 @@ button, .btn, .font-btn {
   from {opacity:0; transform:translateY(20px);}
   to {opacity:1; transform:translateY(0);}
 }
+
