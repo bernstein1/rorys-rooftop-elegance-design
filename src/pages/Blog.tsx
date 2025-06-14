@@ -33,7 +33,7 @@ const Blog = () => (
         {POSTS.map((post, i) => (
           <div
             key={i}
-            style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige after swap
+            style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige for cards
             className="rounded-2xl shadow-lg hover-scale transition-all flex flex-col"
           >
             <div className="overflow-hidden rounded-t-2xl">

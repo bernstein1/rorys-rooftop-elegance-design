@@ -6,24 +6,24 @@
 /* Custom color palette: */
 @layer base {
   :root {
-    --background: 346 56% 86%; /* #F6CCD3 (Soft Rose, Pink) */
+    --background: 346 56% 86%; /* #F6CCD3 (Soft Rose, Pink) for section/page background */
     --foreground: 228 13% 18%; /* Rich Black (#2C2E33) */
-    --card: 46 46% 95%;        /* #F6F2DA (Warm Cream - beige) */
+    --card: 46 46% 95%;        /* #F6F2DA (Warm Cream - beige) for cards/buttons */
     --card-foreground: 228 13% 18%;
 
-    --popover: 346 56% 86%;    /* Pink popover */
+    --popover: 346 56% 86%;    /* Pink popover/background */
     --popover-foreground: 228 13% 18%;
 
     --primary: 174 88% 32%;    /* #0A9F93 (Deep Teal) */
     --primary-foreground: 0 0% 100%; /* White for crisp high contrast */
 
-    --secondary: 46 46% 95%;   /* Beige */
+    --secondary: 46 46% 95%;   /* Beige secondary/background for buttons etc */
     --secondary-foreground: 228 13% 18%;
 
-    --muted: 346 56% 86%;      /* Pink */
+    --muted: 346 56% 86%;      /* Pink for muted backgrounds */
     --muted-foreground: 228 10% 40%;
 
-    --accent: 46 46% 95%;      /* Beige as accent */
+    --accent: 346 56% 86%;     /* Pink as accent */
     --accent-foreground: 228 13% 18%;
 
     --destructive: 0 84.2% 60.2%;
@@ -41,7 +41,7 @@
     --foreground: 0 0% 100%; /* White */
     --primary: 174 88% 32%; /* Deep Teal */
     --primary-foreground: 0 0% 100%;
-    --secondary: 46 46% 95%;  /* Beige */
+    --secondary: 46 46% 95%;  /* Beige (for light elements in dark mode too) */
     --secondary-foreground: 0 0% 100%;
     --muted: 228 13% 22%;
     --muted-foreground: 0 0% 80%;

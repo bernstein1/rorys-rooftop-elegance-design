@@ -35,7 +35,7 @@ const Events = () => (
           <div
             key={i}
             className="rounded-2xl shadow-lg hover-scale transition-all group"
-            style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige after swap
+            style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige for event cards
           >
             <div className="overflow-hidden rounded-t-2xl">
               <img src={event.image} alt={event.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform" />

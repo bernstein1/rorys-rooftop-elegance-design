@@ -6,7 +6,7 @@ const About = () => {
     <section
       id="about"
       className="py-20"
-      style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige after swap
+      style={{ backgroundColor: "hsl(346, 56%, 86%)" }} // pink as background
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -29,17 +29,17 @@ const About = () => {
             
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 pt-6">
-              <Card className="p-4 text-center bg-background">
+              {/* Ensuring Cards use Beige */}
+              <Card className="p-4 text-center bg-card">
                 <h3 className="font-semibold text-primary mb-2">Rooftop Views</h3>
                 <p className="text-sm text-muted-foreground">Stunning NYC skyline panoramas</p>
               </Card>
-              <Card className="p-4 text-center bg-background">
+              <Card className="p-4 text-center bg-card">
                 <h3 className="font-semibold text-primary mb-2">Craft Cocktails</h3>
                 <p className="text-sm text-muted-foreground">Expertly crafted drinks</p>
               </Card>
             </div>
           </div>
-
           {/* Image */}
           <div className="relative">
             <img
