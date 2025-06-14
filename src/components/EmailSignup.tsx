@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,8 +32,8 @@ const EmailSignup = () => {
     <section
       className="relative z-10 py-16 px-4 md:py-20 flex flex-col items-center"
       style={{
-        // Solid turquoise (#0A9F93) matching site primary color
-        background: "#0A9F93",
+        // Use a lighter turquoise, staying brand-aligned
+        background: "#27bfb2",
       }}
     >
       <div className="max-w-2xl w-full text-center">
