@@ -1,0 +1,50 @@
+
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    question: "Do I need a reservation?",
+    answer: "Reservations are highly recommended, especially on weekends. Walk-ins are welcome based on availability.",
+  },
+  {
+    question: "Is there a dress code?",
+    answer: "Smart casual attire is encouraged. Please, no beachwear or athletic wear.",
+  },
+  {
+    question: "Are children allowed?",
+    answer: "Rory’s Rooftop is 21+ only. Valid government-issued ID is required for all guests.",
+  },
+  {
+    question: "Do you host private events?",
+    answer: "Absolutely! We welcome private events and group bookings. Please contact us for event packages and availability.",
+  },
+  {
+    question: "Can I bring my own cake or outside food?",
+    answer: "Outside food and beverages are not permitted, but we’re happy to assist with special arrangements for celebrations.",
+  },
+  {
+    question: "Is the rooftop accessible for guests with disabilities?",
+    answer: "Yes, our facilities are accessible and we’re happy to accommodate additional needs. Please let us know in advance.",
+  },
+];
+
+export default function FAQ() {
+  return (
+    <section className="min-h-screen bg-[hsl(346,56%,86%)] py-24">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">Frequently Asked Questions</h1>
+        <p className="text-lg text-center text-muted-foreground mb-10">
+          Answers to our most common guest questions. For anything else, feel free to <a href="/contact" className="underline text-primary">contact us</a>.
+        </p>
+        <Accordion type="single" collapsible className="w-full rounded-lg bg-[hsl(46,46%,95%)] shadow-xl">
+          {faqs.map((faq, idx) => (
+            <AccordionItem key={idx} value={`item-${idx}`}>
+              <AccordionTrigger className="text-lg">{faq.question}</AccordionTrigger>
+              <AccordionContent>{faq.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+}

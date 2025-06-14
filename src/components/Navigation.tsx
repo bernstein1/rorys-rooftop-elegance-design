@@ -6,14 +6,14 @@ import { Menu, X } from "lucide-react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Add "Events" and "Blog" to navigation
+  // Remove "About", add "FAQ" in navigation
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
     { name: "Menu", href: "#menu" },
     { name: "Events", href: "/events" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" }, // changed from #contact to /contact
+    { name: "FAQ", href: "/faq" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -98,4 +98,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
