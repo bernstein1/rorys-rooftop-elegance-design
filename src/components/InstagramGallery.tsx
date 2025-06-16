@@ -8,14 +8,6 @@ const InstagramGallery = () => {
     "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
     "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
     "/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png",
-    "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png",
-    "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
-    "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
-    "/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png",
-    "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png",
-    "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
-    "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
-    "/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png"
   ];
 
   return (
@@ -27,7 +19,7 @@ const InstagramGallery = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-4 gap-4 mb-12">
           {instagramPosts.map((post, index) => (
             <div
               key={index}

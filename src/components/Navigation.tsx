@@ -40,7 +40,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-lg text-foreground/90 hover:text-primary font-medium transition-colors px-3 py-1 ${
+                className={`text-lg text-foreground/90 hover:text-primary font-didot font-medium transition-colors px-3 py-1 ${
                   item.name === "Events" || item.name === "Blog"
                     ? "story-link"
                     : ""
@@ -83,7 +83,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="block text-lg font-medium px-3 py-2 rounded-md text-foreground/90 hover:bg-primary/10 hover:text-primary transition-colors"
+                className="block text-lg font-didot font-medium px-3 py-2 rounded-md text-foreground/90 hover:bg-primary/10 hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
