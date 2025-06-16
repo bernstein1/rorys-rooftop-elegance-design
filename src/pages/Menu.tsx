@@ -36,7 +36,7 @@ const MENU_DATA = {
 
 const MenuPage = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground" style={{ backgroundColor: "hsl(46, 46%, 95%)" }}>
+    <div className="min-h-screen bg-secondary text-foreground">
       <Navigation />
       <main className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

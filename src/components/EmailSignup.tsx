@@ -70,7 +70,7 @@ const EmailSignup = () => {
             placeholder="Your email address"
             value={email}
             onChange={e => setEmail(e.target.value)}
-            className="flex-1 bg-[hsl(46,46%,95%)] border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
+            className="flex-1 bg-secondary border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
             disabled={submitting}
             required
             aria-label="Email address"

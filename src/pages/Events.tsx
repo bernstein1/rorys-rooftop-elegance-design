@@ -47,7 +47,7 @@ const Events = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
-    <div className="min-h-screen pt-0 pb-16" style={{ backgroundColor: "hsl(346, 56%, 86%)" }}>
+    <div className="min-h-screen pt-0 pb-16 bg-background">
       <Navigation />
       <section className="max-w-6xl mx-auto px-4 pt-32">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
@@ -62,8 +62,7 @@ const Events = () => {
               {EVENTS.map((event, i) => (
                 <div
                   key={i}
-                  className="w-80 sm:w-96 flex-shrink-0 rounded-2xl shadow-xl hover-scale transition-all group"
-                  style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // beige for event cards
+                  className="w-80 sm:w-96 flex-shrink-0 rounded-2xl shadow-xl hover-scale transition-all group bg-secondary"
                 >
                   <div className="overflow-hidden rounded-t-2xl">
                     <img src={event.image} alt={event.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform" />
@@ -82,7 +81,7 @@ const Events = () => {
                         href="https://resy.com/rorysrooftop"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block rounded-full bg-[hsl(46,46%,95%)] text-primary px-8 py-3 font-medium hover:bg-[hsl(46,46%,90%)] transition-colors"
+                        className="inline-block rounded-full bg-secondary text-primary px-8 py-3 font-medium hover:bg-[hsl(46,46%,90%)] transition-colors"
                       >
                         RSVP
                       </a>
@@ -107,7 +106,7 @@ const Events = () => {
             mode="single"
             selected={date}
             onSelect={setDate}
-            className="rounded-md border bg-[hsl(46,46%,95%)]"
+            className="rounded-md border bg-secondary"
           />
         </div>
       </section>

@@ -2,14 +2,9 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
+import { CONTACT_INFO } from "@/lib/contactInfo";
 
 const Contact = () => {
-  const hours = [
-    { day: "Monday - Thursday", time: "4:00 PM - 10:00 PM" },
-    { day: "Friday", time: "4:00 PM - 1:00 AM" },
-    { day: "Saturday", time: "12:00 PM - 1:00 AM" },
-    { day: "Sunday", time: "12:00 PM - 10:00 PM" }
-  ];
 
   return (
     <section id="contact" className="py-20 bg-muted/30">
@@ -31,8 +26,8 @@ const Contact = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Location</h3>
                 <p className="text-muted-foreground">
-                  446 W 14th St<br />
-                  New York, NY 10014
+                  {CONTACT_INFO.addressLines[0]}<br />
+                  {CONTACT_INFO.addressLines[1]}
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
                   Enter through Puttery NYC<br />
@@ -49,13 +44,13 @@ const Contact = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Contact</h3>
                 <p className="text-muted-foreground mb-2">
-                  +1 631-212-8501
+                  {CONTACT_INFO.phone}
                 </p>
                 <div className="flex items-center space-x-3">
-                  <a href="https://www.instagram.com/rorysrooftop/" className="text-primary hover:text-primary/80">
+                  <a href={CONTACT_INFO.instagram.url} className="text-primary hover:text-primary/80">
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <span className="text-sm text-muted-foreground">@rorysrooftop</span>
+                  <span className="text-sm text-muted-foreground">{CONTACT_INFO.instagram.handle}</span>
                 </div>
               </div>
             </div>
@@ -68,7 +63,7 @@ const Contact = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-3">Hours</h3>
                 <div className="space-y-2">
-                  {hours.map((schedule, index) => (
+                  {CONTACT_INFO.hours.map((schedule, index) => (
                     <div key={index} className="flex justify-between text-sm">
                       <span className="text-muted-foreground">{schedule.day}</span>
                       <span className="text-foreground font-medium">{schedule.time}</span>
@@ -121,7 +116,7 @@ const Contact = () => {
             size="lg"
             variant="outline"
           >
-            <a href="mailto:hello@rorysrooftop.com">
+            <a href={`mailto:${CONTACT_INFO.email}`}>
               Request Information
             </a>
           </Button>

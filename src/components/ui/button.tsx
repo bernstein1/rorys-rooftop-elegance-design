@@ -11,10 +11,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[hsl(46,46%,95%)] text-primary hover:bg-[hsl(46,46%,90%)]", // Beige with teal text, more beige on hover
+        default: "bg-secondary text-primary hover:bg-[hsl(46,46%,90%)]", // Beige with teal text, more beige on hover
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "bg-[hsl(46,46%,95%)] text-primary border-2 border-primary hover:bg-[hsl(46,46%,90%)] hover:text-primary transition-colors",
-        secondary: "bg-[hsl(46,46%,95%)] text-primary hover:bg-[hsl(46,46%,90%)]",
+        outline: "bg-secondary text-primary border-2 border-primary hover:bg-[hsl(46,46%,90%)] hover:text-primary transition-colors",
+        secondary: "bg-secondary text-primary hover:bg-[hsl(46,46%,90%)]",
         ghost: "hover:bg-muted",
         link: "text-primary underline-offset-4 hover:underline",
       },

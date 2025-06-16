@@ -121,7 +121,7 @@ const Blog = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen pt-0 pb-16" style={{ backgroundColor: "hsl(346, 56%, 86%)" }}>
+    <div className="min-h-screen pt-0 pb-16 bg-background">
       <Navigation />
       <section className="max-w-6xl mx-auto px-4 pt-32">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 text-center">
@@ -145,7 +145,7 @@ const Blog = () => {
                   {/* Clickable Card */}
                   <button
                     onClick={() => navigate(`/blog/${post.slug}`)}
-                    className="w-full group rounded-xl shadow-xl hover-scale transition-all flex flex-col items-stretch cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-primary/30 bg-[hsl(46,46%,95%)] border border-border hover:border-primary/30 h-full min-h-[380px]"
+                    className="w-full group rounded-xl shadow-xl hover-scale transition-all flex flex-col items-stretch cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-primary/30 bg-secondary border border-border hover:border-primary/30 h-full min-h-[380px]"
                     aria-label={`Read full article: ${post.title}`}
                   >
                     <div className="overflow-hidden rounded-t-xl">
