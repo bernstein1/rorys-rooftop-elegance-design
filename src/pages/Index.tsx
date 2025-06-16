@@ -9,6 +9,9 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import EmailSignup from "@/components/EmailSignup";
+import RooftopFeatures from "@/components/RooftopFeatures";
+import InstagramGallery from "@/components/InstagramGallery";
+import PrivateEvents from "@/components/PrivateEvents";
 
 const Index = () => {
   return (
@@ -16,8 +19,11 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
+      <RooftopFeatures />
       <EmailSignup />
       <MenuPreview />
+      <InstagramGallery />
+      <PrivateEvents />
       <Contact />
       <Footer />
     </div>
@@ -25,4 +31,3 @@ const Index = () => {
 };
 
 export default Index;
-
