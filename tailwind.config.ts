@@ -18,10 +18,10 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				didot: ['Playfair Display', 'serif'], // Didot alt for hero/headers
-				brandongrotesque: ['Montserrat', 'Inter', 'sans-serif'], // Grotesque alt for body, etc
-			},
+                        fontFamily: {
+                                didot: ['Phosphate', 'sans-serif'], // Primary font for headers/buttons
+                                brandongrotesque: ['Jubilat', 'serif'], // Secondary font for body text
+                        },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
