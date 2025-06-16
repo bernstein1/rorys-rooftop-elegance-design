@@ -47,7 +47,7 @@ const RooftopFeatures = () => {
                 />
               </div>
               <div className="p-6 pt-0">
-                <h3 className="font-subsection-header text-primary mb-4">
+                <h3 className="text-primary mb-4 font-didot text-2xl">
                   {feature.title}
                 </h3>
                 <p className="font-body text-foreground mb-6 leading-relaxed">

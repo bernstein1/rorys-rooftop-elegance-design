@@ -75,31 +75,6 @@ const Contact = () => {
           </Card>
         </div>
 
-        {/* Important Info */}
-        <div className="mt-12 text-center">
-          <Card className="p-6 max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold mb-3">Important Information</h3>
-            <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-              <div>
-                <p className="font-medium text-foreground">Age Requirement</p>
-                <p>21+ only, valid ID required</p>
-              </div>
-              <div>
-                <p className="font-medium text-foreground">Payment</p>
-                <p>Credit/debit cards only, no cash</p>
-              </div>
-              <div>
-                <p className="font-medium text-foreground">Reservations</p>
-                <p>Walk-ins welcome, reservations recommended</p>
-              </div>
-              <div>
-                <p className="font-medium text-foreground">Dress Code</p>
-                <p>Smart casual attire preferred</p>
-              </div>
-            </div>
-          </Card>
-        </div>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
           <Button
