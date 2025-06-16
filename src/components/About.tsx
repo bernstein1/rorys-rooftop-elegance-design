@@ -23,7 +23,7 @@ const About = () => {
           {/* Image */}
           <div className="relative">
             <img
-              src="/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png"
+              src="/lovable-uploads/Comp 1 (0-00-03-19).jpg"
               alt="Chic interior of Rory's Rooftop Bar with guests enjoying the ambiance"
               className="w-full h-96 object-cover rounded-lg shadow-2xl"
             />
