@@ -18,8 +18,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className="w-full fixed top-0 left-0 z-50 shadow backdrop-blur transition-colors"
-      style={{ backgroundColor: "hsl(46, 46%, 95%)" }} // Force beige for navbar
+      className="w-full fixed top-0 left-0 z-50 shadow backdrop-blur transition-colors bg-secondary"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">

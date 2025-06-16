@@ -1,5 +1,6 @@
 
 import { Instagram, Phone, MapPin, Mail } from "lucide-react";
+import { CONTACT_INFO } from "@/lib/contactInfo";
 
 const Footer = () => {
   return (
@@ -36,15 +37,22 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span className="text-primary-foreground/80 text-sm">446 W 14th St, NYC</span>
+                <span className="text-primary-foreground/80 text-sm">
+                  {CONTACT_INFO.addressLines[0]}, NYC
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span className="text-primary-foreground/80 text-sm">+1 631-212-8501</span>
+                <span className="text-primary-foreground/80 text-sm">{CONTACT_INFO.phone}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:hello@rorysrooftop.com" className="text-primary-foreground/80 text-sm hover:text-white">hello@rorysrooftop.com</a>
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="text-primary-foreground/80 text-sm hover:text-white"
+                >
+                  {CONTACT_INFO.email}
+                </a>
               </div>
             </div>
           </div>

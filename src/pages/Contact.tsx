@@ -6,14 +6,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { MapPin, Phone, Clock, Mail, Instagram } from "lucide-react";
+import { CONTACT_INFO } from "@/lib/contactInfo";
 import { useState } from "react";
 
-const HOURS = [
-  { day: "Mon–Thu", time: "4:00 PM – 10:00 PM" },
-  { day: "Friday", time: "4:00 PM – 1:00 AM" },
-  { day: "Saturday", time: "12:00 PM – 1:00 AM" },
-  { day: "Sunday", time: "12:00 PM – 10:00 PM" },
-];
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -64,32 +59,34 @@ export default function ContactPage() {
             <Card className="p-6 relative z-10">
               <div className="flex items-center mb-3">
                 <MapPin className="text-primary mr-3" />
-                <span className="font-medium">446 W 14th St, New York, NY 10014</span>
+                <span className="font-medium">
+                  {CONTACT_INFO.addressLines.join(', ')}
+                </span>
               </div>
               <div className="flex items-center mb-3">
                 <Phone className="text-primary mr-3" />
-                <span className="font-medium">+1 631-212-8501</span>
+                <span className="font-medium">{CONTACT_INFO.phone}</span>
               </div>
               <div className="flex items-center mb-3">
                 <Mail className="text-primary mr-3" />
                 <span>
                   <a
-                    href="mailto:info@rorysrooftop.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     className="text-primary hover:underline transition"
                   >
-                    info@rorysrooftop.com
+                    {CONTACT_INFO.email}
                   </a>
                 </span>
               </div>
               <div className="flex items-center">
                 <Instagram className="text-primary mr-3" />
                 <a
-                  href="https://www.instagram.com/rorysrooftop/"
+                  href={CONTACT_INFO.instagram.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary font-medium hover:underline"
                 >
-                  @rorysrooftop
+                  {CONTACT_INFO.instagram.handle}
                 </a>
               </div>
             </Card>
@@ -99,7 +96,7 @@ export default function ContactPage() {
                 <span className="font-medium">Hours</span>
               </div>
               <div className="space-y-1 font-body text-base">
-                {HOURS.map(({ day, time }) => (
+                {CONTACT_INFO.hours.map(({ day, time }) => (
                   <div key={day} className="flex justify-between">
                     <span className="text-muted-foreground">{day}</span>
                     <span className="text-foreground">{time}</span>
@@ -116,7 +113,7 @@ export default function ContactPage() {
               className="absolute -bottom-12 -right-20 w-48 h-auto hidden lg:block"
               style={{ transform: "rotate(10deg)" }}
             />
-            <Card className="p-8 bg-[hsl(46,46%,95%)] shadow-lg relative z-10">
+            <Card className="p-8 bg-secondary shadow-lg relative z-10">
               <h2 className="font-section-header text-2xl mb-4 text-primary">Send a Message</h2>
               <form className="space-y-5" onSubmit={handleSubmit}>
                 <Input

@@ -37,7 +37,7 @@ export default function FAQ() {
   return (
     <>
       <Navigation />
-      <section className="min-h-screen bg-[hsl(346,56%,86%)] flex items-center justify-center py-12 md:py-20 pt-36 overflow-x-hidden">
+      <section className="min-h-screen bg-background flex items-center justify-center py-12 md:py-20 pt-36 overflow-x-hidden">
         <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto relative">
             <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 -left-64 z-0">
@@ -69,7 +69,7 @@ export default function FAQ() {
                 <Accordion
                   type="single"
                   collapsible
-                  className="w-full rounded-lg bg-[hsl(46,46%,95%)] shadow-xl border border-primary/10"
+                  className="w-full rounded-lg bg-secondary shadow-xl border border-primary/10"
                 >
                   {faqs.map((faq, idx) => (
                     <AccordionItem key={idx} value={`item-${idx}`}>
