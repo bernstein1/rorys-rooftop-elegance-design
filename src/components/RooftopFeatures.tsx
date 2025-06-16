@@ -39,7 +39,7 @@ const RooftopFeatures = () => {
               key={index}
               className="bg-secondary border-0 shadow-lg overflow-hidden text-center flex flex-col"
             >
-              <div className="aspect-square mb-6">
+              <div className="aspect-[3/4] mb-6">
                 <img
                   src={feature.image}
                   alt={`${feature.title} at Rory's Rooftop`}
