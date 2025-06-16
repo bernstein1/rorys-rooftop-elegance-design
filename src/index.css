@@ -3,10 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==== Custom Font Faces ==== */
+@font-face {
+  font-family: "Phosphate";
+  src: url("/fonts/Phosphate.woff2") format("woff2"),
+       url("/fonts/Phosphate.ttc") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Jubilat";
+  src: url("/fonts/JubilatRegular.woff2") format("woff2"),
+       url("/fonts/JubilatRegular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* ==== Custom Typography Variables & Classes ==== */
 :root {
-  --font-heading: 'Playfair Display', 'serif'; /* Didot alt */
-  --font-body: 'Montserrat', 'Inter', 'sans-serif'; /* Grotesque alt */
+  --font-heading: 'Phosphate', sans-serif;
+  --font-body: 'Jubilat', serif;
   --color-heading: #0A9F93;
   --color-body: #1a1a1a;
 }

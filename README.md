@@ -75,6 +75,16 @@ The app expects `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY` to be defined.
 
 Simply open [Lovable](https://lovable.dev/projects/4a1efce0-117d-41b3-92ed-2ca013fd033b) and click on Share -> Publish.
 
+## Custom fonts
+
+This project expects two local font files for headings and body text:
+
+- `public/fonts/Phosphate.woff2` (or `Phosphate.ttc`)
+- `public/fonts/JubilatRegular.woff2` (or `JubilatRegular.otf`)
+
+Copy your font files into the `public/fonts` directory with these names. The
+`@font-face` rules in `src/index.css` will load them automatically.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
