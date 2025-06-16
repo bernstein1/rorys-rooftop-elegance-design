@@ -1,7 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { CONTACT_INFO } from "@/lib/contactInfo";
 
 const Contact = () => {
@@ -39,19 +39,30 @@ const Contact = () => {
 
           {/* Contact Card */}
           <Card className="p-6">
-            <div className="flex items-start space-x-4">
-              <Phone className="w-6 h-6 text-primary mt-1" />
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Contact</h3>
-                <p className="text-muted-foreground mb-2">
-                  {CONTACT_INFO.phone}
-                </p>
-                <div className="flex items-center space-x-3">
-                  <a href={CONTACT_INFO.instagram.url} className="text-primary hover:text-primary/80">
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                  <span className="text-sm text-muted-foreground">{CONTACT_INFO.instagram.handle}</span>
-                </div>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="text-primary mr-3" />
+                <span className="font-medium">{CONTACT_INFO.phone}</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="text-primary mr-3" />
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="text-primary hover:underline transition"
+                >
+                  {CONTACT_INFO.email}
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Instagram className="text-primary mr-3" />
+                <a
+                  href={CONTACT_INFO.instagram.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-medium hover:underline"
+                >
+                  {CONTACT_INFO.instagram.handle}
+                </a>
               </div>
             </div>
           </Card>
