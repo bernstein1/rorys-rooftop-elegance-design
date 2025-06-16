@@ -37,7 +37,7 @@ const RooftopFeatures = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="bg-secondary border-0 shadow-lg overflow-hidden text-center"
+              className="bg-secondary border-0 shadow-lg overflow-hidden text-center flex flex-col"
             >
               <div className="aspect-square mb-6">
                 <img
@@ -46,7 +46,7 @@ const RooftopFeatures = () => {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="p-6 pt-0">
+              <div className="p-6 pt-0 flex flex-col flex-1">
                 <h3 className="text-primary mb-4 font-didot text-2xl">
                   {feature.title}
                 </h3>
@@ -56,7 +56,7 @@ const RooftopFeatures = () => {
                 <Button
                   variant="outline"
                   onClick={feature.onClick}
-                  className="w-full"
+                  className="w-full mt-auto"
                 >
                   {feature.cta}
                 </Button>

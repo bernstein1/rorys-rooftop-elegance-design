@@ -62,12 +62,12 @@ const Events = () => {
               {EVENTS.map((event, i) => (
                 <div
                   key={i}
-                  className="w-80 sm:w-96 flex-shrink-0 rounded-2xl shadow-xl hover-scale transition-all group bg-secondary"
+                  className="w-80 sm:w-96 flex-shrink-0 rounded-2xl shadow-xl hover-scale transition-all group bg-secondary flex flex-col"
                 >
                   <div className="overflow-hidden rounded-t-2xl">
                     <img src={event.image} alt={event.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform" />
                   </div>
-                  <div className="p-6 flex flex-col gap-3">
+                  <div className="p-6 flex flex-col gap-3 flex-1">
                     <h2 className="text-2xl font-semibold text-primary mb-2">{event.title}</h2>
                     <div className="flex gap-4 text-muted-foreground text-sm items-center">
                       <CalendarDays className="w-5 h-5" />
@@ -76,7 +76,7 @@ const Events = () => {
                       <span>{event.location}</span>
                     </div>
                     <p className="text-base text-foreground/80">{event.desc}</p>
-                    <div className="mt-4">
+                    <div className="mt-auto">
                       <a
                         href="https://resy.com/rorysrooftop"
                         target="_blank"
