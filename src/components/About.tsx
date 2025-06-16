@@ -25,7 +25,7 @@ const About = () => {
             <img
               src="/lovable-uploads/comp-1.jpg"
               alt="Chic interior of Rory's Rooftop Bar with guests enjoying the ambiance"
-              className="w-full h-96 object-cover rounded-lg shadow-2xl"
+              className="w-full h-96 object-cover object-[50%_30%] rounded-lg shadow-2xl"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
           </div>
