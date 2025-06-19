@@ -97,19 +97,19 @@ const MenuPage = () => {
     <div className="min-h-screen bg-secondary text-foreground">
       <Navigation />
       <main className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Rory's Rooftop Bar Menu</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               A curated collection of vibrant cocktails, fresh plates, and rooftop favorites, crafted with the finest ingredients and served with stunning views.
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {Object.entries(MENU_DATA).map(([category, items]) => (
               <section key={category}>
                 <h2 className="text-3xl font-bold text-primary mb-6 pb-3 border-b-2 border-primary/20">{category}</h2>
-                <div className="grid md:grid-cols-1 gap-y-6">
+                <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
                   {items.map((item) => (
                     <div key={item.name} className="flex justify-between items-start py-3 border-b border-muted/20 last:border-b-0">
                       <div className="flex-1 pr-4">
@@ -124,7 +124,7 @@ const MenuPage = () => {
             ))}
           </div>
 
-          <div className="text-center mt-20">
+          <div className="text-center mt-16">
             <Button asChild size="lg">
               <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
                 Make a Reservation
