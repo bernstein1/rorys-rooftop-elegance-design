@@ -162,7 +162,7 @@ const MenuPage = () => {
                         <h3 className="text-lg font-semibold text-foreground mb-1">{item.name}</h3>
                         <p className="text-sm text-muted-foreground italic leading-relaxed">{item.description}</p>
                       </div>
-                      <p className="text-lg font-semibold text-foreground shrink-0">{item.price}</p>
+                      <p className="text-lg font-semibold text-foreground">{item.price}</p>
                     </div>
                   ))}
                 </div>
