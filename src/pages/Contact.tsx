@@ -8,6 +8,7 @@ import { toast } from "@/hooks/use-toast";
 import { MapPin, Phone, Clock, Mail, Instagram } from "lucide-react";
 import { CONTACT_INFO } from "@/lib/contactInfo";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 
 export default function ContactPage() {
@@ -18,7 +19,7 @@ export default function ContactPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast({ variant: "destructive", title: "Please fill in all fields." });
@@ -29,14 +30,21 @@ export default function ContactPage() {
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+    const { error } = await supabase
+      .from("Contact Us")
+      .insert([
+        { Name: form.name, Email: form.email, Message: form.message },
+      ]);
+    setSubmitting(false);
+    if (error) {
+      toast({ variant: "destructive", title: "Error sending message." });
+    } else {
       setForm({ name: "", email: "", message: "" });
       toast({
         title: "Message sent! We’ll be in touch soon.",
         description: "Thank you for contacting Rory's Rooftop Bar.",
       });
-    }, 1200);
+    }
   }
 
   return (

@@ -30,6 +30,30 @@ export type Database = {
         }
         Relationships: []
       }
+      "Contact Us": {
+        Row: {
+          id: number
+          created_at: string
+          Name: string | null
+          Email: string | null
+          Message: string | null
+        }
+        Insert: {
+          id?: number
+          created_at?: string
+          Name?: string | null
+          Email?: string | null
+          Message?: string | null
+        }
+        Update: {
+          id?: number
+          created_at?: string
+          Name?: string | null
+          Email?: string | null
+          Message?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
