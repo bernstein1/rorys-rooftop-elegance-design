@@ -159,7 +159,7 @@ const MenuPage = () => {
                   {items.map((item) => (
                     <div
                       key={item.name}
-                      className="flex flex-wrap justify-between items-start py-3 border-b border-muted/20 last:border-b-0"
+                      className="flex flex-col md:flex-row justify-between items-start gap-2 py-3 border-b border-muted/20 last:border-b-0"
                     >
                       <div className="flex-1 pr-4">
                         <h3 className="text-lg font-semibold text-foreground mb-1">{item.name}</h3>
