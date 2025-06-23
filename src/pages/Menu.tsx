@@ -101,8 +101,8 @@ const MENU_DATA = {
     { name: "Kinoko Lemonade", description: "Mushrooms, allspice, thyme, cane sugar, lemon, egg white", price: "$12" },
   ],
   "Bounties": [
-    { name: "Sangria", description: "Red blend, apple brandy, house made grenadine, cinnamon, orange, mint", price: "Glass $19 / Carafe (serves 2) $32 / Bowl (serves 4) $64" },
-    { name: "Rooftop Margarita", description: "Blanco tequila, cucumber, lime, cane sugar", price: "Glass $19 / Carafe (serves 2) $32 / Bowl (serves 4) $64" },
+    { name: "Sangria", description: "Red blend, apple brandy, house made grenadine, cinnamon, orange, mint"},
+    { name: "Rooftop Margarita", description: "Blanco tequila, cucumber, lime, cane sugar"},
   ],
   "Wine": [
     { name: "House Red", description: "Glass or bottle", price: "$14 / $60" },
