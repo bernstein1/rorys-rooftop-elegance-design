@@ -29,7 +29,8 @@ git clone <YOUR_GIT_URL>
 # Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Step 3: Install the necessary dependencies. This will also set up
+# ESLint and Vite so the lint and build scripts work.
 npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
@@ -70,6 +71,12 @@ cp .env.example .env.local
 ```
 
 The app expects `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY` to be defined.
+
+## Contact form data
+
+Messages submitted from the Contact page are stored in the Supabase table
+**"Contact Us"**. Anonymous users can insert new rows but cannot read existing
+messages thanks to row-level security policies.
 
 ## How can I deploy this project?
 
