@@ -30,20 +30,29 @@ export default function ContactPage() {
       return;
     }
     setSubmitting(true);
-    const { error } = await supabase
-      .from("Contact Us")
-      .insert([
-        { Name: form.name, Email: form.email, Message: form.message },
-      ]);
-    setSubmitting(false);
-    if (error) {
-      toast({ variant: "destructive", title: "Error sending message." });
-    } else {
+    try {
+      const { error } = await supabase
+        .from("Contact Us")
+        .insert({
+          Name: form.name,
+          Email: form.email,
+          Message: form.message,
+        });
+
+      if (error) {
+        throw error;
+      }
+
       setForm({ name: "", email: "", message: "" });
       toast({
         title: "Message sent! We’ll be in touch soon.",
         description: "Thank you for contacting Rory's Rooftop Bar.",
       });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({ variant: "destructive", title: "Error sending message." });
+    } finally {
+      setSubmitting(false);
     }
   }
 
