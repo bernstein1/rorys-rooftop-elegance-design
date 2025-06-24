@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 const InstagramGallery = () => {
   // Using existing uploaded images in a masonry-style grid
   const instagramPosts = [
-    "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png",
-    "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
-    "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
-    "/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png",
+    "/lovable-uploads/cocktail.png",
+    "/lovable-uploads/aperol.png",
+    "/lovable-uploads/comp-1.jpg",
+    "/lovable-uploads/meal.png",
   ];
 
   return (

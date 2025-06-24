@@ -111,7 +111,7 @@ const POSTS = [
     slug: "date-night-guide-nyc-rooftop-restaurants-2024",
     title: "NYC Date Night Guide: Romantic Rooftop Restaurants & Bars in Manhattan",
     date: "June 5, 2024",
-    image: "/lovable-uploads/rooftop refresh.png",
+    image: "/lovable-uploads/rooftop-refresh.png",
     author: "Sofia Martinez",
     metaDescription: "Find the most romantic rooftop restaurants in NYC for your perfect date night. Complete guide to Manhattan's best elevated dining with stunning city views.",
     content: `
@@ -212,7 +212,7 @@ const POSTS = [
     slug: "after-work-happy-hour-spots-meatpacking-district",
     title: "Best After-Work Happy Hour Spots in NYC's Meatpacking District",
     date: "May 28, 2024",
-    image: "/lovable-uploads/eaf50c27-a77f-4580-8706-d131c85608f1.png",
+    image: "/lovable-uploads/comp-1.jpg",
     author: "Marcus Thompson",
     metaDescription: "Find the best happy hour spots in NYC's Meatpacking District. Professional guide to after-work drinks, elevated bar food, and networking venues near Hudson Yards.",
     content: `
@@ -316,7 +316,7 @@ const POSTS = [
     slug: "group-celebrations-rooftop-venues-nyc-guide",
     title: "Ultimate Guide to Group Celebrations at NYC Rooftop Venues",
     date: "May 22, 2024",
-    image: "/lovable-uploads/70c2fc32-5834-4dcc-9911-137b8c8ff451.png",
+    image: "/lovable-uploads/manhattan-sunset.png",
     author: "Alex Rivera",
     metaDescription: "Plan perfect group celebrations at NYC rooftop venues. Complete guide to birthday parties, corporate events, and special occasions with stunning Manhattan views.",
     content: `
