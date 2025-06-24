@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import { CalendarDays, MapPin } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import EmailSignup from "@/components/EmailSignup";
 
@@ -8,42 +8,36 @@ const EVENTS = [
   {
     title: "Pride Party – Celebrate Love & Unity",
     date: "Sunday, June 29, 12:00 PM – 10:00 PM",
-    location: "Rory's Rooftop",
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&h=600&fit=crop",
     desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, DJ sets, and panoramic city views. Love wins here.",
   },
   {
     title: "Sunset Cocktails & Live DJ",
     date: "Friday, June 21, 8:00 PM",
-    location: "Rory's Rooftop",
     image: "/lovable-uploads/cocktail.png",
     desc: "Kick off the weekend as our resident DJ spins feel-good tracks against a sunset backdrop. Good vibes only.",
   },
   {
     title: "Rosé All Day – Summer Brunch",
     date: "Sunday, June 23, 12:00 PM",
-    location: "Rory's Rooftop",
     image: "/lovable-uploads/aperol.png",
     desc: "Our weekend brunch, perfected. Enjoy a curated menu of brunch favorites and, of course, free-flowing rosé.",
   },
   {
     title: "Rooftop Movie Night",
     date: "Wednesday, June 26, 9:00 PM",
-    location: "Rory's Rooftop",
     image: "/lovable-uploads/cheers.png",
     desc: "Your favorite films have never looked this good. Join us for cinema under the stars, complete with themed cocktails and gourmet popcorn.",
   },
   {
     title: "Acoustic Sessions: Unplugged",
     date: "Thursday, June 27, 7:00 PM",
-    location: "Rory's Rooftop",
     image: "/lovable-uploads/meal.png",
     desc: "Experience the magic of live, unplugged music in an intimate setting. A truly special night.",
   },
   {
     title: "Weekend Yoga & Mimosas",
     date: "Saturday, June 29, 10:00 AM",
-    location: "Rory's Rooftop",
     image: "/lovable-uploads/meal-cheers.png",
     desc: "Salute the sun (and the skyline) with a morning yoga class, then reward yourself with well-deserved mimosas.",
   },
@@ -76,8 +70,6 @@ const Events = () => {
                     <div className="flex gap-4 text-muted-foreground text-sm items-center">
                       <CalendarDays className="w-5 h-5" />
                       <span>{event.date}</span>
-                      <MapPin className="w-4 h-4 ml-4" />
-                      <span>{event.location}</span>
                     </div>
                     <p className="text-base text-foreground/80">{event.desc}</p>
                     <div className="mt-auto">
