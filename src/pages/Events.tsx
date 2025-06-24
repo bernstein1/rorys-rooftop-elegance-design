@@ -8,14 +8,14 @@ const EVENTS = [
   {
     title: "Pride Party – Celebrate Love & Unity",
     date: "Sunday, June 29, 12:00 PM – 10:00 PM",
-    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/pride.png",
     desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, DJ sets, and panoramic city views. Love wins here.",
   },
   {
-    title: "Sunset Cocktails & Live DJ",
+    title: "4th of July Party",
     date: "Friday, June 21, 8:00 PM",
-    image: "/lovable-uploads/cocktail.png",
-    desc: "Kick off the weekend as our resident DJ spins feel-good tracks against a sunset backdrop. Good vibes only.",
+    image: "/lovable-uploads/4th.png",
+    desc: "Celebrate Independence Day at Rory’s Rooftop! Sip red-white-and-blue cocktails under the stars, mingle with friends old and new, and make July 4th in NYC unforgettable.",
   },
   {
     title: "Rosé All Day – Summer Brunch",
