@@ -47,12 +47,11 @@ export default function ContactPage() {
       
       console.log('Attempting to insert data:', insertData);
       
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from("Contact Us")
-        .insert(insertData)
-        .select();
+        .insert(insertData);
 
-      console.log('Supabase response - data:', data, 'error:', error);
+      console.log('Supabase response - error:', error);
 
       if (error) {
         console.error('Supabase error details:', {
@@ -76,7 +75,7 @@ export default function ContactPage() {
       let errorMessage = "Error sending message.";
       if (error instanceof Error) {
         if (error.message.includes('violates row-level security')) {
-          errorMessage = "Permission denied. Please try again.";
+          errorMessage = "Unable to send message. Please try again.";
         } else if (error.message.includes('relation') && error.message.includes('does not exist')) {
           errorMessage = "Database table not found. Please contact support.";
         } else if (error.message.includes('column') && error.message.includes('does not exist')) {
@@ -89,7 +88,7 @@ export default function ContactPage() {
       toast({ 
         variant: "destructive", 
         title: errorMessage,
-        description: error instanceof Error ? error.message : "Unknown error occurred"
+        description: "Please try again or contact support if the issue persists."
       });
     } finally {
       setSubmitting(false);
