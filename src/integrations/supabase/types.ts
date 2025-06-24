@@ -9,27 +9,27 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      "Contact Us": {
+      contact_messages: {
         Row: {
-          created_at: string
-          Email: string | null
-          id: number
-          message: string | null
-          Name: string | null
+          created_at: string | null
+          email: string
+          id: string
+          message: string
+          name: string
         }
         Insert: {
-          created_at?: string
-          Email?: string | null
-          id?: number
-          message?: string | null
-          Name?: string | null
+          created_at?: string | null
+          email: string
+          id?: string
+          message: string
+          name: string
         }
         Update: {
-          created_at?: string
-          Email?: string | null
-          id?: number
-          message?: string | null
-          Name?: string | null
+          created_at?: string | null
+          email?: string
+          id?: string
+          message?: string
+          name?: string
         }
         Relationships: []
       }

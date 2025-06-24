@@ -37,15 +37,15 @@ export default function ContactForm() {
     
     try {
       const insertData = {
-        Name: form.name,
-        Email: form.email,
+        name: form.name,
+        email: form.email,
         message: form.message,
       };
       
       console.log('Attempting to insert data:', insertData);
       
       const { error } = await supabase
-        .from("Contact Us")
+        .from("contact_messages")
         .insert(insertData);
 
       console.log('Supabase response - error:', error);
@@ -69,7 +69,7 @@ export default function ContactForm() {
     } catch (error) {
       console.error("Detailed error during form submission:", error);
       
-      let errorMessage = "Error sending message.";
+      let errorMessage = "Error sending message. Please try again.";
       if (error instanceof Error) {
         if (error.message.includes('violates row-level security')) {
           errorMessage = "Unable to send message. Please try again.";
@@ -77,8 +77,6 @@ export default function ContactForm() {
           errorMessage = "Database table not found. Please contact support.";
         } else if (error.message.includes('column') && error.message.includes('does not exist')) {
           errorMessage = "Database schema error. Please contact support.";
-        } else if (error.message.includes('Bad Request')) {
-          errorMessage = "Invalid request format. Please try again.";
         }
       }
       
