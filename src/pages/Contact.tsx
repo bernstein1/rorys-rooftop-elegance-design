@@ -42,11 +42,12 @@ export default function ContactPage() {
       const insertData = {
         Name: form.name,
         Email: form.email,
-        Message: form.message,
+        message: form.message,
       };
       
       console.log('Attempting to insert data:', insertData);
       
+      // Use the proper table name with quotes to handle spaces
       const { data, error } = await supabase
         .from("Contact Us")
         .insert(insertData)
@@ -82,6 +83,8 @@ export default function ContactPage() {
           errorMessage = "Database table not found. Please contact support.";
         } else if (error.message.includes('column') && error.message.includes('does not exist')) {
           errorMessage = "Database schema error. Please contact support.";
+        } else if (error.message.includes('Bad Request')) {
+          errorMessage = "Invalid request format. Please try again.";
         }
       }
       
