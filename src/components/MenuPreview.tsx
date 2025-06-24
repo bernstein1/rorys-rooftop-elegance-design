@@ -10,7 +10,7 @@ const MenuPreview = () => {
       name: "Manhattan Sunset",
       description: "Bourbon, sweet vermouth, cherry bitters, garnished with orange peel",
       price: "$16",
-      image: "/lovable-uploads/manhattan sunset.png"
+      image: "/lovable-uploads/manhattan-sunset.png"
     },
     {
       name: "Rooftop Refresh",
