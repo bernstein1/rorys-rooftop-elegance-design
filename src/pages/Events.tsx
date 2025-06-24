@@ -3,7 +3,6 @@ import * as React from "react";
 import { CalendarDays, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import EmailSignup from "@/components/EmailSignup";
-import { Calendar } from "@/components/ui/calendar";
 
 const EVENTS = [
   {
@@ -44,8 +43,6 @@ const EVENTS = [
 ];
 
 const Events = () => {
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-
   return (
     <div className="min-h-screen pt-0 pb-16 bg-background">
       <Navigation />
@@ -96,18 +93,6 @@ const Events = () => {
           <p className="text-muted-foreground text-base">
             More events launching soon. <a href="#contact" className="underline text-primary">Contact us</a> for private bookings.
           </p>
-        </div>
-        {/* Calendar Section */}
-        <div className="mt-16 flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-            Event Calendar
-          </h2>
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            className="rounded-md border bg-secondary"
-          />
         </div>
       </section>
       <div className="mt-16">
