@@ -10,13 +10,13 @@ const MenuPreview = () => {
       name: "Manhattan Sunset",
       description: "Bourbon, sweet vermouth, cherry bitters, garnished with orange peel",
       price: "$16",
-      image: "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png"
+      image: "/lovable-uploads/manhattan sunset.png"
     },
     {
       name: "Rooftop Refresh",
       description: "Gin, elderflower, cucumber, lime, topped with prosecco",
       price: "$14",
-      image: "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png"
+      image: "/lovable-uploads/green.png"
     },
     {
       name: "Avocado Toast Elevated",
