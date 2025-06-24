@@ -8,7 +8,7 @@ const POSTS = [
     slug: "best-rooftop-bars-meatpacking-district-nyc-2024",
     title: "Best Rooftop Bars in NYC's Meatpacking District: Your 2024 Guide",
     date: "June 15, 2024",
-    image: "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
+    image: "/lovable-uploads/Rorys_Bartender.png",
     author: "Rory Adams",
     metaDescription: "Find the best rooftop bars in NYC's Meatpacking District. Expert guide to elevated cocktails, stunning views, and unforgettable nights out in Manhattan.",
     content: `
@@ -55,7 +55,7 @@ const POSTS = [
     slug: "seasonal-cocktails-summer-2024-nyc-rooftop",
     title: "Summer 2024 Cocktail Trends: Tropical Flavors Meet NYC Rooftop Culture",
     date: "June 10, 2024",
-    image: "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png",
+    image: "/lovable-uploads/Rorys_Bartender_2.png",
     author: "Jamie Chen",
     metaDescription: "Explore 2024's hottest cocktail trends at NYC rooftop bars. Tropical flavors, craft spirits, and innovative mixology techniques defining summer drinking in Manhattan.",
     content: `
@@ -111,7 +111,7 @@ const POSTS = [
     slug: "date-night-guide-nyc-rooftop-restaurants-2024",
     title: "NYC Date Night Guide: Romantic Rooftop Restaurants & Bars in Manhattan",
     date: "June 5, 2024",
-    image: "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
+    image: "/lovable-uploads/rooftop refresh.png",
     author: "Sofia Martinez",
     metaDescription: "Find the most romantic rooftop restaurants in NYC for your perfect date night. Complete guide to Manhattan's best elevated dining with stunning city views.",
     content: `
@@ -212,7 +212,7 @@ const POSTS = [
     slug: "after-work-happy-hour-spots-meatpacking-district",
     title: "Best After-Work Happy Hour Spots in NYC's Meatpacking District",
     date: "May 28, 2024",
-    image: "/lovable-uploads/5ecc025f-806a-46fc-8570-aa25f4d60ea6.png",
+    image: "/lovable-uploads/eaf50c27-a77f-4580-8706-d131c85608f1.png",
     author: "Marcus Thompson",
     metaDescription: "Find the best happy hour spots in NYC's Meatpacking District. Professional guide to after-work drinks, elevated bar food, and networking venues near Hudson Yards.",
     content: `
@@ -316,7 +316,7 @@ const POSTS = [
     slug: "group-celebrations-rooftop-venues-nyc-guide",
     title: "Ultimate Guide to Group Celebrations at NYC Rooftop Venues",
     date: "May 22, 2024",
-    image: "/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png",
+    image: "/lovable-uploads/70c2fc32-5834-4dcc-9911-137b8c8ff451.png",
     author: "Alex Rivera",
     metaDescription: "Plan perfect group celebrations at NYC rooftop venues. Complete guide to birthday parties, corporate events, and special occasions with stunning Manhattan views.",
     content: `
