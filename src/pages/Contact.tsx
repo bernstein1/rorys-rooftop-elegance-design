@@ -47,7 +47,6 @@ export default function ContactPage() {
       
       console.log('Attempting to insert data:', insertData);
       
-      // Use the proper table name with quotes to handle spaces
       const { data, error } = await supabase
         .from("Contact Us")
         .insert(insertData)
@@ -74,7 +73,6 @@ export default function ContactPage() {
     } catch (error) {
       console.error("Detailed error during form submission:", error);
       
-      // More specific error messages based on error type
       let errorMessage = "Error sending message.";
       if (error instanceof Error) {
         if (error.message.includes('violates row-level security')) {
