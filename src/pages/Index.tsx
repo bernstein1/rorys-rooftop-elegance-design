@@ -22,8 +22,8 @@ const Index = () => {
       <RooftopFeatures />
       <EmailSignup />
       <MenuPreview />
-      <InstagramGallery />
       <PrivateEvents />
+      <InstagramGallery />
       <Contact />
       <Footer />
     </div>

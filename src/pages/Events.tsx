@@ -6,6 +6,13 @@ import EmailSignup from "@/components/EmailSignup";
 
 const EVENTS = [
   {
+    title: "Pride Party – Celebrate Love & Unity",
+    date: "Sunday, June 29, 12:00 PM – 10:00 PM",
+    location: "Rory's Rooftop",
+    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+    desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, DJ sets, and panoramic city views. Love wins here.",
+  },
+  {
     title: "Sunset Cocktails & Live DJ",
     date: "Friday, June 21, 8:00 PM",
     location: "Rory's Rooftop",

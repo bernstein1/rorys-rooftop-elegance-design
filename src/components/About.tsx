@@ -19,6 +19,9 @@ const About = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Our menu is a love letter to New York—a spirited mix of inventive cocktails and artfully crafted plates, all designed to be shared and savored. Join us where the city lights sparkle brightest.
             </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Located above <a href="https://www.puttery.com/locations/new-york-city/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Puttery NYC</a>, our rooftop offers the perfect continuation of your entertainment experience—start with mini golf downstairs, then elevate your night with us.
+            </p>
           </div>
           {/* Image */}
           <div className="relative">
