@@ -13,7 +13,7 @@ const EVENTS = [
   },
   {
     title: "4th of July Party",
-    date: "Friday, June 21, 8:00 PM",
+    date: "Friday, July 4, 8:00 PM",
     image: "/lovable-uploads/4th.png",
     desc: "Celebrate Independence Day at Rory’s Rooftop! Sip red-white-and-blue cocktails under the stars, mingle with friends old and new, and make July 4th in NYC unforgettable.",
   },
