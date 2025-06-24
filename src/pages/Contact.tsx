@@ -10,49 +10,89 @@ import { CONTACT_INFO } from "@/lib/contactInfo";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
-
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    console.log('Form field changed:', e.target.name, e.target.value);
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    console.log('Form submission started with data:', form);
+    
     if (!form.name || !form.email || !form.message) {
+      console.log('Validation failed: missing fields');
       toast({ variant: "destructive", title: "Please fill in all fields." });
       return;
     }
+    
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      console.log('Validation failed: invalid email format');
       toast({ variant: "destructive", title: "Enter a valid email address." });
       return;
     }
+    
     setSubmitting(true);
+    console.log('Starting Supabase insert...');
+    
     try {
-      const { error } = await supabase
+      const insertData = {
+        Name: form.name,
+        Email: form.email,
+        Message: form.message,
+      };
+      
+      console.log('Attempting to insert data:', insertData);
+      
+      const { data, error } = await supabase
         .from("Contact Us")
-        .insert({
-          Name: form.name,
-          Email: form.email,
-          Message: form.message,
-        });
+        .insert(insertData)
+        .select();
+
+      console.log('Supabase response - data:', data, 'error:', error);
 
       if (error) {
+        console.error('Supabase error details:', {
+          message: error.message,
+          details: error.details,
+          hint: error.hint,
+          code: error.code
+        });
         throw error;
       }
 
+      console.log('Form submission successful');
       setForm({ name: "", email: "", message: "" });
       toast({
-        title: "Message sent! We’ll be in touch soon.",
+        title: "Message sent! We'll be in touch soon.",
         description: "Thank you for contacting Rory's Rooftop Bar.",
       });
     } catch (error) {
-      console.error("Error sending message:", error);
-      toast({ variant: "destructive", title: "Error sending message." });
+      console.error("Detailed error during form submission:", error);
+      
+      // More specific error messages based on error type
+      let errorMessage = "Error sending message.";
+      if (error instanceof Error) {
+        if (error.message.includes('violates row-level security')) {
+          errorMessage = "Permission denied. Please try again.";
+        } else if (error.message.includes('relation') && error.message.includes('does not exist')) {
+          errorMessage = "Database table not found. Please contact support.";
+        } else if (error.message.includes('column') && error.message.includes('does not exist')) {
+          errorMessage = "Database schema error. Please contact support.";
+        }
+      }
+      
+      toast({ 
+        variant: "destructive", 
+        title: errorMessage,
+        description: error instanceof Error ? error.message : "Unknown error occurred"
+      });
     } finally {
       setSubmitting(false);
+      console.log('Form submission process completed');
     }
   }
 
