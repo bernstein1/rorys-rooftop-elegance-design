@@ -38,7 +38,7 @@ const EVENTS = [
     title: "Weekend Yoga & Mimosas",
     date: "Saturday, June 29, 10:00 AM",
     location: "Rory's Rooftop",
-    image: "/lovable-uploads/meal cheers.png",
+    image: "/lovable-uploads/meal-cheers.png",
     desc: "Salute the sun (and the skyline) with a morning yoga class, then reward yourself with well-deserved mimosas.",
   },
 ];
