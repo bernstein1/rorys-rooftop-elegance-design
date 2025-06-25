@@ -86,18 +86,18 @@ export default function ContactForm() {
 
         /* Phone and extension on same line */
         body #tripleseat_embed_form_inline input[type="tel"] {
-          width: 200px;
-          max-width: 60%;
+          width: calc(70% - 10px);
           display: inline-block;
+          vertical-align: top;
           margin-right: 10px;
         }
-
+        
         body #tripleseat_embed_form_inline input[name*="extension"],
         body #tripleseat_embed_form_inline input[placeholder*="Ext"],
         body #tripleseat_embed_form_inline input[placeholder*="ext"] {
-          width: 80px;
-          max-width: 30%;
+          width: 30%;
           display: inline-block;
+          vertical-align: top;
           margin-left: 0;
         }
 
