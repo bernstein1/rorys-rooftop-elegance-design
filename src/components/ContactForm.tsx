@@ -19,7 +19,7 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <Card className="p-8 bg-white shadow-lg mt-8 max-w-4xl mx-auto">
+    <Card className="p-6 shadow-lg mt-8 max-w-4xl mx-auto">
       <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Private Event Inquiry</h2>
       
       {/* TripleSeat Form Container */}
@@ -40,6 +40,9 @@ export default function ContactForm() {
           color: #2C2E33;
           max-width: 100%;
           margin: 0 auto;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          box-sizing: border-box;
           text-align: left;
         }
 
