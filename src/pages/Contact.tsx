@@ -12,10 +12,12 @@ export default function ContactPage() {
         <p className="font-body text-lg mb-8 text-muted-foreground text-center">
           Whether it's for reservations, private events, or just to say hello, we'd love to hear from you. Let's connect.
         </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          <ContactInfo />
-          <ContactForm />
-        </div>
+        
+        {/* Contact Info and Hours in a row */}
+        <ContactInfo />
+        
+        {/* Contact Form in a separate white container below */}
+        <ContactForm />
       </div>
     </div>
   );
