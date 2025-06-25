@@ -7,16 +7,16 @@ const MenuPreview = () => {
   const navigate = useNavigate();
   const featuredItems = [
     {
-      name: "Manhattan Sunset",
-      description: "Bourbon, sweet vermouth, cherry bitters, garnished with orange peel",
+      name: "Mecican Candy",
+      description: "Spicy blanco tequila, watermelon, lime",
       price: "$16",
-      image: "/lovable-uploads/manhattan-sunset.png"
+      image: "/lovable-uploads/mexcandy.png"
     },
     {
-      name: "Rooftop Refresh",
-      description: "Gin, elderflower, cucumber, lime, topped with prosecco",
+      name: "Trip to the Beach",
+      description: "Aged rum, coconut, pineapple, orange",
       price: "$14",
-      image: "/lovable-uploads/green.png"
+      image: "/lovable-uploads/colada.png"
     },
     {
       name: "Avocado Toast Elevated",
