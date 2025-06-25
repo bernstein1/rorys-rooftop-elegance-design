@@ -20,7 +20,7 @@ export default function ContactForm() {
 
   return (
     <Card className="p-40 shadow-lg mt-8 max-w-4xl mx-auto">
-      <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Private Event Inquiry</h2>
+      <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Event Inquiry</h2>
       
       {/* TripleSeat Form Container */}
       <div id="tripleseat-form-container" className="max-w-3xl mx-auto">
