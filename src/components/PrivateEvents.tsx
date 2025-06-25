@@ -50,7 +50,7 @@ const PrivateEvents = () => {
               variant="outline"
               asChild
             >
-              <a href="#contact">
+              <a href="/contact">
                 INQUIRE TODAY
               </a>
             </Button>
