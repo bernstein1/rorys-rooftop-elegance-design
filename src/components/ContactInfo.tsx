@@ -5,7 +5,7 @@ import { CONTACT_INFO } from "@/lib/contactInfo";
 
 export default function ContactInfo() {
   return (
-    <div className="grid md:grid-cols-2 gap-6 relative">
+    <div className="grid md:grid-cols-2 gap-4 relative">
       <img
         src="/lovable-uploads/70c2fc32-5834-4dcc-9911-137b8c8ff451.png"
         alt="Illustration of a person reading under a beach umbrella"
@@ -14,20 +14,20 @@ export default function ContactInfo() {
       />
       
       {/* Contact Details Card */}
-      <Card className="p-6 relative z-10">
-        <div className="flex items-center mb-3">
-          <MapPin className="text-primary mr-3" />
-          <span className="font-medium">
+      <Card className="p-4 relative z-10">
+        <div className="flex items-center mb-2">
+          <MapPin className="text-primary mr-3 w-4 h-4" />
+          <span className="font-medium text-sm">
             {CONTACT_INFO.addressLines.join(', ')}
           </span>
         </div>
-        <div className="flex items-center mb-3">
-          <Phone className="text-primary mr-3" />
-          <span className="font-medium">{CONTACT_INFO.phone}</span>
+        <div className="flex items-center mb-2">
+          <Phone className="text-primary mr-3 w-4 h-4" />
+          <span className="font-medium text-sm">{CONTACT_INFO.phone}</span>
         </div>
-        <div className="flex items-center mb-3">
-          <Mail className="text-primary mr-3" />
-          <span>
+        <div className="flex items-center mb-2">
+          <Mail className="text-primary mr-3 w-4 h-4" />
+          <span className="text-sm">
             <a
               href={`mailto:${CONTACT_INFO.email}`}
               className="text-primary hover:underline transition"
@@ -37,12 +37,12 @@ export default function ContactInfo() {
           </span>
         </div>
         <div className="flex items-center">
-          <Instagram className="text-primary mr-3" />
+          <Instagram className="text-primary mr-3 w-4 h-4" />
           <a
             href={CONTACT_INFO.instagram.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary font-medium hover:underline"
+            className="text-primary font-medium hover:underline text-sm"
           >
             {CONTACT_INFO.instagram.handle}
           </a>
@@ -50,12 +50,12 @@ export default function ContactInfo() {
       </Card>
 
       {/* Hours Card */}
-      <Card className="p-6 relative z-10">
-        <div className="flex items-center mb-4">
-          <Clock className="text-primary mr-3" />
-          <span className="font-medium">Hours</span>
+      <Card className="p-4 relative z-10">
+        <div className="flex items-center mb-3">
+          <Clock className="text-primary mr-3 w-4 h-4" />
+          <span className="font-medium text-sm">Hours</span>
         </div>
-        <div className="space-y-1 font-body text-base">
+        <div className="space-y-1 font-body text-sm">
           {CONTACT_INFO.hours.map(({ day, time }) => (
             <div key={day} className="flex justify-between">
               <span className="text-muted-foreground">{day}</span>
