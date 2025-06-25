@@ -7,7 +7,7 @@ const MenuPreview = () => {
   const navigate = useNavigate();
   const featuredItems = [
     {
-      name: "Mecican Candy",
+      name: "Mexican Candy",
       description: "Spicy blanco tequila, watermelon, lime",
       price: "$16",
       image: "/lovable-uploads/mexcandy.png"
