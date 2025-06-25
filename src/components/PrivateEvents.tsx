@@ -51,7 +51,7 @@ const PrivateEvents = () => {
               asChild
             >
               <a href="#contact">
-                LEARN MORE
+                INQUIRE TODAY
               </a>
             </Button>
           </div>
