@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 
@@ -19,11 +18,11 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <Card className="p-40 shadow-lg mt-8 max-w-4xl mx-auto">
+    <Card className="p-8 shadow-lg mt-8 max-w-2xl mx-auto">
       <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Event Inquiry</h2>
       
       {/* TripleSeat Form Container */}
-      <div id="tripleseat-form-container" className="max-w-3xl mx-auto">
+      <div id="tripleseat-form-container">
         {/* The TripleSeat form will be injected here */}
       </div>
       
@@ -34,124 +33,39 @@ export default function ContactForm() {
       </div>
 
       <style>{`
-        /* Custom styling to match website design and implement user requirements */
+        /* Clean, simple form styling */
         body #tripleseat_embed_form_inline {
-          font-family: 'Jubilat', serif;
-          color: #2C2E33;
+          font-family: system-ui, -apple-system, sans-serif;
           max-width: 100%;
-          margin: 0 auto;
-          padding-left: 10rem;
-          padding-right: 10rem;
-          box-sizing: border-box;
-          text-align: left;
+          margin: 0;
+          padding: 0;
         }
 
+        /* Hide default title */
         body #tripleseat_embed_form_inline h2 {
-          display: none; /* Hide default title since we have our own */
+          display: none;
         }
 
+        /* Clean labels */
         body #tripleseat_embed_form_inline label {
-          font-family: 'Jubilat', serif;
-          color: #2C2E33;
-          font-weight: 500;
-          margin-bottom: 0.5rem;
           display: block;
-          font-size: 0.9rem;
+          font-weight: 500;
+          margin-bottom: 6px;
+          color: #374151;
         }
 
+        /* All form inputs - consistent styling */
         body #tripleseat_embed_form_inline input,
         body #tripleseat_embed_form_inline textarea,
         body #tripleseat_embed_form_inline select {
-          background-color: #F6F2DA;
-          border: 1px solid #C8D4D1;
-          border-radius: 0.375rem;
-          padding: 0.75rem;
-          font-family: 'Jubilat', serif;
-          color: #2C2E33;
-          margin-bottom: 0.5rem;
-          transition: all 0.2s ease;
-          display: block;
-        }
-
-        /* Standard text inputs - appropriate width, not full page */
-        body #tripleseat_embed_form_inline input[type="text"] {
-          width: 300px;
-          max-width: 100%;
-        }
-
-        body #tripleseat_embed_form_inline input[type="email"] {
-          width: 300px;
-          max-width: 100%;
-        }
-
-        /* Phone and extension on same line */
-        body #tripleseat_embed_form_inline input[type="tel"] {
-          width: calc(70% - 10px);
-          display: inline-block;
-          vertical-align: top;
-          margin-right: 10px;
-        }
-        
-        body #tripleseat_embed_form_inline input[name*="extension"],
-        body #tripleseat_embed_form_inline input[placeholder*="Ext"],
-        body #tripleseat_embed_form_inline input[placeholder*="ext"] {
-          width: 30%;
-          display: inline-block;
-          vertical-align: top;
-          margin-left: 0;
-        }
-
-        /* Guest count - smaller field */
-        body #tripleseat_embed_form_inline input[type="number"] {
-          width: 120px;
-          max-width: 100%;
-        }
-
-        /* Date and time fields - half current size */
-        body #tripleseat_embed_form_inline input[type="date"] {
-          width: 140px;
-          max-width: 100%;
-          display: inline-block;
-          margin-right: 10px;
-        }
-
-        body #tripleseat_embed_form_inline input[type="time"] {
-          width: 100px;
-          max-width: 100%;
-          display: inline-block;
-          margin-right: 10px;
-        }
-
-        /* Selects - appropriate size */
-        body #tripleseat_embed_form_inline select {
-          width: 250px;
-          max-width: 100%;
-        }
-
-        /* Textarea - reasonable width, not full page */
-        body #tripleseat_embed_form_inline textarea {
           width: 100%;
-          max-width: 500px;
-          min-height: 100px;
-          resize: vertical;
-        }
-
-        /* Newsletter checkbox - inline with label */
-        body #tripleseat_embed_form_inline input[type="checkbox"] {
-          width: auto;
-          display: inline-block;
-          margin-right: 8px;
-          margin-bottom: 0;
-          vertical-align: middle;
-        }
-
-        body #tripleseat_embed_form_inline label[for*="newsletter"],
-        body #tripleseat_embed_form_inline label[for*="email_opt"],
-        body #tripleseat_embed_form_inline label[for*="subscribe"] {
-          display: inline-block;
-          margin-bottom: 0.5rem;
-          vertical-align: middle;
-          width: auto;
+          padding: 12px;
+          border: 1px solid #d1d5db;
+          border-radius: 6px;
+          font-size: 14px;
+          margin-bottom: 16px;
+          background: white;
+          box-sizing: border-box;
         }
 
         /* Focus states */
@@ -159,147 +73,78 @@ export default function ContactForm() {
         body #tripleseat_embed_form_inline textarea:focus,
         body #tripleseat_embed_form_inline select:focus {
           outline: none;
-          border-color: #0A9F93;
-          box-shadow: 0 0 0 2px rgba(10, 159, 147, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
-        /* Submit button - centered */
-        body #tripleseat_embed_form_inline .button,
+        /* Textarea specific */
+        body #tripleseat_embed_form_inline textarea {
+          min-height: 100px;
+          resize: vertical;
+        }
+
+        /* Submit button */
         body #tripleseat_embed_form_inline button[type="submit"],
-        body #tripleseat_embed_form_inline input[type="submit"] {
-          background-color: #0A9F93;
+        body #tripleseat_embed_form_inline input[type="submit"],
+        body #tripleseat_embed_form_inline .button {
+          background: #3b82f6;
           color: white;
           border: none;
-          border-radius: 0.375rem;
-          padding: 0.75rem 1.5rem;
-          font-family: 'Phosphate', sans-serif;
+          padding: 12px 24px;
+          border-radius: 6px;
           font-weight: 500;
           cursor: pointer;
-          transition: all 0.2s ease;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          margin-top: 1rem;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
           width: auto;
+          display: inline-block;
+          margin: 16px auto 0;
         }
 
-        body #tripleseat_embed_form_inline .button:hover,
         body #tripleseat_embed_form_inline button[type="submit"]:hover,
-        body #tripleseat_embed_form_inline input[type="submit"]:hover {
-          background-color: #088A7E;
-          transform: translateY(-1px);
-          box-shadow: 0 4px 8px rgba(10, 159, 147, 0.2);
+        body #tripleseat_embed_form_inline input[type="submit"]:hover,
+        body #tripleseat_embed_form_inline .button:hover {
+          background: #2563eb;
         }
 
-        /* Form field containers */
+        /* Checkboxes */
+        body #tripleseat_embed_form_inline input[type="checkbox"] {
+          width: auto;
+          margin-right: 8px;
+          margin-bottom: 0;
+        }
+
+        /* Field containers */
         body #tripleseat_embed_form_inline .tripleseat_field {
-          margin-bottom: 1rem;
-          width: auto;
-          clear: both;
+          margin-bottom: 16px;
         }
 
-        body #tripleseat_embed_form_inline .tripleseat_field_section {
-          margin-bottom: 1.25rem;
-          width: 100%;
-        }
-
-        /* Location selection styling */
-        body #tripleseat_embed_form_inline .location_list input {
-          width: auto;
-          margin-right: 0.5rem;
-          display: inline-block;
-          vertical-align: middle;
-        }
-
-        body #tripleseat_embed_form_inline .location_list label {
-          margin-left: 0.5rem;
-          margin-bottom: 0.5rem;
-          display: inline-block;
-          vertical-align: middle;
-        }
-
-        body #tripleseat_embed_form_inline .location_list div {
-          margin-bottom: 0.5rem;
-        }
-
-        /* Error styling */
+        /* Error states */
         body #tripleseat_embed_form_inline .errorExplanation {
-          background-color: #FEE2E2;
-          border: 1px solid #F87171;
-          border-radius: 0.375rem;
-          padding: 1rem;
-          margin-bottom: 0.5rem;
-          text-align: center;
-        }
-
-        body #tripleseat_embed_form_inline .errorExplanation h2 {
-          color: #DC2626;
-          font-size: 1rem;
-          margin-bottom: 0.5rem;
+          background: #fef2f2;
+          border: 1px solid #fecaca;
+          padding: 12px;
+          border-radius: 6px;
+          margin-bottom: 16px;
+          color: #dc2626;
         }
 
         body #tripleseat_embed_form_inline input.error,
         body #tripleseat_embed_form_inline textarea.error,
         body #tripleseat_embed_form_inline select.error {
-          background-color: #FEE2E2;
-          border-color: #F87171;
+          border-color: #dc2626;
         }
 
-        body #tripleseat_embed_form_inline .help-block {
-          font-size: 0.875rem;
-          color: #6B7280;
-          margin-top: 0.25rem;
-        }
-
-        body #tripleseat_embed_form_inline .danger {
-          color: #DC2626;
-        }
-
+        /* Required field indicator */
         body #tripleseat_embed_form_inline .required {
-          color: #DC2626;
+          color: #dc2626;
         }
 
-        /* Mobile responsiveness */
+        /* Mobile responsive */
         @media (max-width: 640px) {
-          body #tripleseat_embed_form_inline .tripleseat_field {
-            width: 100%;
-          }
-          
           body #tripleseat_embed_form_inline input,
           body #tripleseat_embed_form_inline textarea,
           body #tripleseat_embed_form_inline select {
-            width: 100%;
-            max-width: 100%;
+            font-size: 16px; /* Prevents zoom on iOS */
           }
-
-          body #tripleseat_embed_form_inline input[type="tel"] {
-            width: 65%;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-          }
-
-          body #tripleseat_embed_form_inline input[name*="extension"],
-          body #tripleseat_embed_form_inline input[placeholder*="Ext"],
-          body #tripleseat_embed_form_inline input[placeholder*="ext"] {
-            width: 30%;
-            display: inline-block;
-            margin-left: 5%;
-          }
-        }
-
-        /* Powered by link styling */
-        #tripleseat_link {
-          font-size: 0.75rem;
-          color: #9CA3AF;
-          text-decoration: none;
-          margin-top: 1rem;
-          display: inline-block;
-        }
-
-        #tripleseat_link:hover {
-          color: #0A9F93;
         }
       `}</style>
     </Card>
