@@ -20,10 +20,8 @@ export default function ContactForm() {
     <Card className="p-8 shadow-lg mt-8 max-w-2xl mx-auto">
       <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Event Inquiry</h2>
       
-      <div className="bg-[#F6F2DA] p-12 rounded-lg">
-        <div id="tripleseat_embed_form_inline" className="pl-16">
-          {/* The TripleSeat form will be injected here */}
-        </div>
+      <div id="tripleseat_embed_form_inline">
+        {/* The TripleSeat form will be injected here */}
       </div>
       
       <div className="text-center mt-6">
@@ -43,8 +41,9 @@ export default function ContactForm() {
           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
           max-width: 100% !important;
           margin: 0 !important;
-          padding: 0 !important;
-          background: transparent !important;
+          padding: 48px 48px 48px 112px !important;
+          background: #F6F2DA !important;
+          border-radius: 8px !important;
         }
 
         /* Kill the default title */
