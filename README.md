@@ -72,6 +72,23 @@ cp .env.example .env.local
 
 The app expects `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY` to be defined.
 
+### Tripleseat integration
+
+The contact form also sends lead information to Tripleseat. Create additional
+environment variables in `.env.local` with your Tripleseat credentials:
+
+```env
+# Tripleseat settings
+VITE_TRIPLESEAT_PUBLIC_KEY=ea1b9e9398812b6177ebfb0f6c6077f9dd47cd76
+VITE_TRIPLESEAT_LEAD_FORM_ID=44808
+# Optional if your account uses multiple locations
+VITE_TRIPLESEAT_LOCATION_ID=
+```
+
+The public key and lead form ID come from your Tripleseat account settings. If
+you have multiple locations, fill in `VITE_TRIPLESEAT_LOCATION_ID` with the
+corresponding ID.
+
 ## Contact form data
 
 Messages submitted from the Contact page are stored in the Supabase table
