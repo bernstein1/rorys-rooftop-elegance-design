@@ -38,7 +38,7 @@ export default function ContactForm() {
           Private Event Software powered by Tripleseat
         </a>
 
-        <style jsx>{`
+        <style>{`
           /* Custom styling to match website design */
           body #tripleseat_embed_form_inline {
             font-family: 'Jubilat', serif;
