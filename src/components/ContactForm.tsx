@@ -19,7 +19,7 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <Card className="p-6 shadow-lg mt-8 max-w-4xl mx-auto">
+    <Card className="p-8 shadow-lg mt-8 max-w-4xl mx-auto">
       <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Private Event Inquiry</h2>
       
       {/* TripleSeat Form Container */}
@@ -40,8 +40,8 @@ export default function ContactForm() {
           color: #2C2E33;
           max-width: 100%;
           margin: 0 auto;
-          padding-left: 1rem;
-          padding-right: 1rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
           box-sizing: border-box;
           text-align: left;
         }
@@ -68,7 +68,7 @@ export default function ContactForm() {
           padding: 0.75rem;
           font-family: 'Jubilat', serif;
           color: #2C2E33;
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
           transition: all 0.2s ease;
           display: block;
         }
@@ -149,7 +149,7 @@ export default function ContactForm() {
         body #tripleseat_embed_form_inline label[for*="email_opt"],
         body #tripleseat_embed_form_inline label[for*="subscribe"] {
           display: inline-block;
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
           vertical-align: middle;
           width: auto;
         }
@@ -195,13 +195,13 @@ export default function ContactForm() {
 
         /* Form field containers */
         body #tripleseat_embed_form_inline .tripleseat_field {
-          margin-bottom: 1.5rem;
+          margin-bottom: 1rem;
           width: auto;
           clear: both;
         }
 
         body #tripleseat_embed_form_inline .tripleseat_field_section {
-          margin-bottom: 2rem;
+          margin-bottom: 1.25rem;
           width: 100%;
         }
 
@@ -230,7 +230,7 @@ export default function ContactForm() {
           border: 1px solid #F87171;
           border-radius: 0.375rem;
           padding: 1rem;
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
           text-align: center;
         }
 
