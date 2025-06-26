@@ -12,13 +12,13 @@
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self'; 
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.tripleseat.com https://www.googletagmanager.com; 
-      style-src 'self' 'unsafe-inline'; 
-      img-src 'self' data: https:; 
-      font-src 'self' data:; 
-      connect-src 'self' https://api.tripleseat.com https://*.supabase.co; 
-      frame-src 'self' https:;
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.tripleseat.com https://*.tripleseat.com https://www.googletagmanager.com;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https:;
+      font-src 'self' data:;
+      connect-src 'self' https://api.tripleseat.com https://*.tripleseat.com https://*.supabase.co;
+      frame-src 'self' https: https://*.tripleseat.com;
     " />
 
     <meta property="og:title" content="Rory's Rooftop Bar | Elevated Cocktails & Dining in NYC's Meatpacking District" />
