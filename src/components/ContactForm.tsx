@@ -6,8 +6,12 @@ export default function ContactForm() {
   useEffect(() => {
     // Load the TripleSeat script
     const script = document.createElement('script');
-    script.src = 'https://api.tripleseat.com/v1/leads/ts_script.js?lead_form_id=44808&public_key=ea1b9e9398812b6177ebfb0f6c6077f9dd47cd76&inline_form=true';
+    script.src =
+      'https://api.tripleseat.com/v1/leads/ts_script.js?lead_form_id=44808&public_key=ea1b9e9398812b6177ebfb0f6c6077f9dd47cd76&inline_form=true';
     script.async = true;
+    script.referrerPolicy = 'no-referrer';
+    script.crossOrigin = 'anonymous';
+    script.defer = true;
     document.body.appendChild(script);
 
     return () => {
