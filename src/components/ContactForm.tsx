@@ -12,6 +12,7 @@ export default function ContactForm() {
     script.referrerPolicy = 'no-referrer';
     script.crossOrigin = 'anonymous';
     script.defer = true;
+    script.setAttribute('data-external-service', 'tripleseat');
     document.body.appendChild(script);
 
     return () => {
@@ -27,12 +28,23 @@ export default function ContactForm() {
       <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Event Inquiry</h2>
       
       {/* TripleSeat Form Container */}
-      <div id="tripleseat-form-container">
+      <div 
+        id="tripleseat-form-container"
+        role="form"
+        aria-label="Event inquiry form"
+      >
         {/* The TripleSeat form will be injected here */}
       </div>
       
       <div className="text-center mt-6">
-        <a id="tripleseat_link" href="https://www.tripleseat.com" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+        <a 
+          id="tripleseat_link" 
+          href="https://www.tripleseat.com" 
+          className="text-xs text-muted-foreground hover:text-primary transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Private Event Software powered by Tripleseat (opens in new window)"
+        >
           Private Event Software powered by Tripleseat
         </a>
       </div>
@@ -60,6 +72,16 @@ export default function ContactForm() {
           margin-bottom: 6px;
           color: #2C2E33;
           font-size: 1rem;
+        }
+
+        /* Add required field indicators */
+        body #tripleseat_embed_form_inline label[required]::after,
+        body #tripleseat_embed_form_inline label:has(+ input[required])::after,
+        body #tripleseat_embed_form_inline label:has(+ select[required])::after,
+        body #tripleseat_embed_form_inline label:has(+ textarea[required])::after {
+          content: " *";
+          color: #dc2626;
+          font-weight: bold;
         }
 
         /* All form inputs - consistent styling with site colors */
@@ -100,11 +122,12 @@ export default function ContactForm() {
           min-height: 50px;
         }
 
-        /* Focus states using site primary color */
+        /* Focus states using site primary color - enhanced for accessibility */
         body #tripleseat_embed_form_inline input:focus,
         body #tripleseat_embed_form_inline textarea:focus,
         body #tripleseat_embed_form_inline select:focus {
-          outline: none;
+          outline: 3px solid #0A9F93;
+          outline-offset: 2px;
           border-color: #0A9F93;
           box-shadow: 0 0 0 3px rgba(10, 159, 147, 0.1);
         }
@@ -128,6 +151,7 @@ export default function ContactForm() {
           display: inline-block;
           margin: 16px auto 0;
           transition: all 0.3s ease;
+          min-height: 44px; /* WCAG touch target size */
         }
 
         body #tripleseat_embed_form_inline button[type="submit"]:hover,
@@ -137,11 +161,25 @@ export default function ContactForm() {
           transform: translateY(-1px);
         }
 
-        /* Checkboxes */
+        body #tripleseat_embed_form_inline button[type="submit"]:focus,
+        body #tripleseat_embed_form_inline input[type="submit"]:focus,
+        body #tripleseat_embed_form_inline .button:focus {
+          outline: 3px solid #0A9F93;
+          outline-offset: 2px;
+        }
+
+        /* Checkboxes - enhanced for accessibility */
         body #tripleseat_embed_form_inline input[type="checkbox"] {
-          width: auto;
+          width: 18px;
+          height: 18px;
           margin-right: 8px;
           margin-bottom: 0;
+          cursor: pointer;
+        }
+
+        body #tripleseat_embed_form_inline input[type="checkbox"]:focus {
+          outline: 3px solid #0A9F93;
+          outline-offset: 2px;
         }
 
         /* Field containers */
@@ -158,12 +196,14 @@ export default function ContactForm() {
           margin-bottom: 16px;
           color: #dc2626;
           font-family: 'Jubilat', serif;
+          role: alert;
         }
 
         body #tripleseat_embed_form_inline input.error,
         body #tripleseat_embed_form_inline textarea.error,
         body #tripleseat_embed_form_inline select.error {
           border-color: #dc2626;
+          background-color: #fef2f2;
         }
 
         /* Required field indicator */
@@ -181,6 +221,15 @@ export default function ContactForm() {
           body #tripleseat_embed_form_inline textarea,
           body #tripleseat_embed_form_inline select {
             font-size: 16px; /* Prevents zoom on iOS */
+          }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+          body #tripleseat_embed_form_inline input,
+          body #tripleseat_embed_form_inline textarea,
+          body #tripleseat_embed_form_inline select {
+            border-width: 2px;
           }
         }
       `}</style>

@@ -13,13 +13,13 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import BlogPost from "./pages/BlogPost";
 import Menu from "./pages/Menu";
-import SkipLink from "./components/SkipLink";
+import AccessibilitySkipLink from "./components/AccessibilitySkipLink";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <SkipLink />
+    <AccessibilitySkipLink />
     <TooltipProvider>
       <Toaster />
       <Sonner />
