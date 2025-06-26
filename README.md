@@ -71,6 +71,7 @@ cp .env.example .env.local
 ```
 
 The app expects `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY` to be defined.
+The build process also reads `SITE_URL` to populate `public/sitemap.xml`.
 
 ## Contact form data
 
