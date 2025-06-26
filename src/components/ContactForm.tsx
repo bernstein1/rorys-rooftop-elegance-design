@@ -5,7 +5,9 @@ import { Card } from "@/components/ui/card";
 export default function ContactForm() {
   useEffect(() => {
     // Clean up any existing TripleSeat elements first
-    const existingScript = document.querySelector('script[src*="tripleseat.com"]');
+    const existingScript = document.querySelector(
+      'script[data-external-service="tripleseat"]'
+    );
     const existingForm = document.getElementById('tripleseat_embed_form_inline');
     
     if (existingScript) {
@@ -17,15 +19,19 @@ export default function ContactForm() {
 
     // Create and load the TripleSeat script
     const script = document.createElement('script');
-    script.src = 'https://api.tripleseat.com/v1/leads/ts_script.js?lead_form_id=44808&public_key=ea1b9e9398812b6177ebfb0f6c6077f9dd47cd76&inline_form=true';
-    script.async = true;
-    script.defer = true;
+    script.src =
+      'https://api.tripleseat.com/v1/leads/ts_script.js?lead_form_id=44808&public_key=ea1b9e9398812b6177ebfb0f6c6077f9dd47cd76&inline_form=true';
     script.crossOrigin = 'anonymous';
     script.referrerPolicy = 'no-referrer';
     script.setAttribute('data-external-service', 'tripleseat');
-    
-    // Add script to head instead of body for better loading
-    document.head.appendChild(script);
+
+    // Add script to the form container so the form renders in place
+    const container = document.getElementById('tripleseat-form-container');
+    if (container) {
+      container.appendChild(script);
+    } else {
+      document.body.appendChild(script);
+    }
 
     // Cleanup function
     return () => {
@@ -41,13 +47,14 @@ export default function ContactForm() {
       <h2 className="font-section-header text-2xl mb-6 text-primary text-center">Event Inquiry</h2>
       
       {/* TripleSeat Form Container */}
-      <div 
+      <div
         id="tripleseat-form-container"
         role="form"
         aria-label="Event inquiry form powered by TripleSeat"
         className="min-h-[400px]"
       >
         {/* The TripleSeat form will be automatically injected here by their script */}
+        <div id="tripleseat_embed_form_inline" />
       </div>
       
       <div className="text-center mt-6">
