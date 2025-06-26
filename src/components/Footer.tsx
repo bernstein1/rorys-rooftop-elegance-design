@@ -14,9 +14,9 @@ const Footer = () => {
             <PrivacyPolicyModal />
             <TermsOfServiceModal />
             <a 
-              href="#contact" 
+              href="/contact" 
               className="text-background hover:text-secondary transition-colors"
-              aria-label="Go to contact section"
+              aria-label="Go to contact page"
             >
               Contact
             </a>
