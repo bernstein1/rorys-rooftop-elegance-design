@@ -1,5 +1,6 @@
 
 import { Instagram, Phone, MapPin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import { CONTACT_INFO } from "@/lib/contactInfo";
 
 const Footer = () => {
@@ -29,6 +30,8 @@ const Footer = () => {
               <li><a href="#menu" className="text-primary-foreground/80 hover:text-white">Menu</a></li>
               <li><a href="#contact" className="text-primary-foreground/80 hover:text-white">Contact</a></li>
               <li><a href="https://www.puttery.com/locations/new-york-city/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-white">Puttery NYC</a></li>
+              <li><Link to="/privacy" className="text-primary-foreground/80 hover:text-white">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-primary-foreground/80 hover:text-white">Terms of Service</Link></li>
             </ul>
           </div>
 
