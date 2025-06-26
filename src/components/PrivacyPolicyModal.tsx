@@ -10,7 +10,10 @@ const PrivacyPolicyModal = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="link" className="p-0 h-auto text-sm text-muted-foreground hover:text-primary">
+        <Button 
+          variant="link" 
+          className="p-0 h-auto text-sm text-background/90 hover:text-secondary underline-offset-4 hover:underline"
+        >
           Privacy Policy
         </Button>
       </DialogTrigger>

@@ -1,5 +1,6 @@
 
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const faqs = [
@@ -83,6 +84,7 @@ export default function FAQ() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

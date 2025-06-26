@@ -3,6 +3,7 @@ import * as React from "react";
 import { CalendarDays } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import EmailSignup from "@/components/EmailSignup";
+import Footer from "@/components/Footer";
 
 const EVENTS = [
   {
@@ -15,7 +16,7 @@ const EVENTS = [
     title: "4th of July Party",
     date: "Friday, July 4, 8:00 PM",
     image: "/lovable-uploads/4th.png",
-    desc: "Celebrate Independence Day at Rory’s Rooftop! Sip red-white-and-blue cocktails under the stars, mingle with friends old and new, and make July 4th in NYC unforgettable.",
+    desc: "Celebrate Independence Day at Rory's Rooftop! Sip red-white-and-blue cocktails under the stars, mingle with friends old and new, and make July 4th in NYC unforgettable.",
   },
   {
     title: "Rosé All Day – Summer Brunch",
@@ -90,13 +91,14 @@ const Events = () => {
         </div>
         <div className="mt-16 text-center">
           <p className="text-muted-foreground text-base">
-            More events launching soon. <a href="#contact" className="underline text-primary">Contact us</a> for private bookings.
+            More events launching soon. <a href="/contact" className="underline text-primary">Contact us</a> for private bookings.
           </p>
         </div>
       </section>
       <div className="mt-16">
         <EmailSignup />
       </div>
+      <Footer />
     </div>
   );
 };

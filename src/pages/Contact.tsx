@@ -2,6 +2,7 @@
 import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
 import ContactInfo from "@/components/ContactInfo";
+import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   return (
@@ -21,6 +22,7 @@ export default function ContactPage() {
         {/* Contact Form in a separate white container below */}
         <ContactForm />
       </main>
+      <Footer />
     </div>
   );
 }
