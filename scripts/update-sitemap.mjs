@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 
 const siteUrl = process.env.SITE_URL;
 if (!siteUrl) {
-  console.error('SITE_URL environment variable is not set');
+  console.error('Set the SITE_URL environment variable before building');
   process.exit(1);
 }
 
