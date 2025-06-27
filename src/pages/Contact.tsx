@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   return (
-    <div id="main-content" className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
+    <div id="main-content" className="bg-background min-h-screen w-full overflow-x-hidden flex flex-col">
       <Navigation />
-      <main className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
+      <main className="flex-1 max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
         <header className="text-center mb-8">
           <h1 className="font-hero mb-2">Contact Rory's Rooftop Bar</h1>
           <p className="font-body text-lg text-muted-foreground">
