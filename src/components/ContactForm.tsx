@@ -24,6 +24,8 @@ export default function ContactForm() {
     script.crossOrigin = 'anonymous';
     script.referrerPolicy = 'no-referrer';
     script.setAttribute('data-external-service', 'tripleseat');
+    script.async = true;
+    script.defer = true;
 
     // Add script to the form container so the form renders in place
     const container = document.getElementById('tripleseat-form-container');
