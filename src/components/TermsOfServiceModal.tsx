@@ -1,54 +1,61 @@
 
-import React, { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const TermsOfServiceModal = () => {
-  const [open, setOpen] = useState(false);
-
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog>
       <DialogTrigger asChild>
-        <Button 
-          variant="link" 
-          className="p-0 h-auto text-sm text-background/90 hover:text-secondary underline-offset-4 hover:underline"
-        >
+        <Button variant="link" className="text-background/90 hover:text-secondary p-0 h-auto underline-offset-4 hover:underline">
           Terms of Service
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl max-h-[80vh]">
+      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Terms of Service</DialogTitle>
         </DialogHeader>
-        <ScrollArea className="h-[60vh] pr-4">
-          <div className="space-y-4 text-sm">
-            <section>
-              <h3 className="font-semibold mb-2">1. Acceptance of Terms</h3>
-              <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
-            </section>
-            
-            <section>
-              <h3 className="font-semibold mb-2">2. Reservations</h3>
-              <p>Reservations are subject to availability and confirmation. We reserve the right to refuse service to anyone for any reason at any time.</p>
-            </section>
-            
-            <section>
-              <h3 className="font-semibold mb-2">3. Cancellation Policy</h3>
-              <p>Cancellations must be made at least 24 hours in advance. Late cancellations or no-shows may be subject to charges.</p>
-            </section>
-            
-            <section>
-              <h3 className="font-semibold mb-2">4. Liability</h3>
-              <p>Rory's Rooftop Bar is not liable for any direct, indirect, incidental, or consequential damages arising from your use of our services.</p>
-            </section>
-            
-            <section>
-              <h3 className="font-semb-2">5. Modifications</h3>
-              <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on our website.</p>
-            </section>
-          </div>
-        </ScrollArea>
+        <div className="space-y-4 text-sm">
+          <p><strong>Last Updated:</strong> June 2024</p>
+          
+          <section>
+            <h3 className="font-semibold mb-2">Acceptance of Terms</h3>
+            <p>By accessing and using Rory's Rooftop Bar services, you accept and agree to be bound by the terms and provision of this agreement.</p>
+          </section>
+
+          <section>
+            <h3 className="font-semibold mb-2">Reservations</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Reservations are subject to availability and confirmation</li>
+              <li>We reserve the right to cancel or modify reservations due to circumstances beyond our control</li>
+              <li>Cancellation policies apply and may vary by booking type</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 className="font-semibold mb-2">Code of Conduct</h3>
+            <p>We maintain a sophisticated atmosphere and reserve the right to refuse service to anyone who does not comply with our dress code or behavioral standards.</p>
+          </section>
+
+          <section>
+            <h3 className="font-semibold mb-2">Age Requirements</h3>
+            <p>All guests must be 21 years or older. Valid government-issued ID is required for entry.</p>
+          </section>
+
+          <section>
+            <h3 className="font-semibold mb-2">Private Events</h3>
+            <p>Private event bookings are subject to separate terms and conditions provided at the time of booking.</p>
+          </section>
+
+          <section>
+            <h3 className="font-semibold mb-2">Limitation of Liability</h3>
+            <p>Rory's Rooftop Bar shall not be liable for any indirect, incidental, special, or consequential damages.</p>
+          </section>
+
+          <section>
+            <h3 className="font-semibold mb-2">Contact Information</h3>
+            <p>For questions about these terms, please contact us through our website or speak with management during your visit.</p>
+          </section>
+        </div>
       </DialogContent>
     </Dialog>
   );
