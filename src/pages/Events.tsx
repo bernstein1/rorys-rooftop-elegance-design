@@ -1,133 +1,106 @@
 
+import * as React from "react";
+import { CalendarDays } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import EmailSignup from "@/components/EmailSignup";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
-import { Card } from "@/components/ui/card";
-import { Users, Calendar, Star, MapPin } from "lucide-react";
 
-const eventPackages = [
+const EVENTS = [
   {
-    name: "Corporate Gathering",
-    capacity: "20-50 guests",
-    features: ["Dedicated bar area", "Customized menu", "A/V equipment", "Event coordinator"],
-    price: "Starting at $75/person"
+    title: "Pride Party – Celebrate Love & Unity",
+    date: "Sunday, June 29, 12:00 PM – 10:00 PM",
+    image: "/lovable-uploads/pride.png",
+    desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, DJ sets, and panoramic city views. Love wins here.",
   },
   {
-    name: "Celebration Package",
-    capacity: "10-30 guests",
-    features: ["Semi-private space", "Cocktail reception", "Passed appetizers", "Dedicated server"],
-    price: "Starting at $65/person"
+    title: "4th of July Party",
+    date: "Friday, July 4, 8:00 PM",
+    image: "/lovable-uploads/4th.png",
+    desc: "Celebrate Independence Day at Rory's Rooftop! Sip red-white-and-blue cocktails under the stars, mingle with friends old and new, and make July 4th in NYC unforgettable.",
   },
   {
-    name: "Full Venue Buyout",
-    capacity: "Up to 150 guests",
-    features: ["Exclusive rooftop access", "Full bar service", "Custom menu design", "Event planning"],
-    price: "Contact for pricing"
-  }
+    title: "Rosé All Day – Summer Brunch",
+    date: "Sunday, June 23, 12:00 PM",
+    image: "/lovable-uploads/aperol.png",
+    desc: "Our weekend brunch, perfected. Enjoy a curated menu of brunch favorites and, of course, free-flowing rosé.",
+  },
+  {
+    title: "Rooftop Movie Night",
+    date: "Wednesday, June 26, 9:00 PM",
+    image: "/lovable-uploads/cheers.png",
+    desc: "Your favorite films have never looked this good. Join us for cinema under the stars, complete with themed cocktails and gourmet popcorn.",
+  },
+  {
+    title: "Acoustic Sessions: Unplugged",
+    date: "Thursday, June 27, 7:00 PM",
+    image: "/lovable-uploads/meal.png",
+    desc: "Experience the magic of live, unplugged music in an intimate setting. A truly special night.",
+  },
+  {
+    title: "Weekend Yoga & Mimosas",
+    date: "Saturday, June 29, 10:00 AM",
+    image: "/lovable-uploads/meal-cheers.png",
+    desc: "Salute the sun (and the skyline) with a morning yoga class, then reward yourself with well-deserved mimosas.",
+  },
 ];
 
-export default function Events() {
+const Events = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div id="main-content" className="min-h-screen pt-0 pb-16 bg-background">
       <Navigation />
-      <main id="main-content" className="max-w-6xl mx-auto px-4 pt-32 pb-16">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            Private Events
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Transform your next celebration into an unforgettable experience high above the Meatpacking District. 
-            Our rooftop offers the perfect backdrop for corporate events, celebrations, and exclusive gatherings.
-          </p>
-        </header>
-
-        {/* Hero Image */}
-        <div className="mb-16">
-          <img 
-            src="/lovable-uploads/cheers.png" 
-            alt="Private event celebration at Rory's Rooftop"
-            className="w-full h-64 md:h-96 object-cover rounded-lg shadow-2xl"
-          />
+      <section className="max-w-6xl mx-auto px-4 pt-32">
+        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">
+          Happenings at The Rooftop
+        </h1>
+        <p className="text-lg md:text-xl mb-10 text-muted-foreground text-center max-w-2xl mx-auto">
+          From sunset DJ sets to exclusive tasting menus, there's always something happening at Rory's. See what's on.
+        </p>
+        <div className="relative">
+          <div className="overflow-x-scroll overflow-y-hidden pb-4 custom-scrollbar">
+            <div className="flex gap-8 w-max">
+              {EVENTS.map((event, i) => (
+                <div
+                  key={i}
+                  className="w-80 sm:w-96 flex-shrink-0 rounded-2xl shadow-xl hover-scale transition-all group bg-secondary flex flex-col"
+                >
+                  <div className="overflow-hidden rounded-t-2xl">
+                    <img src={event.image} alt={event.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div className="p-6 flex flex-col gap-3 flex-1">
+                    <h2 className="text-2xl font-semibold text-primary mb-2">{event.title}</h2>
+                    <div className="flex gap-4 text-muted-foreground text-sm items-center">
+                      <CalendarDays className="w-5 h-5" />
+                      <span>{event.date}</span>
+                    </div>
+                    <p className="text-base text-foreground/80">{event.desc}</p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://resy.com/rorysrooftop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block rounded-full bg-secondary text-primary px-8 py-3 font-medium hover:bg-[hsl(46,46%,90%)] transition-colors"
+                      >
+                        RSVP
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-
-        {/* Event Types */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-8">
-            Event Types We Host
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: Users, title: "Corporate Events", desc: "Team building, client dinners, product launches" },
-              { icon: Calendar, title: "Celebrations", desc: "Birthdays, anniversaries, graduations" },
-              { icon: Star, title: "Exclusive Parties", desc: "Private gatherings with premium service" },
-              { icon: MapPin, title: "Wedding Events", desc: "Rehearsal dinners, receptions, ceremonies" }
-            ].map((type, idx) => (
-              <Card key={idx} className="p-6 text-center hover:shadow-lg transition-shadow">
-                <type.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-foreground mb-2">{type.title}</h3>
-                <p className="text-sm text-muted-foreground">{type.desc}</p>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Event Packages */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-8">
-            Event Packages
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {eventPackages.map((pkg, idx) => (
-              <Card key={idx} className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold text-primary mb-2">{pkg.name}</h3>
-                <p className="text-muted-foreground mb-4">{pkg.capacity}</p>
-                <ul className="space-y-2 mb-6">
-                  {pkg.features.map((feature, featureIdx) => (
-                    <li key={featureIdx} className="text-sm text-muted-foreground flex items-center">
-                      <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-lg font-semibold text-foreground">{pkg.price}</p>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="mb-16 bg-secondary rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-8">
-            Why Choose Rory's for Your Event?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Unmatched Views</h3>
-              <p className="text-muted-foreground mb-4">
-                Breathtaking panoramic views of Manhattan's skyline and the Hudson River create the perfect backdrop for your event photos and memories.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Expert Service</h3>
-              <p className="text-muted-foreground">
-                Our dedicated events team ensures every detail is perfect, from custom menu planning to seamless execution.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Flexible Spaces</h3>
-              <p className="text-muted-foreground mb-4">
-                Multiple areas can be configured for intimate gatherings or large celebrations, with options for semi-private or full venue buyouts.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Prime Location</h3>
-              <p className="text-muted-foreground">
-                Located in the heart of the Meatpacking District, easily accessible for guests coming from anywhere in NYC.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Form */}
-        <ContactForm />
-      </main>
+        <div className="mt-16 text-center">
+          <p className="text-muted-foreground text-base">
+            More events launching soon. <a href="/contact" className="underline text-primary">Contact us</a> for private bookings.
+          </p>
+        </div>
+      </section>
+      <div className="mt-16">
+        <EmailSignup />
+      </div>
       <Footer />
     </div>
   );
-}
+};
+
+export default Events;

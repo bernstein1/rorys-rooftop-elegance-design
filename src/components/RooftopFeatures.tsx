@@ -1,49 +1,66 @@
 
 import { Card } from "@/components/ui/card";
-import { MapPin, Utensils, Music, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const RooftopFeatures = () => {
+  const navigate = useNavigate();
+
   const features = [
     {
-      icon: MapPin,
-      title: "Prime Location",
-      description: "Stunning views of the Meatpacking District and Hudson River"
+      title: "SUNSET LIBATIONS",
+      description: "Sunset in a glass. From freshly pressed citrus cocktails to island-inspired creations with rum, tequila, and house infusions, our signature cocktails bring tropical energy to the city skyline. Sip slow, unwind, and let's embrace island time.",
+      cta: "DRINK MENU",
+      image: "/lovable-uploads/6a6bcbe3-b86b-441d-a54c-3c7bd47ea431.png",
+      onClick: () => navigate("/menu")
     },
     {
-      icon: Utensils,
-      title: "Craft Cocktails",
-      description: "Expertly crafted drinks with premium spirits and fresh ingredients"
+      title: "ROOFTOP VIBES",
+      description: "Sky-high and sunkissed, Rory's Rooftop is where laid-back lounge meets elevated atmosphere. Cozy up in plush seating, catch golden hour with friends, and enjoy a full menu of vibrant food and beach-y cocktails.",
+      cta: "VIEW GALLERY",
+      image: "/lovable-uploads/99403d6d-9c27-480f-8bdd-fe1acbeaa5d9.png",
+      onClick: () => window.scrollTo({ top: document.getElementById('instagram')?.offsetTop || 0, behavior: 'smooth' })
     },
     {
-      icon: Music,
-      title: "Live Atmosphere",
-      description: "DJ sets and live music to complement your rooftop experience"
-    },
-    {
-      icon: Users,
-      title: "Private Events",
-      description: "Perfect venue for celebrations, corporate events, and special occasions"
+      title: "FOOD TO MATCH THE VIEW",
+      description: "Our plates are designed for rooftop grazing — fresh, bold, and full of flavor. From citrusy ceviche to crispy bites and global street food twists, every dish is made to pair perfectly with your drink… and the view.",
+      cta: "FOOD MENU",
+      image: "/lovable-uploads/97800ff3-e4bd-426e-974e-7ae6c3b68c9e.png",
+      onClick: () => navigate("/menu")
     }
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Why Choose Rory's?
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            More than just a rooftop bar - we're your gateway to unforgettable NYC experiences.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, idx) => (
-            <Card key={idx} className="p-6 text-center hover:shadow-lg transition-shadow">
-              <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <Card
+              key={index}
+              className="bg-secondary border-0 shadow-lg overflow-hidden text-center flex flex-col"
+            >
+              <div className="w-full h-80 mb-6">
+                <img
+                  src={feature.image}
+                  alt={`${feature.title} at Rory's Rooftop`}
+                  className="w-full h-full object-cover object-center rounded-lg"
+                />
+              </div>
+              <div className="p-6 pt-0 flex flex-col flex-1">
+                <h3 className="text-primary mb-4 font-didot text-2xl">
+                  {feature.title}
+                </h3>
+                <p className="font-body text-foreground mb-6 leading-relaxed">
+                  {feature.description}
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={feature.onClick}
+                  className="w-full mt-auto"
+                >
+                  {feature.cta}
+                </Button>
+              </div>
             </Card>
           ))}
         </div>
