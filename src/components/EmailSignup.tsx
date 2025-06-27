@@ -9,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 const EmailSignup = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [consent, setConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -34,12 +35,12 @@ const EmailSignup = () => {
     setSubmitting(true);
 
     try {
+      // Insert into the correct table structure matching the database schema
       const { error } = await supabase
         .from("Email Collection")
         .insert([{ 
-          Email: email,
-          consent_given: true,
-          consent_timestamp: new Date().toISOString()
+          Email: email.trim(),
+          Name: name.trim() || null
         }]);
 
       if (error) {
@@ -47,6 +48,7 @@ const EmailSignup = () => {
       }
 
       setEmail("");
+      setName("");
       setConsent(false);
       toast({
         title: "Thank you for subscribing!",
@@ -85,27 +87,38 @@ const EmailSignup = () => {
           className="space-y-4 w-full max-w-lg mx-auto"
           noValidate
         >
-          <div className="flex flex-col md:flex-row items-center gap-4">
+          <div className="flex flex-col gap-4">
             <Input
-              type="email"
-              placeholder="Your email address"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              className="flex-1 bg-secondary border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
+              type="text"
+              placeholder="Your name (optional)"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              className="bg-secondary border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
               disabled={submitting}
-              required
-              aria-label="Email address"
-              aria-describedby="email-error"
+              aria-label="Name"
             />
-            <Button
-              type="submit"
-              variant="outline"
-              className="border-primary text-primary px-12 py-3"
-              size="lg"
-              disabled={submitting || !consent}
-            >
-              {submitting ? "Joining..." : "Sign Up"}
-            </Button>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                className="flex-1 bg-secondary border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
+                disabled={submitting}
+                required
+                aria-label="Email address"
+                aria-describedby="email-error"
+              />
+              <Button
+                type="submit"
+                variant="outline"
+                className="border-primary text-primary px-12 py-3"
+                size="lg"
+                disabled={submitting || !consent}
+              >
+                {submitting ? "Joining..." : "Sign Up"}
+              </Button>
+            </div>
           </div>
           
           <div className="flex items-start space-x-3 text-left">

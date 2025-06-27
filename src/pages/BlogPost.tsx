@@ -1,7 +1,7 @@
-
 import Navigation from "@/components/Navigation";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, CalendarDays } from "lucide-react";
+import { sanitizeHtml } from "@/lib/sanitizer";
 
 const POSTS = [
   {
@@ -474,6 +474,9 @@ const BlogPost = () => {
     );
   }
 
+  // Sanitize the blog post content before rendering
+  const sanitizedContent = sanitizeHtml(post.content);
+
   return (
     <div id="main-content" className="min-h-screen bg-background pb-16">
       <Navigation />
@@ -495,7 +498,10 @@ const BlogPost = () => {
           <span>•</span>
           <span>by {post.author}</span>
         </div>
-        <div className="prose prose-lg prose-primary max-w-none text-foreground/90 leading-relaxed" dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div 
+          className="prose prose-lg prose-primary max-w-none text-foreground/90 leading-relaxed" 
+          dangerouslySetInnerHTML={{ __html: sanitizedContent }} 
+        />
         
         {/* Call-to-Action Section */}
         <div className="mt-12 p-8 bg-secondary rounded-2xl text-center">
