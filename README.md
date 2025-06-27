@@ -73,6 +73,16 @@ cp .env.example .env.local
 The app expects `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY` to be defined.
 The build process also reads `SITE_URL` to populate `public/sitemap.xml`.
 
+## Deployment Requirements
+
+`SITE_URL` **must** be set when running `npm run build`. If this variable is
+missing, the build will exit with an error. Set it to the domain where the site
+will be hosted:
+
+```bash
+SITE_URL=https://your-domain.com npm run build
+```
+
 ## Contact form data
 
 Messages submitted from the Contact page are stored in the Supabase table
