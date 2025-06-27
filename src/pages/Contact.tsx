@@ -1,26 +1,25 @@
 
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import ContactInfo from "@/components/ContactInfo";
 
-export default function ContactPage() {
+const Contact = () => {
   return (
-    <div className="min-h-screen bg-background w-full overflow-x-hidden">
+    <div id="main-content" className="min-h-screen bg-background">
       <Navigation />
-      <main id="main-content" className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
-        <header className="text-center mb-8">
-          <h1 className="font-hero mb-2">Contact Rory's Rooftop Bar</h1>
-          <p className="font-body text-lg text-muted-foreground">
-            Whether it's for reservations, private events, or just to say hello, we'd love to hear from you. Let's connect.
-          </p>
-        </header>
-        
-        {/* Contact Info and Hours in a row */}
-        <ContactInfo />
-        
-        {/* Contact Form in a separate white container below */}
-        <ContactForm />
-      </main>
+      <div className="pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
+          <div className="grid md:grid-cols-2 gap-12">
+            <ContactInfo />
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
-}
+};
+
+export default Contact;
