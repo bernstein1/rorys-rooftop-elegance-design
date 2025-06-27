@@ -14,7 +14,7 @@ export default function ContactForm() {
       existingScript.remove();
     }
     if (existingForm) {
-      existingForm.remove();
+      existingForm.innerHTML = '';
     }
 
     // Create and load the TripleSeat script
@@ -38,6 +38,10 @@ export default function ContactForm() {
       const scriptToRemove = document.querySelector('script[src*="tripleseat.com"]');
       if (scriptToRemove && document.head.contains(scriptToRemove)) {
         document.head.removeChild(scriptToRemove);
+      }
+      const formPlaceholder = document.getElementById('tripleseat_embed_form_inline');
+      if (formPlaceholder) {
+        formPlaceholder.innerHTML = '';
       }
     };
   }, []);
