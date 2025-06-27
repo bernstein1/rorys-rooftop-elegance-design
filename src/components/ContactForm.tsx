@@ -35,9 +35,15 @@ export default function ContactForm() {
 
     // Cleanup function
     return () => {
-      const scriptToRemove = document.querySelector('script[src*="tripleseat.com"]');
-      if (scriptToRemove && document.head.contains(scriptToRemove)) {
-        document.head.removeChild(scriptToRemove);
+      const scriptToRemove = document.querySelector(
+        'script[src*="tripleseat.com"]'
+      );
+      if (scriptToRemove) {
+        if (typeof scriptToRemove.remove === 'function') {
+          scriptToRemove.remove();
+        } else if (scriptToRemove.parentNode) {
+          scriptToRemove.parentNode.removeChild(scriptToRemove);
+        }
       }
     };
   }, []);
