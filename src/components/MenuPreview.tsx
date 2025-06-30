@@ -42,8 +42,16 @@ const MenuPreview = () => {
           {featuredItems.map((item, index) => (
             <Card
               key={index}
+              role="button"
+              tabIndex={0}
               className="relative overflow-hidden group cursor-pointer h-80 rounded-lg shadow-lg border-0"
               onClick={() => navigate("/menu")}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  navigate("/menu");
+                }
+              }}
             >
               <img
                 src={item.image}
