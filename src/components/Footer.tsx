@@ -29,7 +29,18 @@ const Footer = () => {
               <li><a href="#about" className="text-primary-foreground/80 hover:text-white">About</a></li>
               <li><a href="#menu" className="text-primary-foreground/80 hover:text-white">Menu</a></li>
               <li><a href="#contact" className="text-primary-foreground/80 hover:text-white">Contact</a></li>
-              <li><a href="https://www.puttery.com/locations/new-york-city/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-white">Puttery NYC</a></li>
+              <li>
+                <a
+                  href="https://www.puttery.com/locations/new-york-city/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-foreground/80 hover:text-white"
+                  aria-label="Puttery NYC (opens in a new tab)"
+                >
+                  Puttery NYC
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
+              </li>
             </ul>
           </div>
 
