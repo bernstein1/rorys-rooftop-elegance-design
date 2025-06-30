@@ -1,6 +1,7 @@
 
 import { Instagram, Phone, MapPin, Mail } from "lucide-react";
 import { CONTACT_INFO } from "@/lib/contactInfo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -59,9 +60,18 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center space-y-2">
           <p className="text-primary-foreground/80 text-sm">
             © 2024 Rory's Rooftop. All rights reserved.
+          </p>
+          <p className="text-primary-foreground/80 text-sm space-x-2">
+            <Link to="/privacy" className="underline hover:text-white">
+              Privacy Policy
+            </Link>
+            <span>|</span>
+            <Link to="/terms" className="underline hover:text-white">
+              Terms &amp; Conditions
+            </Link>
           </p>
         </div>
       </div>
