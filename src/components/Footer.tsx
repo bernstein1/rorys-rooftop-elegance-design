@@ -15,8 +15,15 @@ const Footer = () => {
               Where skyline views, creative cocktails, and an unforgettable vibe meet. Your elevated escape in the heart of the Meatpacking District.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/rorysrooftop/" className="text-primary-foreground/80 hover:text-white">
+              <a
+                href="https://www.instagram.com/rorysrooftop/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-white"
+                aria-label="Instagram (opens in a new tab)"
+              >
                 <Instagram className="w-5 h-5" aria-hidden="true" />
+                <span className="sr-only">(opens in a new tab)</span>
               </a>
             </div>
           </div>
