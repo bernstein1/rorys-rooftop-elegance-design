@@ -65,7 +65,11 @@ const EmailSignup = () => {
           onSubmit={handleSubmit}
           className="flex flex-col md:flex-row items-center gap-4 w-full max-w-lg mx-auto"
         >
+          <label htmlFor="signup-email" className="sr-only">
+            Email address
+          </label>
           <Input
+            id="signup-email"
             type="email"
             placeholder="Your email address"
             value={email}
@@ -73,7 +77,6 @@ const EmailSignup = () => {
             className="flex-1 bg-secondary border border-primary/60 placeholder:text-muted-foreground md:text-base text-md"
             disabled={submitting}
             required
-            aria-label="Email address"
           />
           <Button
             type="submit"
