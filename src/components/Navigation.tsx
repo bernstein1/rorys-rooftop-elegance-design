@@ -71,8 +71,9 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen((prev) => !prev)}
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
               className="border border-primary text-primary"
             >
               {isOpen ? (
