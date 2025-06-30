@@ -40,12 +40,14 @@ const InstagramGallery = () => {
             variant="outline"
             asChild
           >
-            <a 
-              href="https://www.instagram.com/rorysrooftop/" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/rorysrooftop/"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="Follow us on Instagram (opens in a new tab)"
             >
               FOLLOW US
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
           </Button>
         </div>
