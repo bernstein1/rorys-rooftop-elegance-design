@@ -26,8 +26,8 @@ const CookieBanner = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm">
           We use cookies to improve your experience. Read our {""}
-          <Link to="/privacy" className="underline hover:text-primary/80">
-            Privacy Policy
+          <Link to="/cookies" className="underline hover:text-primary/80">
+            Cookie Policy
           </Link>
           .
         </p>
