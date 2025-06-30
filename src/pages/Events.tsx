@@ -45,7 +45,7 @@ const EVENTS = [
 
 const Events = () => {
   return (
-    <div className="min-h-screen pt-0 pb-16 bg-background">
+    <div id="main" className="min-h-screen pt-0 pb-16 bg-background">
       <Navigation />
       <section className="max-w-6xl mx-auto px-4 pt-32">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">

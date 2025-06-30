@@ -129,7 +129,7 @@ const MENU_DATA = {
 
 const MenuPage = () => {
   return (
-    <div className="min-h-screen bg-secondary text-foreground">
+    <div id="main" className="min-h-screen bg-secondary text-foreground">
       <Navigation />
       <main className="pt-32 pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

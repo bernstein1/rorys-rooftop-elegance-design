@@ -461,7 +461,7 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex flex-col justify-center items-center bg-background">
+      <div id="main" className="min-h-screen flex flex-col justify-center items-center bg-background">
         <Navigation />
         <p className="text-xl font-bold text-destructive mt-40">Article not found.</p>
         <button
@@ -475,7 +475,7 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background pb-16">
+    <div id="main" className="min-h-screen bg-background pb-16">
       <Navigation />
       <section className="max-w-4xl mx-auto px-4 pt-36 animate-fade-in">
         <button
