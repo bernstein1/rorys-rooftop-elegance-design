@@ -49,13 +49,19 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button 
+            <Button
               asChild
               className="ml-8 bg-primary text-primary-foreground shadow-md px-8 py-3"
               size="lg"
             >
-              <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://resy.com/rorysrooftop"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Make Reservation (opens in a new tab)"
+              >
                 Make Reservation
+                <span className="sr-only">(opens in a new tab)</span>
               </a>
             </Button>
           </div>
@@ -90,8 +96,14 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild className="mt-4 w-full bg-primary text-primary-foreground px-8 py-3" size="lg">
-              <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://resy.com/rorysrooftop"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Make Reservation (opens in a new tab)"
+              >
                 Make Reservation
+                <span className="sr-only">(opens in a new tab)</span>
               </a>
             </Button>
           </div>

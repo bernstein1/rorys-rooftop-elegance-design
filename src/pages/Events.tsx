@@ -78,8 +78,10 @@ const Events = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block rounded-full bg-secondary text-primary px-8 py-3 font-medium hover:bg-[hsl(46,46%,90%)] transition-colors"
+                        aria-label="RSVP (opens in a new tab)"
                       >
                         RSVP
+                        <span className="sr-only">(opens in a new tab)</span>
                       </a>
                     </div>
                   </div>
