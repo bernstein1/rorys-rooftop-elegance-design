@@ -15,7 +15,7 @@ import PrivateEvents from "@/components/PrivateEvents";
 
 const Index = () => {
   return (
-    <div id="main-content" className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
       <About />

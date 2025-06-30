@@ -2,42 +2,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{SITE_URL}}/</loc>
+    <loc>https://your-website-url.com/</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>{{SITE_URL}}/menu</loc>
+    <loc>https://your-website-url.com/menu</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>{{SITE_URL}}/events</loc>
+    <loc>https://your-website-url.com/events</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>{{SITE_URL}}/blog</loc>
+    <loc>https://your-website-url.com/blog</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>{{SITE_URL}}/blog/seasonal-cocktails-to-welcome-summer</loc>
+    <loc>https://your-website-url.com/blog/seasonal-cocktails-to-welcome-summer</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>{{SITE_URL}}/blog/nyc-rooftop-dining-behind-the-scenes</loc>
+    <loc>https://your-website-url.com/blog/nyc-rooftop-dining-behind-the-scenes</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>{{SITE_URL}}/contact</loc>
+    <loc>https://your-website-url.com/contact</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>{{SITE_URL}}/faq</loc>
+    <loc>https://your-website-url.com/faq</loc>
     <lastmod>2025-06-14</lastmod>
     <priority>0.80</priority>
   </url>

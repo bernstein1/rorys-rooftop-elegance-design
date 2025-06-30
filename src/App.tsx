@@ -2,7 +2,6 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import CookieBanner from "@/components/CookieBanner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
@@ -13,17 +12,14 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import BlogPost from "./pages/BlogPost";
 import Menu from "./pages/Menu";
-import AccessibilitySkipLink from "./components/AccessibilitySkipLink";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <AccessibilitySkipLink />
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <CookieBanner />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
