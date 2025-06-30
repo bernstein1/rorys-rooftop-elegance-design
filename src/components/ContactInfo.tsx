@@ -16,17 +16,17 @@ export default function ContactInfo() {
       {/* Contact Details Card */}
       <Card className="p-8 relative z-10">
         <div className="flex items-center mb-2">
-          <MapPin className="text-primary mr-3 w-4 h-4" />
+          <MapPin className="text-primary mr-3 w-4 h-4" aria-hidden="true" />
           <span className="font-medium text-lg">
             {CONTACT_INFO.addressLines.join(', ')}
           </span>
         </div>
         <div className="flex items-center mb-2">
-          <Phone className="text-primary mr-3 w-4 h-4" />
+          <Phone className="text-primary mr-3 w-4 h-4" aria-hidden="true" />
           <span className="font-medium text-lg">{CONTACT_INFO.phone}</span>
         </div>
         <div className="flex items-center mb-2">
-          <Mail className="text-primary mr-3 w-4 h-4" />
+          <Mail className="text-primary mr-3 w-4 h-4" aria-hidden="true" />
           <span className="text-lg">
             <a
               href={`mailto:${CONTACT_INFO.email}`}
@@ -37,7 +37,7 @@ export default function ContactInfo() {
           </span>
         </div>
         <div className="flex items-center">
-          <Instagram className="text-primary mr-3 w-4 h-4" />
+          <Instagram className="text-primary mr-3 w-4 h-4" aria-hidden="true" />
           <a
             href={CONTACT_INFO.instagram.url}
             target="_blank"
@@ -52,7 +52,7 @@ export default function ContactInfo() {
       {/* Hours Card */}
       <Card className="p-8 relative z-10">
         <div className="flex items-center mb-3">
-          <Clock className="text-primary mr-3 w-4 h-4" />
+          <Clock className="text-primary mr-3 w-4 h-4" aria-hidden="true" />
           <span className="font-medium text-lg">Hours</span>
         </div>
         <div className="space-y-1 font-body text-lg">

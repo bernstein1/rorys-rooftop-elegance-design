@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="w-7 h-7 text-white opacity-85" />
+        <ArrowDown className="w-7 h-7 text-white opacity-85" aria-hidden="true" />
       </div>
     </section>
   );

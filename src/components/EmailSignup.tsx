@@ -56,7 +56,7 @@ const EmailSignup = () => {
       }}
     >
       <div className="max-w-2xl w-full text-center">
-        <Mail className="mx-auto mb-4 text-primary-foreground" size={40} />
+        <Mail className="mx-auto mb-4 text-primary-foreground" size={40} aria-hidden="true" />
         <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Stay Informed</h2>
         <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
           Join the list for exclusive invites, opening parties, and signature rooftop experiences.

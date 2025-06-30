@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/rorysrooftop/" className="text-primary-foreground/80 hover:text-white">
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -37,17 +37,17 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4" aria-hidden="true" />
                 <span className="text-primary-foreground/80 text-sm">
                   {CONTACT_INFO.addressLines[0]}, NYC
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4" aria-hidden="true" />
                 <span className="text-primary-foreground/80 text-sm">{CONTACT_INFO.phone}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4" aria-hidden="true" />
                 <a
                   href={`mailto:${CONTACT_INFO.email}`}
                   className="text-primary-foreground/80 text-sm hover:text-white"
