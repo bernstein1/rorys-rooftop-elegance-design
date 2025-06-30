@@ -60,8 +60,10 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary font-medium hover:underline"
+                  aria-label={`${CONTACT_INFO.instagram.handle} (opens in a new tab)`}
                 >
                   {CONTACT_INFO.instagram.handle}
+                  <span className="sr-only">(opens in a new tab)</span>
                 </a>
               </div>
             </div>
@@ -93,8 +95,14 @@ const Contact = () => {
             size="lg"
             className="px-12 py-3 shadow-lg"
           >
-            <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://resy.com/rorysrooftop"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Make Reservation (opens in a new tab)"
+            >
               Make Reservation
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
           </Button>
           <Button
