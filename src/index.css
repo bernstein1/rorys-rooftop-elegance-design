@@ -229,3 +229,24 @@ p, .p, li, ul, ol {
   from {opacity:0; transform:translateY(20px);}
   to {opacity:1; transform:translateY(0);}
 }
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  z-index: 1000;
+}

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
+    <div id="main" className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
       <Navigation />
       <main className="max-w-3xl mx-auto px-4 pt-32 pb-8 space-y-6 animate-fade-in">
         <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
