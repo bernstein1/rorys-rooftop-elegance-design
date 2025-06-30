@@ -144,7 +144,7 @@ p, .p, li, ul, ol {
     --secondary-foreground: 228 13% 18%;
 
     --muted: 346 56% 86%;      /* Pink for muted backgrounds */
-    --muted-foreground: 228 10% 40%;
+    --muted-foreground: 228 10% 30%;
 
     --accent: 346 56% 86%;     /* Pink as accent */
     --accent-foreground: 228 13% 18%;
