@@ -8,12 +8,27 @@ export default function ContactForm() {
     const script = document.createElement('script');
     script.src = 'https://api.tripleseat.com/v1/leads/ts_script.js?lead_form_id=44808&public_key=ea1b9e9398812b6177ebfb0f6c6077f9dd47cd76&inline_form=true';
     script.async = true;
+    script.id = 'tripleseat-script'; // Add an ID for easier cleanup
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
+      // More thorough cleanup
+      const scriptElement = document.getElementById('tripleseat-script');
+      if (scriptElement && document.body.contains(scriptElement)) {
+        document.body.removeChild(scriptElement);
+      }
+      
+      // Clean up any TripleSeat-related DOM elements that might have been injected
+      const tripleSeatElements = document.querySelectorAll('[id^="tripleseat"], [class*="tripleseat"]');
+      tripleSeatElements.forEach(element => {
+        if (element.parentNode && !element.closest('#tripleseat-form-container')) {
+          element.parentNode.removeChild(element);
+        }
+      });
+      
+      // Clean up any global TripleSeat variables
+      if (window.TripleSeat) {
+        delete window.TripleSeat;
       }
     };
   }, []);
