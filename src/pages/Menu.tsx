@@ -175,7 +175,7 @@ const MenuPage = () => {
 
           <div className="text-center mt-16">
             <Button asChild size="lg">
-              <a href="https://resy.com/rorysrooftop" target="_blank" rel="noopener noreferrer">
+              <a href="http://resy.com/link?venue_id=91610" target="_blank" rel="noopener noreferrer">
                 Make a Reservation
               </a>
             </Button>
