@@ -11,19 +11,13 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
     >
-      {/* Background Image with WebP optimization ready */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
-        <picture>
-          <source 
-            srcSet="/lovable-uploads/Rorys_Footer_Image_2.webp" 
-            type="image/webp" 
-          />
-          <img 
-            src="/lovable-uploads/Rorys_Footer_Image_2.jpg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </picture>
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/Rorys_Footer_Image_2.jpg')`,
+        }}
+      >
         <div className="absolute inset-0 bg-black/45"></div>
       </div>
 
