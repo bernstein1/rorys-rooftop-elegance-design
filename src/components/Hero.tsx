@@ -11,7 +11,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
     >
-      {/* Background Image with WebP optimization */}
+      {/* Background Image with WebP optimization ready */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
         <picture>
           <source 
