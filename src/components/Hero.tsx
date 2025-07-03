@@ -40,7 +40,7 @@ const Hero = () => {
             className="bg-primary text-primary-foreground px-12 py-3 shadow-lg"
           >
             <a
-              href="https://resy.com/rorysrooftop"
+              href="http://resy.com/link?venue_id=91610"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Make Reservation (opens in a new tab)"

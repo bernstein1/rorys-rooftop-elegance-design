@@ -52,7 +52,7 @@ const POSTS = [
       <h2>The Future of Meatpacking District Nightlife</h2>
       <p>With new developments and renovations constantly reshaping the neighborhood, the Meatpacking District continues to evolve as NYC's premier destination for elevated entertainment. The combination of historic industrial architecture and cutting-edge design creates a backdrop that's impossible to replicate anywhere else in the city.</p>
       
-      <p><strong>Ready to experience the best rooftop bar in the Meatpacking District?</strong> Join us at Rory's Rooftop for craft cocktails, elevated bites, and the stunning views that make NYC nights unforgettable. <a href="/menu">View our menu</a> or <a href="https://resy.com/rorysrooftop" target="_blank" aria-label="reserve your table (opens in a new tab)">reserve your table<span className="sr-only">(opens in a new tab)</span></a> for tonight's sunset.</p>
+      <p><strong>Ready to experience the best rooftop bar in the Meatpacking District?</strong> Join us at Rory's Rooftop for craft cocktails, elevated bites, and the stunning views that make NYC nights unforgettable. <a href="/menu">View our menu</a> or <a href="http://resy.com/link?venue_id=91610" target="_blank" aria-label="reserve your table (opens in a new tab)">reserve your table<span className="sr-only">(opens in a new tab)</span></a> for tonight's sunset.</p>
     `
   },
   {
@@ -110,7 +110,7 @@ const POSTS = [
       <h2>Planning Your Summer Rooftop Cocktail Tour</h2>
       <p>With so many innovative cocktails available across NYC's rooftop scene, planning a progressive cocktail experience has never been more exciting. Start with lighter, fruit-forward drinks during sunset hours, then progress to more complex, spirit-forward cocktails as the evening develops.</p>
       
-      <p><strong>Experience the best of summer 2024's cocktail trends</strong> at Rory's Rooftop, where our mixologists craft innovative tropical cocktails with premium spirits and fresh, seasonal ingredients. <a href="/menu">Explore our summer cocktail menu</a> or <a href="https://resy.com/rorysrooftop" target="_blank" aria-label="book your rooftop table (opens in a new tab)">book your rooftop table<span className="sr-only">(opens in a new tab)</span></a> to taste the season's best flavors with stunning Manhattan views.</p>
+      <p><strong>Experience the best of summer 2024's cocktail trends</strong> at Rory's Rooftop, where our mixologists craft innovative tropical cocktails with premium spirits and fresh, seasonal ingredients. <a href="/menu">Explore our summer cocktail menu</a> or <a href="http://resy.com/link?venue_id=91610" target="_blank" aria-label="book your rooftop table (opens in a new tab)">book your rooftop table<span className="sr-only">(opens in a new tab)</span></a> to taste the season's best flavors with stunning Manhattan views.</p>
     `
   },
   {
@@ -213,7 +213,7 @@ const POSTS = [
         <li>Surprise arrangements with advance notice</li>
       </ul>
       
-      <p><strong>Ready to plan the perfect romantic evening?</strong> Experience elevated romance at Rory's Rooftop, where craft cocktails, elevated cuisine, and stunning Manhattan views create the ideal setting for unforgettable date nights. <a href="https://resy.com/rorysrooftop" target="_blank" aria-label="Reserve your romantic table (opens in a new tab)">Reserve your romantic table<span className="sr-only">(opens in a new tab)</span></a> or <a href="/contact">contact us</a> for special occasion planning assistance.</p>
+      <p><strong>Ready to plan the perfect romantic evening?</strong> Experience elevated romance at Rory's Rooftop, where craft cocktails, elevated cuisine, and stunning Manhattan views create the ideal setting for unforgettable date nights. <a href="http://resy.com/link?venue_id=91610" target="_blank" aria-label="Reserve your romantic table (opens in a new tab)">Reserve your romantic table<span className="sr-only">(opens in a new tab)</span></a> or <a href="/contact">contact us</a> for special occasion planning assistance.</p>
     `
   },
   {
@@ -319,7 +319,7 @@ const POSTS = [
       <h2>Making the Most of Meatpacking District Happy Hour</h2>
       <p>Success in the Meatpacking District's happy hour scene requires understanding the neighborhood's rhythm. Arrive early for the best seating, dress professionally but comfortably, and be prepared for a sophisticated crowd that values quality over quantity.</p>
       
-      <p><strong>Ready to elevate your after-work routine?</strong> Join the professional crowd at Rory's Rooftop, where craft cocktails, elevated bar food, and stunning city views create the perfect atmosphere for networking and unwinding. <a href="/menu">View our happy hour menu</a> or <a href="https://resy.com/rorysrooftop" target="_blank" aria-label="reserve your table (opens in a new tab)">reserve your table<span className="sr-only">(opens in a new tab)</span></a> for tonight's sunset happy hour.</p>
+      <p><strong>Ready to elevate your after-work routine?</strong> Join the professional crowd at Rory's Rooftop, where craft cocktails, elevated bar food, and stunning city views create the perfect atmosphere for networking and unwinding. <a href="/menu">View our happy hour menu</a> or <a href="http://resy.com/link?venue_id=91610" target="_blank" aria-label="reserve your table (opens in a new tab)">reserve your table<span className="sr-only">(opens in a new tab)</span></a> for tonight's sunset happy hour.</p>
     `
   },
   {
@@ -461,7 +461,7 @@ const POSTS = [
       <h3>Accessibility Considerations</h3>
       <p>Ensure venue accessibility for all guests, including elevator access to rooftop levels and appropriate seating arrangements.</p>
       
-      <p><strong>Ready to plan your unforgettable group celebration?</strong> Rory's Rooftop specializes in creating memorable group experiences with customizable packages, stunning city views, and dedicated event coordination. <a href="/contact">Contact our events team</a> to discuss your celebration or <a href="https://resy.com/rorysrooftop" target="_blank" aria-label="book a venue tour (opens in a new tab)">book a venue tour<span className="sr-only">(opens in a new tab)</span></a> to see how we can make your next group event extraordinary.</p>
+      <p><strong>Ready to plan your unforgettable group celebration?</strong> Rory's Rooftop specializes in creating memorable group experiences with customizable packages, stunning city views, and dedicated event coordination. <a href="/contact">Contact our events team</a> to discuss your celebration or <a href="http://resy.com/link?venue_id=91610" target="_blank" aria-label="book a venue tour (opens in a new tab)">book a venue tour<span className="sr-only">(opens in a new tab)</span></a> to see how we can make your next group event extraordinary.</p>
     `
   }
 ];

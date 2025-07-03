@@ -55,7 +55,7 @@ const Navigation = () => {
               size="lg"
             >
               <a
-                href="https://resy.com/rorysrooftop"
+                href="http://resy.com/link?venue_id=91610"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Make Reservation (opens in a new tab)"
@@ -102,7 +102,7 @@ const Navigation = () => {
             ))}
             <Button asChild className="mt-4 w-full bg-primary text-primary-foreground px-8 py-3" size="lg">
               <a
-                href="https://resy.com/rorysrooftop"
+                href="http://resy.com/link?venue_id=91610"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Make Reservation (opens in a new tab)"
