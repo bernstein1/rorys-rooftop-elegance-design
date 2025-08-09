@@ -85,7 +85,7 @@ export default function ContactForm() {
           font-size: 14px;
           font-family: 'Jubilat', serif;
           margin-bottom: 16px;
-          background: hsl(var(--background));
+          background: white;
           box-sizing: border-box;
           color: hsl(var(--foreground));
         }
@@ -99,7 +99,7 @@ export default function ContactForm() {
           font-size: 14px;
           font-family: 'Jubilat', serif;
           margin-bottom: 16px;
-          background: hsl(var(--background));
+          background: white;
           box-sizing: border-box;
           color: hsl(var(--foreground));
           min-height: 100px;
