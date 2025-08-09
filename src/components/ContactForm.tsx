@@ -27,8 +27,8 @@ export default function ContactForm() {
       });
       
       // Clean up any global TripleSeat variables
-      if (window.TripleSeat) {
-        delete window.TripleSeat;
+      if ((window as any).TripleSeat) {
+        delete (window as any).TripleSeat;
       }
     };
   }, []);
