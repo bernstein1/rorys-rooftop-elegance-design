@@ -1,6 +1,6 @@
 export const CONTACT_INFO = {
   addressLines: ["446 W 14th St", "New York, NY 10014"],
-  phone: "+1 646-585-5592",
+  phone: "+1 646-585-5591",
   email: "hello@rorysrooftop.com",
   instagram: {
     handle: "@rorysrooftop",
