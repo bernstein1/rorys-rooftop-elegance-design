@@ -1,25 +1,61 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const navigate = useNavigate();
+  const [videoEnded, setVideoEnded] = useState(false);
+  const [videoAvailable, setVideoAvailable] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => {
+      if (!videoLoaded) {
+        setVideoAvailable(false);
+      }
+    }, 12000);
+
+    return () => window.clearTimeout(timeout);
+  }, [videoLoaded]);
+
+  const showVideo = videoAvailable && !videoEnded;
 
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
     >
-      {/* Background Image */}
+      {/* Background Video */}
+      <video
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+          showVideo ? "opacity-100" : "opacity-0"
+        }`}
+        src="/lovable-uploads/25_Rorys_Web_5-10_v9.mp4"
+        poster="/lovable-uploads/Rorys_Footer_Image_2.jpg"
+        autoPlay
+        muted
+        playsInline
+        onEnded={() => setVideoEnded(true)}
+        onError={() => setVideoAvailable(false)}
+        onLoadedData={() => setVideoLoaded(true)}
+        aria-hidden
+      />
+
+      {/* Background Image Fallback */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ${
+          showVideo ? "opacity-0" : "opacity-100"
+        }`}
         style={{
-          backgroundImage: `url('/lovable-uploads/Rorys_Footer_Image_2.jpg')`,
+          backgroundImage: "url('/lovable-uploads/Rorys_Footer_Image_2.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-black/45"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
       </div>
+
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/60 pointer-events-none" />
 
       <div className="relative z-10 text-center max-w-3xl mx-auto px-4 flex flex-col items-center">
         {/* LOGO ONLY */}
