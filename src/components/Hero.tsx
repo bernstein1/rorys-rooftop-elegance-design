@@ -9,6 +9,7 @@ const Hero = () => {
   const [videoEnded, setVideoEnded] = useState(false);
   const [videoAvailable, setVideoAvailable] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const fallbackImage = "/lovable-uploads/Rorys_Footer_Image_2.jpg";
 
   useEffect(() => {
     const timeout = window.setTimeout(() => {
@@ -33,7 +34,7 @@ const Hero = () => {
           showVideo ? "opacity-100" : "opacity-0"
         }`}
         src="/lovable-uploads/25_Rorys_Web_5-10_v9.mp4"
-        poster="/lovable-uploads/Rorys_Footer_Image_2.jpg"
+        poster={!showVideo ? fallbackImage : undefined}
         autoPlay
         muted
         playsInline
@@ -49,7 +50,7 @@ const Hero = () => {
           showVideo ? "opacity-0" : "opacity-100"
         }`}
         style={{
-          backgroundImage: "url('/lovable-uploads/Rorys_Footer_Image_2.jpg')",
+          backgroundImage: `url('${fallbackImage}')`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
