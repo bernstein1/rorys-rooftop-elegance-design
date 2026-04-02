@@ -52,7 +52,7 @@ const Events = () => {
           Happenings at The Rooftop
         </h1>
         <p className="text-lg md:text-xl mb-10 text-muted-foreground text-center max-w-2xl mx-auto">
-          From sunset DJ sets to exclusive tasting menus, there's always something happening at Rory's. See what's on.
+          From sunset soirées to exclusive tasting menus, there's always something happening at Rory's. See what's on.
         </p>
         <div className="relative">
           <div className="overflow-x-scroll overflow-y-hidden pb-4 custom-scrollbar">
