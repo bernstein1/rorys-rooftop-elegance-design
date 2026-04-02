@@ -9,7 +9,7 @@ const EVENTS = [
     title: "Pride Party – Celebrate Love & Unity",
     date: "Sunday, June 29, 12:00 PM – 10:00 PM",
     image: "/lovable-uploads/pride.png",
-    desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, live music, and panoramic city views. Love wins here.",
+    desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, good vibes, and panoramic city views. Love wins here.",
   },
   {
     title: "4th of July Party",
