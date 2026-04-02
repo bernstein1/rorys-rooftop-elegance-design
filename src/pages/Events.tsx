@@ -9,7 +9,7 @@ const EVENTS = [
     title: "Pride Party – Celebrate Love & Unity",
     date: "Sunday, June 29, 12:00 PM – 10:00 PM",
     image: "/lovable-uploads/pride.png",
-    desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, DJ sets, and panoramic city views. Love wins here.",
+    desc: "The perfect post-parade destination! Join us for an unforgettable Pride celebration with rainbow cocktails, live music, and panoramic city views. Love wins here.",
   },
   {
     title: "4th of July Party",
@@ -52,7 +52,7 @@ const Events = () => {
           Happenings at The Rooftop
         </h1>
         <p className="text-lg md:text-xl mb-10 text-muted-foreground text-center max-w-2xl mx-auto">
-          From sunset DJ sets to exclusive tasting menus, there's always something happening at Rory's. See what's on.
+          From sunset soirées to exclusive tasting menus, there's always something happening at Rory's. See what's on.
         </p>
         <div className="relative">
           <div className="overflow-x-scroll overflow-y-hidden pb-4 custom-scrollbar">
