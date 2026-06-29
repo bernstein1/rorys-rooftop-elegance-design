@@ -1,228 +1,385 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
-const MENU_DATA = {
-  "APPETIZERS": [
-    {
-      name: "WINGS",
-      description:
-        "Choice of BBQ, Buffalo, Garlic Parm, Sweet & Sour. Served with carrots, celery, and ranch or blue cheese",
-      price: "$18",
-    },
-    {
-      name: "LOADED CHEESE FRIES",
-      description:
-        "Hot and crispy fries covered with cheese blend, bacon, red dragon sauce, ranch, green onion",
-      price: "$18",
-    },
-    {
-      name: "CHIPS & DIP",
-      description: "Tortilla chips, served with salsa and guacamole",
-      price: "$15",
-    },
-    {
-      name: "FIRE SHRIMP",
-      description:
-        "Seared shrimp tossed in cajun butter, tomato, green onion, micro cilantro, served with toasted ciabatta bread",
-      price: "$19",
-    },
-    {
-      name: "TUNA TATAKI",
-      description:
-        "Seared tuna drizzled with chili ponzu and garlic oil, topped with fresno peppers, togarashi, and micro cilantro",
-      price: "$18",
-    },
-    {
-      name: "ELOTE RIBS",
-      description:
-        "Smothered corn on the cobb cut into ribs. Black truffle aioli, cotija cheese, fresh squeezed lime",
-      price: "$15",
-    },
-    {
-      name: "BRUSSEL SPROUTS",
-      description:
-        "Fried brussels tossed in balsamic glaze and parmesan cheese, topped with pickled onions",
-      price: "$16",
-    },
-    {
-      name: "STUFFED POTATO SKINS",
-      description:
-        "Fried potato skins stuffed with bacon and cheese blend, topped with signature red dragon sauce, ranch, green onions",
-      price: "$19",
-    },
-    {
-      name: "BBQ BRISKET SLIDERS",
-      description:
-        "Brisket seared and tossed in our signature BBQ sauce, topped with cabbage blend slaw tossed in ranch, pickles",
-      price: "$17",
-    },
-  ],
-  "SALADS": [
-    {
-      name: "GARDEN SALAD",
-      description:
-        "Lettuce mix, roasted beets, orange slices, avocado, grape tomato, mozzarella, pecans, tossed with Italian vinaigrette",
-      price: "$19",
-    },
-    {
-      name: "CAESAR SALAD",
-      description:
-        "Romaine lettuce, house made Caesar dressing, parmesan cheese, croutons",
-      price: "$17",
-    },
-    {
-      name: "CUCUMBER SALAD",
-      description:
-        "Cucumber, sesame oil, sesame seeds, carrots, red onions, sundried tomato",
-      price: "$19",
-    },
-  ],
-  "BURGERS & SANDWICHES": [
-    {
-      name: "DOUBLE SMASH BURGER",
-      description:
-        "Two 4oz smashed burger patties, american cheese, house sauce, lettuce, tomato, pickle",
-      price: "$25",
-    },
-    {
-      name: "BARN YARD BURGER",
-      description:
-        "Two 4oz smashed burger patties, egg, bacon, cheddar cheese, house sauce, lettuce, tomato, pickle",
-      price: "$27",
-    },
-    {
-      name: "RODEO BURGER",
-      description:
-        "Two 4oz smashed burger patties, pepperjack cheese, BBQ sauce, bacon, fried onions and jalapenos, house sauce, lettuce, tomato, pickle",
-      price: "$27",
-    },
-    {
-      name: "FRY CHICKEN",
-      description:
-        "Ranch, fried chicken breast topped with a cabbage blend slaw tossed in red dragon sauce",
-      price: "$23",
-    },
-    {
-      name: "RORY’S LUCKY CHICKEN SANDWICH",
-      description:
-        "Grilled chicken, dijon aioli, sundried tomato, avocado",
-      price: "$23",
-    },
-    {
-      name: "BRISKET GRILLED CHEESE",
-      description:
-        "Brisket seared and tossed in our signature BBQ sauce, pepperjack cheese, cheddar cheese",
-      price: "$25",
-    },
-  ],
-  "ENTREES": [
-    {
-      name: "HULI-HULI CHICKEN",
-      description:
-        "2 chicken breasts smothered with huli-huli marinade, served over pineapple fried rice and cucumber salad",
-      price: "$26",
-    },
-    {
-      name: "SALMON",
-      description:
-        "Garlic parmesan crusted salmon over rice and broccolini",
-      price: "$27",
-    },
-    {
-      name: "CHIMICHURRI STEAK FRITES",
-      description:
-        "8oz flat iron steak topped with chimichurri, fresno peppers, served with fries",
-      price: "$32",
-    },
-    {
-      name: "FIRE SURF & TURF",
-      description:
-        "8oz flat iron steak, topped with 6 seared shrimp, tossed in cajun butter, tomato, and green onion, served with a baked potato and broccolini",
-      price: "$38",
-    },
-    {
-      name: "CAJUN PASTA",
-      description:
-        "Cajun alfredo, penne, parmesan cheese, black pepper and toasted ciabatta. Add Chicken 8, Shrimp 9, 4oz Steak 11, Salmon 12",
-      price: "$20",
-    },
-  ],
-  "DESSERTS": [
-    {
-      name: "HOMEMADE BREAD PUDDING",
-      description:
-        "Bread pudding, vanilla ice cream, pecan crumble, bourbon glaze",
-      price: "$14",
-    },
-    {
-      name: "BROWNIE",
-      description:
-        "Fudge brownie, vanilla ice cream, brownie crumbles, whipped cream, chocolate syrup",
-      price: "$15",
-    },
-    {
-      name: "APPLE PIE",
-      description:
-        "Fried apple pie dumplings, ice cream, whipped cream, caramel sauce",
-      price: "$14",
-    },
-  ],
-  "Signature COCKTAILS": [
-    { name: "TRANSFUSION", description: "Tito’s Vodka, Blackberry Liqueur, Fresh Lemon Juice, Ginger Beer" },
-    { name: "TEE TIME ESPRESSO", description: "Freshly Brewed Iced Coffee, Vanilla Vodka, Coffee Liqueur, Simple Syrup" },
-    { name: "GREEN JACKET", description: "Gin, Fresh Cucumber Juice, Fresh Lime Juice, Basil Syrup" },
-    { name: "CLUBHOUSE COOLER", description: "Gin, Watermelon Syrup, Fresh Lemon Juice, Club Soda" },
-    { name: "SMOKY FAIRWAY", description: "Tequila, Mezcal, Pineapple Juice, Fresh Lime Juice" },
-    { name: "BIRDIE BREEZE", description: "Tequila, Hibiscus Syrup, Fresh Lemon Juice, Club Soda" },
-    { name: "TROPIC TIDES", description: "White Rum, Passion Fruit Nectar, Pineapple Juice, Coconut Cream" },
-    { name: "APPLE ALBATROSS", description: "Apple Jack, Apple Juice, Ginger Liqueur" },
-  ],
-  "THE 23 COLLECTION": [
-    { name: "CINCORO’S FAMOUS PALOMA", description: "Cincoro Tequila Blanco, Fresh Grapefruit Juice, Fresh Lime Juice, Agave Syrup, Jalapeno, Club Soda" },
-    { name: "THE CLOVER", description: "Cincoro Tequilla Blanco, Combier Peach, Lemon Juice, Simple Syrup" },
-    { name: "GOLDEN SUNRISE", description: "Cincoro Tequila Blanco, Mango Nectar, Fresh Lime Juice, Chili Honey" },
-  ],
-  "MOCKTAILS": [
-    { name: "BERRY BASIL SMASH", description: "Mixed Berries, Fresh Basil Leaves, Fresh Lemon Juice, Simple Syrup, Club Soda" },
-    { name: "TROPICAL GINGER COOLER", description: "Pineapple Juice, Coconut Syrup, Fresh Lime Juice, Ginger Beer" },
-    { name: "CHIP CRUSH", description: "Strawberry, Passionfruit, Orange Juice, Club Soda" },
-  ],
-  "DRAFT BEER": [
-    { name: "BROOKLYN LAGER", description: "", price: "$10" },
-    { name: "CONEY ISLAND PILSNER", description: "", price: "$10" },
-    { name: "MILLER LITE", description: "", price: "$10" },
-    { name: "MODELO", description: "", price: "$10" },
-    { name: "HEINEKEN", description: "", price: "$10" },
-    { name: "SIXPOINT BENGALI IPA", description: "", price: "$10" },
-    { name: "ROTATING IPA", description: "", price: "$10" },
-  ],
-  "BOTTLED BEER": [
-    { name: "MILLER LITE", description: "", price: "$10" },
-    { name: "MODELO", description: "", price: "$10" },
-    { name: "HEINEKEN", description: "", price: "$10" },
-    { name: "HEINEKEN 00", description: "", price: "$10" },
-    { name: "SURFSIDE", description: "", price: "$10" },
-    { name: "SUNTORY -196", description: "", price: "$10" },
-  ],
-  "NON-ALCOHOLIC": [
-    { name: "COKE PRODUCTS", description: "", price: "$4" },
-    { name: "RED BULL", description: "", price: "$6" },
-  ],
-  "WATER": [
-    { name: "AQUA PANNA", description: "", price: "$7" },
-    { name: "SAN PELLEGRINO", description: "", price: "$7" },
-  ],
-  "WINE": [
-    { name: "HOUSE CABERNET", description: "Glass", price: "$14" },
-    { name: "HOUSE PINOT NOIR", description: "Glass", price: "$14" },
-    { name: "HOUSE SAUVIGNON BLANC", description: "Glass", price: "$14" },
-    { name: "HOUSE CHARDONNAY", description: "Glass", price: "$14" },
-    { name: "HOUSE ROSE", description: "Glass", price: "$14" },
-    { name: "HOUSE PROSECCO", description: "Glass", price: "$14" },
-  ],
+type MenuItem = {
+  name: string;
+  description?: string;
+  price?: string;
 };
+
+type MenuSection = {
+  title: string;
+  subtitle?: string;
+  notes?: string[];
+  items: MenuItem[];
+};
+
+const CORE_MENU_SECTIONS: MenuSection[] = [
+  {
+    title: "SHAREABLES",
+    items: [
+      {
+        name: "WINGS",
+        price: "$18",
+        description: "BBQ GF | Buffalo GF | Garlic Parm GF | Sweet & Sour. Carrots, celery, choice of ranch or blue cheese.",
+      },
+      {
+        name: "BBQ BRISKET SLIDERS",
+        price: "$17",
+        description: "House BBQ sauce, ranch slaw, pickles.",
+      },
+      {
+        name: "ELOTE RIBS",
+        price: "$15",
+        description: "Black truffle aioli, cotija, lime.",
+      },
+      {
+        name: "CHIPS & DIP",
+        price: "$15",
+        description: "House tortilla chips, salsa roja, guacamole.",
+      },
+      {
+        name: "BRUSSELS SPROUTS",
+        price: "$16",
+        description: "Balsamic glaze, parmesan, pickled onions.",
+      },
+      {
+        name: "LOADED CHEESE FRIES",
+        price: "$18",
+        description: "Thick cut fries, Monterey Jack, bacon, Red Dragon sauce, ranch, scallions.",
+      },
+      {
+        name: "POTATO SKINS",
+        price: "$19",
+        description: "Monterey Jack, bacon, Red Dragon sauce, ranch, scallions.",
+      },
+      {
+        name: "TUNA TATAKI",
+        price: "$18",
+        description: "Seared ahi tuna, chili ponzu, Fresno, togarashi, micro cilantro.",
+      },
+      {
+        name: "FIRE SHRIMP",
+        price: "$19",
+        description: "Cajun butter, tomato, scallion, cilantro, toasted ciabatta.",
+      },
+    ],
+  },
+  {
+    title: "SIGNATURE ENTREES",
+    items: [
+      {
+        name: "HULI-HULI CHICKEN",
+        price: "$26",
+        description: "Grilled chicken, Huli-Huli sauce, pineapple fried rice, cucumber salad.",
+      },
+      {
+        name: "PAN-SEARED SALMON",
+        price: "$27",
+        description: "Parmesan panko crust, truffle aioli, rice, broccolini.",
+      },
+      {
+        name: "STEAK FRITES",
+        price: "$32",
+        description: "8oz flat iron steak, chimichurri, thick cut fries, broccolini.",
+      },
+      {
+        name: "SURF & TURF",
+        price: "$38",
+        description: "8oz flat iron steak, fire shrimp, baked potato, broccolini.",
+      },
+      {
+        name: "CAJUN PASTA",
+        price: "$20",
+        description: "Penne pasta, Cajun Alfredo, parmesan, toasted ciabatta. +Chicken 8, +Shrimp 9, +4oz Steak 11, +Salmon 12.",
+      },
+    ],
+  },
+  {
+    title: "SALADS",
+    notes: ["+Chicken 8, +Shrimp 9, +Salmon 12, +4oz Steak 11"],
+    items: [
+      {
+        name: "GARDEN SALAD",
+        price: "$19",
+        description: "Mixed greens, roasted beets, orange slices, avocado, grape tomato, fresh mozzarella, pecans, Italian vinaigrette.",
+      },
+      {
+        name: "CAESAR SALAD",
+        price: "$17",
+        description: "Romaine lettuce, parmesan cheese, croutons, Caesar dressing.",
+      },
+      {
+        name: "CUCUMBER SALAD",
+        price: "$19",
+        description: "Cucumber, carrots, red onion, sundried tomato, sesame dressing.",
+      },
+    ],
+  },
+  {
+    title: "BURGERS & SANDWICHES",
+    notes: [
+      "Served with fries, gluten-free buns available.",
+      "+Cheese 2, +Bacon 3, +Avocado 3, Sub GF Bun 3, Sub Impossible Patty 7",
+    ],
+    items: [
+      {
+        name: "DOUBLE SMASH BURGER",
+        price: "$25",
+        description: "Double smash patty, American cheese, house sauce, lettuce, tomato, pickle.",
+      },
+      {
+        name: "BARN YARD BURGER",
+        price: "$27",
+        description: "Double smash patty, cheddar cheese, bacon, egg, house sauce, lettuce, tomato, pickle.",
+      },
+      {
+        name: "RODEO BURGER",
+        price: "$27",
+        description: "Double smash patty, pepperjack, bacon, BBQ sauce, fried onions, jalapeño.",
+      },
+      {
+        name: "FRIED CHICKEN SANDWICH",
+        price: "$23",
+        description: "Fried chicken, ranch slaw, Red Dragon sauce.",
+      },
+      {
+        name: "RORY'S LUCKY CHICKEN SANDWICH",
+        price: "$23",
+        description: "Grilled chicken, avocado, sundried tomato, Dijon aioli.",
+      },
+      {
+        name: "BRISKET GRILLED CHEESE",
+        price: "$25",
+        description: "Sliced BBQ brisket, pepperjack, cheddar, lettuce, tomato, pickle.",
+      },
+    ],
+  },
+  {
+    title: "DESSERTS",
+    items: [
+      {
+        name: "BREAD PUDDING",
+        price: "$14",
+        description: "Bourbon glaze, vanilla ice cream, pecan crumble.",
+      },
+      {
+        name: "BROWNIE",
+        price: "$15",
+        description: "Vanilla ice cream, brownie crumbles, fudge sauce.",
+      },
+      {
+        name: "APPLE PIE DUMPLINGS",
+        price: "$14",
+        description: "Vanilla ice cream, caramel sauce.",
+      },
+    ],
+  },
+  {
+    title: "SIGNATURE COCKTAILS",
+    subtitle: "18",
+    items: [
+      { name: "TRANSFUSION", description: "Vodka, blackberry liqueur, lemon, ginger beer." },
+      { name: "TEE TIME ESPRESSO", description: "Vanilla vodka, coffee liqueur, cold brew, simple syrup." },
+      { name: "GREEN JACKET", description: "Gin, cucumber juice, basil, lime." },
+      { name: "CLUBHOUSE COOLER", description: "Gin, watermelon syrup, lemon, seltzer." },
+      { name: "SMOKY FAIRWAY", description: "Tequila, mezcal, pineapple, lime." },
+      { name: "BIRDIE BREEZE", description: "Tequila, hibiscus syrup, lemon, seltzer." },
+      { name: "TROPIC TIDES", description: "White rum, passion fruit, pineapple, coconut." },
+      { name: "APPLE ALBATROSS", description: "Brandy, ginger liqueur, apple." },
+    ],
+  },
+  {
+    title: "23 COLLECTION",
+    subtitle: "23",
+    items: [
+      {
+        name: "CINCORO'S FAMOUS PALOMA",
+        description: "Cincoro Tequila Blanco, grapefruit, lime, jalapeño, agave, seltzer.",
+      },
+      {
+        name: "GOLDEN SUNRISE",
+        description: "Cincoro Tequila Blanco, mango, lime, chili honey.",
+      },
+      {
+        name: "THE CLOVER",
+        description: "Cincoro Tequila Blanco, peach liqueur, lemon, simple syrup.",
+      },
+    ],
+  },
+  {
+    title: "MOCKTAILS",
+    subtitle: "14",
+    items: [
+      {
+        name: "BERRY BASIL SMASH",
+        description: "Mixed berries, basil, lemon, simple syrup, seltzer.",
+      },
+      {
+        name: "TROPICAL GINGER COOLER",
+        description: "Pineapple, coconut, lime, ginger beer.",
+      },
+      {
+        name: "CHIP CRUSH",
+        description: "Strawberry, passionfruit, orange, seltzer.",
+      },
+    ],
+  },
+  {
+    title: "DRAFT BEER",
+    subtitle: "10",
+    items: [
+      { name: "BROOKLYN LAGER" },
+      { name: "CONEY ISLAND PILSNER" },
+      { name: "MILLER LITE" },
+      { name: "MODELO" },
+      { name: "HEINEKEN" },
+      { name: "MONTAUK WAVE CHASER IPA" },
+      { name: "ROTATING IPA" },
+    ],
+  },
+  {
+    title: "WINE",
+    subtitle: "14",
+    items: [
+      { name: "HOUSE CABERNET" },
+      { name: "HOUSE PINOT NOIR" },
+      { name: "HOUSE SAUVIGNON BLANC" },
+      { name: "HOUSE CHARDONNAY" },
+      { name: "HOUSE ROSE" },
+      { name: "HOUSE PROSECCO" },
+    ],
+  },
+  {
+    title: "BOTTLED BEER",
+    subtitle: "10",
+    items: [
+      { name: "MILLER LITE" },
+      { name: "MODELO" },
+      { name: "HEINEKEN" },
+      { name: "HEINEKEN 00" },
+      { name: "SURFSIDE" },
+      { name: "SUNTORY -196" },
+    ],
+  },
+  {
+    title: "NON-ALCOHOLIC",
+    items: [
+      { name: "COKE PRODUCTS", price: "$4" },
+      { name: "RED BULL", price: "$6" },
+    ],
+  },
+  {
+    title: "WATER",
+    items: [
+      { name: "ACQUA PANNA", price: "$7" },
+      { name: "SAN PELLEGRINO", price: "$7" },
+    ],
+  },
+];
+
+const BRUNCH_MENU_SECTIONS: MenuSection[] = [
+  {
+    title: "BRUNCH ENTREES",
+    notes: ["Saturday & Sundays", "Served 12PM-4PM"],
+    items: [
+      {
+        name: "THICK CUT FRENCH TOAST",
+        price: "$18",
+        description: "Battered thick-cut bread, topped with fresh fruit, berry coulis, served with syrup.",
+      },
+      {
+        name: "SHORT STACK",
+        price: "$16",
+        description: "3 classic buttermilk pancakes, served with syrup and butter.",
+      },
+      {
+        name: "AVOCADO TOAST",
+        price: "$18",
+        description: "Artisan bread, poached egg, grape tomatoes, hot honey, everything bagel season, chili flakes.",
+      },
+      {
+        name: "STEAK & EGGS",
+        price: "$32",
+        description: "8oz marinated skirt steak, 2 eggs, breakfast potatoes, salsa verde.",
+      },
+      {
+        name: "BRISKET BREAKFAST BOWL",
+        price: "$24",
+        description: "Brisket, potatoes, salsa verde, peppers, onions, pepper jack cheese, egg, topped with Red Dragon sauce and green onions.",
+      },
+      {
+        name: "CHILAQUILES",
+        price: "$18",
+        description: "Salsa roja, corn tortillas, over easy egg, jalapeños, avocado, lime crema and green onions.",
+      },
+    ],
+  },
+  {
+    title: "BRUNCH SANDWICHES",
+    notes: ["Choice of side: fresh fruit, breakfast potatoes, french fries."],
+    items: [
+      {
+        name: "SUNRISE SANDWICH",
+        price: "$20",
+        description: "Artisan bread, egg whites, cheddar cheese, spinach, avocado, house sauce.",
+      },
+      {
+        name: "BREAKFAST SMASHBURGER",
+        price: "$25",
+        description: "Two smash patties, bacon, egg, cheese, lettuce, tomato, pickle.",
+      },
+      {
+        name: "CHICKEN & BISCUITS",
+        price: "$20",
+        description: "Fried chicken, buttermilk biscuit, pepper jack cheese, hot honey butter.",
+      },
+      {
+        name: "THE CLASSIC",
+        price: "$19",
+        description: "Bacon, egg, and cheese.",
+      },
+      {
+        name: "THE SANCTUARY SANDWICH",
+        price: "$19",
+        description: "Artisan bread, over easy eggs, lettuce, tomato, pickle, Dijon aioli.",
+      },
+      {
+        name: "BREAKFAST BURRITO",
+        price: "$20",
+        description: "Scrambled eggs, bacon, sausage, pepper jack and Monterey cheese blend, potatoes, pico de gallo, served with salsa.",
+      },
+    ],
+  },
+  {
+    title: "BRUNCH SIDES",
+    items: [
+      { name: "EGGS", price: "$6" },
+      { name: "BACON", price: "$6" },
+      { name: "SAUSAGE", price: "$6" },
+      { name: "TOAST", price: "$5" },
+      { name: "BREAKFAST POTATOES", price: "$5" },
+      { name: "FRESH FRUIT", price: "$5" },
+      { name: "AVOCADO", price: "$5" },
+    ],
+  },
+  {
+    title: "BRUNCH COCKTAILS",
+    items: [
+      {
+        name: "BOTTOMLESS BLOODY MARYS, MIMOSAS & DRAFT MILLER LITE",
+        price: "$25",
+        description: "90 minute time limit, does not extend into mini golf courses.",
+      },
+      { name: "ESPRESSO MARTINI", price: "$16" },
+      { name: "APEROL SPRITZ", price: "$16" },
+      { name: "HUGO SPRITZ", price: "$16" },
+    ],
+  },
+];
+
+const ALL_MENU_SECTIONS = [...CORE_MENU_SECTIONS, ...BRUNCH_MENU_SECTIONS];
 
 const MenuPage = () => {
   return (
@@ -233,46 +390,38 @@ const MenuPage = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Rory's Rooftop Bar Menu</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A curated collection of vibrant cocktails, fresh plates, and rooftop favorites, crafted with the finest ingredients and served with stunning views.
+              A curated collection of vibrant cocktails, fresh plates, rooftop favorites, and weekend brunch.
             </p>
           </div>
 
           <div className="space-y-12">
-            {Object.entries(MENU_DATA).map(([category, items]) => (
-              <section key={category}>
-                <h2 className="text-3xl font-bold text-primary mb-6 pb-3 border-b-2 border-primary/20">{category}</h2>
-                {/* Show section note if exists */}
-                {category === "SALADS" && (
-                  <p className="text-sm text-muted-foreground italic mb-4">
-                    Add Chicken $8, Shrimp $9, Salmon $12, 4oz Steak $11, Burger Patty $6, Impossible Patty $7
-                  </p>
-                )}
-                {category === "BURGERS & SANDWICHES" && (
-                  <div className="text-sm text-muted-foreground italic mb-4 space-y-1">
-                    <p>Served with fries and sriracha ketchup, gluten-free buns available</p>
-                    <p>Add Cheese $2, Extra Patty $6, Bacon $3, Avocado $3, Caramelized Onion $2, Sub Impossible Patty $7</p>
-                  </div>
-                )}
-                {category === "Signature COCKTAILS" && (
-                  <p className="text-sm text-muted-foreground italic mb-4">All Signature Cocktails $18</p>
-                )}
-                {category === "THE 23 COLLECTION" && (
-                  <p className="text-sm text-muted-foreground italic mb-4">All '23 Collection' cocktails $23</p>
-                )}
-                {category === "MOCKTAILS" && (
-                  <p className="text-sm text-muted-foreground italic mb-4">All Mocktails $14</p>
-                )}
+            {ALL_MENU_SECTIONS.map((section) => (
+              <section key={section.title}>
+                <div className="mb-6 border-b-2 border-primary/20 pb-3">
+                  <h2 className="text-3xl font-bold text-primary">
+                    {section.title}
+                    {section.subtitle ? <span className="ml-3 text-2xl text-foreground">{section.subtitle}</span> : null}
+                  </h2>
+                  {section.notes?.map((note) => (
+                    <p key={note} className="mt-2 text-sm text-muted-foreground italic">
+                      {note}
+                    </p>
+                  ))}
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
-                  {items.map((item) => (
+                  {section.items.map((item) => (
                     <div
-                      key={item.name}
-                      className="flex flex-col md:flex-row justify-between items-start gap-2 py-3 border-b border-muted/20 last:border-b-0"
+                      key={`${section.title}-${item.name}`}
+                      className="flex flex-row justify-between items-start gap-4 py-3 border-b border-muted/20 last:border-b-0"
                     >
                       <div className="flex-1 pr-4">
                         <h3 className="text-lg font-semibold text-foreground mb-1">{item.name}</h3>
-                        <p className="text-sm text-muted-foreground italic leading-relaxed">{item.description}</p>
+                        {item.description ? (
+                          <p className="text-sm text-muted-foreground italic leading-relaxed">{item.description}</p>
+                        ) : null}
                       </div>
-                      <p className="text-lg font-semibold text-foreground">{item.price}</p>
+                      {item.price ? <p className="text-lg font-semibold text-foreground whitespace-nowrap">{item.price}</p> : null}
                     </div>
                   ))}
                 </div>
@@ -289,6 +438,7 @@ const MenuPage = () => {
             <div className="mt-6 text-sm text-muted-foreground space-y-2">
               <p>Please notify your server of food allergies or dietary restrictions.</p>
               <p>Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness.</p>
+              <p>Certain menu items can be made vegan. Please ask your server for details.</p>
             </div>
           </div>
         </div>
