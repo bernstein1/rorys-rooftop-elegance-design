@@ -80,7 +80,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center space-y-2">
           <p className="text-primary-foreground/80 text-sm">
-            © 2024 Rory's Rooftop. All rights reserved.
+            © 2026 Rory's Rooftop. All rights reserved.
           </p>
           <p className="text-primary-foreground/80 text-sm space-x-2">
             <Link to="/privacy" className="underline hover:text-white">
