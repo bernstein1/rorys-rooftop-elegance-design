@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 const POSTS = [
   {
     slug: "best-rooftop-bars-meatpacking-district-nyc-2024",
-    title: "Best Rooftop Bars in NYC's Meatpacking District: Your 2024 Guide",
-    date: "June 15, 2024",
+    title: "Best Rooftop Bars in NYC's Meatpacking District: Your 2026 Guide",
+    date: "June 15, 2026",
     image: "/lovable-uploads/Rorys_Bartender.png",
     excerpt: "Discover the top rooftop bars in Manhattan's hottest neighborhood. From sunset cocktails to late-night vibes, here's your complete guide to Meatpacking District's elevated nightlife scene.",
     author: "Rory Adams",
@@ -57,15 +57,15 @@ const POSTS = [
   },
   {
     slug: "seasonal-cocktails-summer-2024-nyc-rooftop",
-    title: "Summer 2024 Cocktail Trends: Tropical Flavors Meet NYC Rooftop Culture",
-    date: "June 10, 2024",
+    title: "Summer 2026 Cocktail Trends: Tropical Flavors Meet NYC Rooftop Culture",
+    date: "June 10, 2026",
     image: "/lovable-uploads/Rorys_Bartender_2.png",
     excerpt: "Discover the hottest cocktail trends taking over NYC's rooftop scene this summer. From tropical infusions to sustainable spirits, here's what's shaking up the city's elevated drinking culture.",
     author: "Jamie Chen",
-    metaDescription: "Explore 2024's hottest cocktail trends at NYC rooftop bars. Tropical flavors, craft spirits, and innovative mixology techniques defining summer drinking in Manhattan.",
-    keywords: ["summer cocktails NYC", "rooftop cocktails", "tropical drinks", "craft cocktails 2024", "NYC mixology trends"],
+    metaDescription: "Explore 2026's hottest cocktail trends at NYC rooftop bars. Tropical flavors, craft spirits, and innovative mixology techniques defining summer drinking in Manhattan.",
+    keywords: ["summer cocktails NYC", "rooftop cocktails", "tropical drinks", "craft cocktails 2026", "NYC mixology trends"],
     content: `
-      <p>Summer 2024 has brought a wave of innovation to NYC's rooftop cocktail scene, with bartenders across the city embracing tropical flavors, sustainable practices, and interactive experiences that perfectly complement the elevated atmosphere of Manhattan's best rooftop venues.</p>
+      <p>Summer 2026 has brought a wave of innovation to NYC's rooftop cocktail scene, with bartenders across the city embracing tropical flavors, sustainable practices, and interactive experiences that perfectly complement the elevated atmosphere of Manhattan's best rooftop venues.</p>
       
       <h2>The Tropical Revolution in NYC Cocktails</h2>
       <p>This summer's biggest trend brings island vibes to the urban jungle. Rooftop bars across Manhattan are incorporating exotic fruits, coconut-based spirits, and tropical garnishes that transport drinkers from the bustling city streets to a beachside paradise—all while enjoying stunning skyline views.</p>
@@ -105,18 +105,18 @@ const POSTS = [
       <p>The most successful rooftop bars are creating Instagram-worthy moments with interactive elements like tableside preparations, smoking techniques, and color-changing cocktails that engage all the senses.</p>
       
       <h2>Perfect Pairings: Food and Cocktail Combinations</h2>
-      <p>Summer 2024's cocktail trends pair perfectly with elevated bar snacks. Tropical cocktails complement fresh ceviches, while smoky mezcal drinks enhance grilled vegetables and artisanal flatbreads.</p>
+      <p>Summer 2026's cocktail trends pair perfectly with elevated bar snacks. Tropical cocktails complement fresh ceviches, while smoky mezcal drinks enhance grilled vegetables and artisanal flatbreads.</p>
       
       <h2>Planning Your Summer Rooftop Cocktail Tour</h2>
       <p>With so many innovative cocktails available across NYC's rooftop scene, planning a progressive cocktail experience has never been more exciting. Start with lighter, fruit-forward drinks during sunset hours, then progress to more complex, spirit-forward cocktails as the evening develops.</p>
       
-      <p><strong>Experience the best of summer 2024's cocktail trends</strong> at Rory's Rooftop, where our mixologists craft innovative tropical cocktails with premium spirits and fresh, seasonal ingredients. <a href="/menu">Explore our summer cocktail menu</a> or <a href="http://resy.com/link?venue_id=91610" target="_blank" aria-label="book your rooftop table (opens in a new tab)">book your rooftop table<span className="sr-only">(opens in a new tab)</span></a> to taste the season's best flavors with stunning Manhattan views.</p>
+      <p><strong>Experience the best of summer 2026's cocktail trends</strong> at Rory's Rooftop, where our mixologists craft innovative tropical cocktails with premium spirits and fresh, seasonal ingredients. <a href="/menu">Explore our summer cocktail menu</a> or <a href="http://resy.com/link?venue_id=91610" target="_blank" aria-label="book your rooftop table (opens in a new tab)">book your rooftop table<span className="sr-only">(opens in a new tab)</span></a> to taste the season's best flavors with stunning Manhattan views.</p>
     `
   },
   {
     slug: "date-night-guide-nyc-rooftop-restaurants-2024",
     title: "NYC Date Night Guide: Romantic Rooftop Restaurants & Bars in Manhattan",
-    date: "June 5, 2024",
+    date: "June 5, 2026",
     image: "/lovable-uploads/rooftop-refresh.png",
     excerpt: "Planning the perfect romantic evening in NYC? Discover Manhattan's most romantic rooftop restaurants and bars, complete with insider tips for creating unforgettable date night experiences.",
     author: "Sofia Martinez",
@@ -219,7 +219,7 @@ const POSTS = [
   {
     slug: "after-work-happy-hour-spots-meatpacking-district",
     title: "Best After-Work Happy Hour Spots in NYC's Meatpacking District",
-    date: "May 28, 2024",
+    date: "May 28, 2026",
     image: "/lovable-uploads/comp-1.jpg",
     excerpt: "Unwind in style at the Meatpacking District's best happy hour destinations. From rooftop cocktails to elevated bar bites, discover where NYC professionals go to decompress after long days.",
     author: "Marcus Thompson",
@@ -325,7 +325,7 @@ const POSTS = [
   {
     slug: "group-celebrations-rooftop-venues-nyc-guide",
     title: "Ultimate Guide to Group Celebrations at NYC Rooftop Venues",
-    date: "May 22, 2024",
+    date: "May 22, 2026",
     image: "/lovable-uploads/manhattan-sunset.png",
     excerpt: "Planning a birthday, bachelorette party, or corporate celebration? Discover how to plan unforgettable group events at Manhattan's best rooftop venues with insider tips and exclusive arrangements.",
     author: "Alex Rivera",
