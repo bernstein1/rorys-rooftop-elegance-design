@@ -7,8 +7,8 @@ export const CONTACT_INFO = {
     url: "https://www.instagram.com/rorysrooftop/",
   },
   hours: [
-    { day: "Mon\u2013Thu", time: "4:00 PM \u2013 10:00 PM" },
-    { day: "Friday", time: "4:00 PM \u2013 12:00 AM" },
+    { day: "Mon\u2013Thu", time: "2:00 PM \u2013 10:00 PM" },
+    { day: "Friday", time: "2:00 PM \u2013 12:00 AM" },
     { day: "Saturday", time: "12:00 PM \u2013 12:00 AM" },
     { day: "Sunday", time: "12:00 PM \u2013 10:00 PM" },
   ],
