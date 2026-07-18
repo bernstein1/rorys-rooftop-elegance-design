@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 const CookiePolicy = () => {
   return (
     <div id="main" className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
+      <SEO title={"Cookie Policy | Rory's Rooftop"} description={"How Rory's Rooftop uses cookies and similar technologies on our website."} path="/cookies" />
       <Navigation />
       <main className="max-w-3xl mx-auto px-4 pt-32 pb-8 space-y-6 animate-fade-in">
         <h1 className="text-4xl font-bold mb-4">Cookie Policy</h1>

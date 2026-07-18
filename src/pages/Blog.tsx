@@ -472,6 +472,7 @@ const Blog = () => {
 
   return (
     <div id="main" className="min-h-screen pt-0 pb-16 bg-background">
+      <SEO title={"Blog | Rory's Rooftop Bar NYC"} description={"Stories, cocktail features, and behind-the-scenes posts from Rory's Rooftop in Manhattan's Meatpacking District."} path="/blog" />
       <Navigation />
       <section className="max-w-6xl mx-auto px-4 pt-32">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 text-center">
