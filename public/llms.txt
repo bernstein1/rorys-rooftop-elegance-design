@@ -1,0 +1,18 @@
+# Rory's Rooftop
+
+> Rooftop bar and restaurant in NYC's Meatpacking District — craft cocktails, elevated cuisine, and skyline views.
+
+## Pages
+
+- [Home](/): Overview of Rory's Rooftop, hero imagery, and highlights.
+- [Menu](/menu): Food and drink menu with appetizers, entrees, cocktails, wine, and beer.
+- [Events](/events): Private events and upcoming happenings at the rooftop.
+- [Blog](/blog): Stories, cocktail features, and behind-the-scenes posts.
+- [FAQ](/faq): Answers to common questions about visiting, reservations, and policies.
+- [Contact](/contact): Location, hours, phone, email, and inquiry form.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Terms & Conditions](/terms)
+- [Cookie Policy](/cookies)

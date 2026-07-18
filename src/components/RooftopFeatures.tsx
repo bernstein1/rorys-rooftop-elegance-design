@@ -33,6 +33,9 @@ const RooftopFeatures = () => {
   return (
     <section className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="font-didot text-3xl md:text-4xl text-primary text-center mb-12">
+          Rooftop Experience
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card
