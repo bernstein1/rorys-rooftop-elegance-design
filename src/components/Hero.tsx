@@ -63,6 +63,10 @@ const Hero = () => {
         <img
           src="/lovable-uploads/6ec2b153-5a0d-4d69-aa6d-d931b2fb9079.png"
           alt="Rory's Rooftop Bar Logo"
+          width={320}
+          height={320}
+          fetchPriority="high"
+          decoding="async"
           className="h-32 md:h-40 w-auto mx-auto mb-6 drop-shadow-lg"
           style={{ maxHeight: "160px" }}
         />
