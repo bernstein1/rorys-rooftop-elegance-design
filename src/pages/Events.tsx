@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 
 import * as React from "react";
 import { CalendarDays } from "lucide-react";

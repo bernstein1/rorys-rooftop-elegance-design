@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
