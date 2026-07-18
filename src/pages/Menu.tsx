@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -81,6 +82,7 @@ const MENU_DATA: Record<string, { name: string; description?: string; price: str
 export default function Menu() {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title={"Menu | Rory's Rooftop Bar NYC"} description={"Explore Rory's Rooftop menu: shareable plates, handhelds, entrées, signature cocktails, wine, and beer in the Meatpacking District."} path="/menu" />
       <Navigation />
       <main className="max-w-4xl mx-auto px-4 pt-32 pb-16">
         <h1 className="font-hero text-4xl md:text-6xl text-center mb-4">Menu</h1>

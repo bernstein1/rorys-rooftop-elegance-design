@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 
 import * as React from "react";
 import { CalendarDays } from "lucide-react";
@@ -46,6 +47,7 @@ const EVENTS = [
 const Events = () => {
   return (
     <div id="main" className="min-h-screen pt-0 pb-16 bg-background">
+      <SEO title={"Events at Rory's Rooftop | NYC Meatpacking"} description={"Upcoming parties, brunches, and private events at Rory's Rooftop in NYC's Meatpacking District."} path="/events" />
       <Navigation />
       <section className="max-w-6xl mx-auto px-4 pt-32">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-10 text-center">

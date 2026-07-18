@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 const InstagramGallery = () => {
   // Using existing uploaded images in a masonry-style grid
   const instagramPosts = [
-    "/lovable-uploads/cocktail.png",
-    "/lovable-uploads/aperol.png",
-    "/lovable-uploads/comp-1.jpg",
-    "/lovable-uploads/meal.png",
+    { src: "/lovable-uploads/cocktail.png", alt: "Signature craft cocktail served at Rory's Rooftop" },
+    { src: "/lovable-uploads/aperol.png", alt: "Aperol spritz on the rooftop bar with skyline in the background" },
+    { src: "/lovable-uploads/comp-1.jpg", alt: "Guests enjoying drinks and sunset views on the rooftop" },
+    { src: "/lovable-uploads/meal.png", alt: "Plated dish from Rory's Rooftop kitchen" },
   ];
 
   return (
@@ -26,8 +26,8 @@ const InstagramGallery = () => {
               className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
             >
               <img
-                src={post}
-                alt={`Instagram post ${index + 1} from Rory's Rooftop`}
+                src={post.src}
+                alt={post.alt}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>

@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -36,6 +37,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <>
+      <SEO title={"FAQ | Rory's Rooftop Bar NYC"} description={"Answers about reservations, dress code, accessibility, and visiting Rory's Rooftop in the Meatpacking District."} path="/faq" />
       <Navigation />
       <section id="main" className="min-h-screen bg-background flex items-center justify-center py-12 md:py-20 pt-36 overflow-x-hidden">
         <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

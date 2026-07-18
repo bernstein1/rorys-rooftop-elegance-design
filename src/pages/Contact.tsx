@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 
 import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
@@ -6,6 +7,7 @@ import ContactInfo from "@/components/ContactInfo";
 export default function ContactPage() {
   return (
     <div id="main" className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
+      <SEO title={"Contact Rory's Rooftop | Reservations & Events"} description={"Reach Rory's Rooftop for reservations, private events, or general inquiries in NYC's Meatpacking District."} path="/contact" />
       <Navigation />
       <div className="max-w-4xl mx-auto px-4 pt-32 pb-8 animate-fade-in">
         <h1 className="font-hero mb-2 text-center">Contact Rory's Rooftop Bar</h1>

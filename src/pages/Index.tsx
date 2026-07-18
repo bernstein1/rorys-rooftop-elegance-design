@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -16,6 +17,7 @@ import PrivateEvents from "@/components/PrivateEvents";
 const Index = () => {
   return (
     <div id="main" className="min-h-screen bg-background">
+      <SEO title={"Rory's Rooftop Bar NYC | Meatpacking Cocktails & Views"} description={"Rory's Rooftop in NYC's Meatpacking District — craft cocktails, elevated cuisine, and skyline views. Reserve your table."} path="/" />
       <Navigation />
       <Hero />
       <About />

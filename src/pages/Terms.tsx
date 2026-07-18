@@ -1,9 +1,11 @@
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Terms = () => {
   return (
     <div id="main" className="bg-background min-h-screen w-full pb-16 overflow-x-hidden">
+      <SEO title={"Terms & Conditions | Rory's Rooftop"} description={"Terms governing your use of the Rory's Rooftop website and services."} path="/terms" />
       <Navigation />
       <main className="max-w-3xl mx-auto px-4 pt-32 pb-8 space-y-6 animate-fade-in">
         <h1 className="text-4xl font-bold mb-4">Terms &amp; Conditions</h1>
