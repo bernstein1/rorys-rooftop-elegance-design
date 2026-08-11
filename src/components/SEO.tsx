@@ -6,10 +6,13 @@ type Props = {
   title: string;
   description: string;
   path: string;
+  image?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
-export default function SEO({ title, description, path }: Props) {
+export default function SEO({ title, description, path, image, jsonLd }: Props) {
   const url = `${SITE}${path}`;
+  const imageUrl = image ? (image.startsWith("http") ? image : `${SITE}${image}`) : undefined;
   return (
     <Helmet>
       <title>{title}</title>
@@ -21,6 +24,11 @@ export default function SEO({ title, description, path }: Props) {
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      {imageUrl && <meta property="og:image" content={imageUrl} />}
+      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+      {jsonLd && (
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      )}
     </Helmet>
   );
 }
