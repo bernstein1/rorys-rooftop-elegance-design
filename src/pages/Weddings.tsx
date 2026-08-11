@@ -3,8 +3,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CONTACT_INFO } from "@/lib/contactInfo";
-import ceremonyAsset from "@/assets/wedding-ceremony.png.asset.json";
-import aerialAsset from "@/assets/wedding-aerial.png.asset.json";
 
 const OFFERINGS = [
   {
@@ -38,7 +36,7 @@ const Weddings = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <img
-          src={ceremonyAsset.url}
+          src="/lovable-uploads/wedding-ceremony.jpg"
           alt="Rooftop wedding ceremony at Rory's Rooftop with a floral arch, draped fabric, and petal-lined aisle overlooking the Meatpacking District"
           className="w-full h-[60vh] md:h-[70vh] object-cover"
         />
@@ -72,7 +70,7 @@ const Weddings = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img
-              src={aerialAsset.url}
+              src="/lovable-uploads/wedding-aerial.jpg"
               alt="Aerial view of Rory's Rooftop set for a wedding ceremony with rows of wooden chairs and a glass-covered atrium"
               className="w-full h-96 object-cover rounded-lg shadow-2xl"
               loading="lazy"
