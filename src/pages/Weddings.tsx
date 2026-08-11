@@ -40,8 +40,8 @@ const Weddings = () => {
           alt="Aerial view of Rory's Rooftop set for a wedding ceremony with rows of wooden chairs and a glass-covered atrium"
           className="w-full h-[60vh] md:h-[70vh] object-cover"
         />
-        <div className="absolute inset-0 top-20 bg-gradient-to-t from-black/60 to-black/10" />
-        <div className="absolute inset-x-0 bottom-0 p-8 md:p-16 max-w-7xl mx-auto">
+        <div className="absolute inset-0 top-20 bg-gradient-to-b from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-x-0 top-20 p-8 md:p-16 max-w-7xl mx-auto">
           <h1 className="font-hero text-4xl md:text-6xl text-primary-foreground mb-4">
             Weddings at Rory's Rooftop
           </h1>
