@@ -52,7 +52,7 @@ const Weddings = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 bg-background">
+      <section className="pt-20 pb-10 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
             Your Day, Elevated
