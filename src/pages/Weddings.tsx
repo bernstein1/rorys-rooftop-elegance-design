@@ -106,7 +106,7 @@ const Weddings = () => {
           src="/lovable-uploads/wedding-aerial.jpg"
           alt="Aerial view of a rooftop wedding venue in New York City set with rows of wooden chairs beside a glass-covered atrium at Rory's Rooftop"
           className="w-full h-[60vh] md:h-[70vh] object-cover"
-          fetchpriority="high"
+          {...({ fetchpriority: "high" } as Record<string, string>)}
         />
         <div className="absolute inset-0 top-20 bg-gradient-to-b from-black/70 via-black/20 to-transparent" />
         <div className="absolute inset-x-0 top-20 p-8 md:p-16 max-w-7xl mx-auto">
