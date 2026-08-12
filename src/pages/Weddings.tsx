@@ -19,14 +19,14 @@ const OFFERINGS = [
   },
   {
     title: "Micro Weddings & Full Rooftop Buyouts",
-    desc: "From intimate NYC elopements for thirty to a full rooftop buyout, our events team handles every detail from setup to last toast.",
+    desc: "From intimate NYC elopements to a full rooftop buyout for up to 80 guests, our events team handles every detail from setup to last toast.",
   },
 ];
 
 const FAQS = [
   {
     q: "How many guests can your NYC rooftop wedding venue hold?",
-    a: "Rory's Rooftop hosts intimate ceremonies of around 30 guests up to full rooftop buyouts for larger wedding receptions. Our events team will confirm exact capacity for your date and setup.",
+    a: "Rory's Rooftop hosts intimate ceremonies up to full rooftop buyouts for up to 80 guests. Our events team will confirm exact capacity for your date and setup.",
   },
   {
     q: "Where is the rooftop located in New York City?",
@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: "What happens if it rains on our wedding day?",
-    a: "The rooftop includes an all-glass covered atrium, so your ceremony and reception continue with skyline views regardless of the weather.",
+    a: "The rooftop includes an all-glass covered atrium, so your ceremony and reception continue with skyline views regardless of the weather. We can also provide tents to extend the covered space, and the building has additional floors indoors we can use as a backup.",
   },
   {
     q: "Do you offer wedding food and drink packages?",
@@ -128,8 +128,8 @@ const Weddings = () => {
           </h2>
           <p className="text-lg text-foreground leading-relaxed">
             Perched above 14th Street, Rory's Rooftop pairs downtown Manhattan skyline views with warm,
-            considered hospitality. Whether you're planning an intimate NYC ceremony for thirty or a full
-            rooftop wedding reception, our events team shapes the space — and the evening — around you.
+            considered hospitality. Whether you're planning an intimate NYC ceremony or a full
+            rooftop wedding reception for up to 80 guests, our events team shapes the space — and the evening — around you.
             We're minutes from the High Line, Chelsea Market, and the West Village, with hotels and
             transit close by for out-of-town guests.
           </p>
