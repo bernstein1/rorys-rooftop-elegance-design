@@ -128,8 +128,8 @@ const Weddings = () => {
           </h2>
           <p className="text-lg text-foreground leading-relaxed">
             Perched above 14th Street, Rory's Rooftop pairs downtown Manhattan skyline views with warm,
-            considered hospitality. Whether you're planning an intimate NYC ceremony for thirty or a full
-            rooftop wedding reception, our events team shapes the space — and the evening — around you.
+            considered hospitality. Whether you're planning an intimate NYC ceremony or a full
+            rooftop wedding reception for up to 80 guests, our events team shapes the space — and the evening — around you.
             We're minutes from the High Line, Chelsea Market, and the West Village, with hotels and
             transit close by for out-of-town guests.
           </p>
