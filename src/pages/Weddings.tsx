@@ -19,14 +19,14 @@ const OFFERINGS = [
   },
   {
     title: "Micro Weddings & Full Rooftop Buyouts",
-    desc: "From intimate NYC elopements to a full rooftop buyout for up to 80 guests, our events team handles every detail from setup to last toast.",
+    desc: "From intimate NYC elopements to a full rooftop buyout — 80 guests for seated dining or up to 200 for a standing reception — our events team handles every detail from setup to last toast.",
   },
 ];
 
 const FAQS = [
   {
     q: "How many guests can your NYC rooftop wedding venue hold?",
-    a: "Rory's Rooftop hosts intimate ceremonies up to full rooftop buyouts for up to 80 guests. Our events team will confirm exact capacity for your date and setup.",
+    a: "Rory's Rooftop accommodates up to 80 guests for seated dining or up to 200 for a standing reception. Our events team will confirm the best setup for your date and guest count.",
   },
   {
     q: "Where is the rooftop located in New York City?",
@@ -129,7 +129,7 @@ const Weddings = () => {
           <p className="text-lg text-foreground leading-relaxed">
             Perched above 14th Street, Rory's Rooftop pairs downtown Manhattan skyline views with warm,
             considered hospitality. Whether you're planning an intimate NYC ceremony or a full
-            rooftop wedding reception for up to 80 guests, our events team shapes the space — and the evening — around you.
+            rooftop wedding reception — 80 guests seated or up to 200 standing — our events team shapes the space — and the evening — around you.
             We're minutes from the High Line, Chelsea Market, and the West Village, with hotels and
             transit close by for out-of-town guests.
           </p>
